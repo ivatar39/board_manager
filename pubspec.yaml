@@ -1,0 +1,30 @@
+name: board_manager
+description: Project for tracking board games
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI
+  cupertino_icons: ^1.0.3
+
+  # Architecture
+  surf_mwwm: ^2.0.0
+
+  # Logging
+  surf_logger: ^1.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+flutter:
+  uses-material-design: true
