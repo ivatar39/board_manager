@@ -12,6 +12,10 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # Firebase
+  firebase_core: ^1.2.1
+  firebase_analytics: ^8.1.1
+
   # UI
   cupertino_icons: ^1.0.3
 
@@ -24,6 +28,9 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  # Linting
+  surf_lint_rules: ^1.2.0
 
 
 flutter:
