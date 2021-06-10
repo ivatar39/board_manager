@@ -11,5 +11,6 @@ class User with _$User {
   const factory User({
     @HiveField(0) required String uniqueId,
     @HiveField(1) required String name,
+    @HiveField(2) required bool isAuthorized,
   }) = _User;
 }

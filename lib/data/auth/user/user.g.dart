@@ -19,17 +19,20 @@ class UserAdapter extends TypeAdapter<User> {
     return User(
       uniqueId: fields[0] as String,
       name: fields[1] as String,
+      isAuthorized: fields[2] as bool,
     );
   }
 
   @override
   void write(BinaryWriter writer, User obj) {
     writer
-      ..writeByte(2)
+      ..writeByte(3)
       ..writeByte(0)
       ..write(obj.uniqueId)
       ..writeByte(1)
-      ..write(obj.name);
+      ..write(obj.name)
+      ..writeByte(2)
+      ..write(obj.isAuthorized);
   }
 
   @override

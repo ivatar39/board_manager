@@ -18,10 +18,12 @@ class _$UserTearOff {
 
   _User call(
       {@HiveField(0) required String uniqueId,
-      @HiveField(1) required String name}) {
+      @HiveField(1) required String name,
+      @HiveField(2) required bool isAuthorized}) {
     return _User(
       uniqueId: uniqueId,
       name: name,
+      isAuthorized: isAuthorized,
     );
   }
 }
@@ -35,6 +37,8 @@ mixin _$User {
   String get uniqueId => throw _privateConstructorUsedError;
   @HiveField(1)
   String get name => throw _privateConstructorUsedError;
+  @HiveField(2)
+  bool get isAuthorized => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $UserCopyWith<User> get copyWith => throw _privateConstructorUsedError;
@@ -44,7 +48,10 @@ mixin _$User {
 abstract class $UserCopyWith<$Res> {
   factory $UserCopyWith(User value, $Res Function(User) then) =
       _$UserCopyWithImpl<$Res>;
-  $Res call({@HiveField(0) String uniqueId, @HiveField(1) String name});
+  $Res call(
+      {@HiveField(0) String uniqueId,
+      @HiveField(1) String name,
+      @HiveField(2) bool isAuthorized});
 }
 
 /// @nodoc
@@ -59,6 +66,7 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
   $Res call({
     Object? uniqueId = freezed,
     Object? name = freezed,
+    Object? isAuthorized = freezed,
   }) {
     return _then(_value.copyWith(
       uniqueId: uniqueId == freezed
@@ -69,6 +77,10 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
+      isAuthorized: isAuthorized == freezed
+          ? _value.isAuthorized
+          : isAuthorized // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -78,7 +90,10 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
   factory _$UserCopyWith(_User value, $Res Function(_User) then) =
       __$UserCopyWithImpl<$Res>;
   @override
-  $Res call({@HiveField(0) String uniqueId, @HiveField(1) String name});
+  $Res call(
+      {@HiveField(0) String uniqueId,
+      @HiveField(1) String name,
+      @HiveField(2) bool isAuthorized});
 }
 
 /// @nodoc
@@ -94,6 +109,7 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
   $Res call({
     Object? uniqueId = freezed,
     Object? name = freezed,
+    Object? isAuthorized = freezed,
   }) {
     return _then(_User(
       uniqueId: uniqueId == freezed
@@ -104,6 +120,10 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
+      isAuthorized: isAuthorized == freezed
+          ? _value.isAuthorized
+          : isAuthorized // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -112,7 +132,9 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 
 class _$_User with DiagnosticableTreeMixin implements _User {
   const _$_User(
-      {@HiveField(0) required this.uniqueId, @HiveField(1) required this.name});
+      {@HiveField(0) required this.uniqueId,
+      @HiveField(1) required this.name,
+      @HiveField(2) required this.isAuthorized});
 
   @override
   @HiveField(0)
@@ -120,10 +142,13 @@ class _$_User with DiagnosticableTreeMixin implements _User {
   @override
   @HiveField(1)
   final String name;
+  @override
+  @HiveField(2)
+  final bool isAuthorized;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'User(uniqueId: $uniqueId, name: $name)';
+    return 'User(uniqueId: $uniqueId, name: $name, isAuthorized: $isAuthorized)';
   }
 
   @override
@@ -132,7 +157,8 @@ class _$_User with DiagnosticableTreeMixin implements _User {
     properties
       ..add(DiagnosticsProperty('type', 'User'))
       ..add(DiagnosticsProperty('uniqueId', uniqueId))
-      ..add(DiagnosticsProperty('name', name));
+      ..add(DiagnosticsProperty('name', name))
+      ..add(DiagnosticsProperty('isAuthorized', isAuthorized));
   }
 
   @override
@@ -143,14 +169,18 @@ class _$_User with DiagnosticableTreeMixin implements _User {
                 const DeepCollectionEquality()
                     .equals(other.uniqueId, uniqueId)) &&
             (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)));
+                const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.isAuthorized, isAuthorized) ||
+                const DeepCollectionEquality()
+                    .equals(other.isAuthorized, isAuthorized)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(uniqueId) ^
-      const DeepCollectionEquality().hash(name);
+      const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(isAuthorized);
 
   @JsonKey(ignore: true)
   @override
@@ -161,7 +191,8 @@ class _$_User with DiagnosticableTreeMixin implements _User {
 abstract class _User implements User {
   const factory _User(
       {@HiveField(0) required String uniqueId,
-      @HiveField(1) required String name}) = _$_User;
+      @HiveField(1) required String name,
+      @HiveField(2) required bool isAuthorized}) = _$_User;
 
   @override
   @HiveField(0)
@@ -169,6 +200,9 @@ abstract class _User implements User {
   @override
   @HiveField(1)
   String get name => throw _privateConstructorUsedError;
+  @override
+  @HiveField(2)
+  bool get isAuthorized => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$UserCopyWith<_User> get copyWith => throw _privateConstructorUsedError;
