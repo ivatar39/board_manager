@@ -13,8 +13,8 @@ dependencies:
     sdk: flutter
 
   # Firebase
-  firebase_core: ^1.2.1
-  firebase_analytics: ^8.1.1
+  firebase_core: ^1.3.0
+  firebase_analytics: ^8.1.2
 
   # UI
   cupertino_icons: ^1.0.3
@@ -35,6 +35,7 @@ dependencies:
 
   # Tools
   path_provider: ^2.0.2
+  uuid: ^3.0.4
 
   # Routing
   auto_route: 2.2.0
@@ -59,3 +60,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/board_game_icon.png
+

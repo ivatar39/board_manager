@@ -10,10 +10,10 @@ abstract class AuthLocalDataSource {
   /// may throw [AuthException]
   Future<void> saveUser(User user);
 
-  /// returns current [User] from local source
+  /// returns first authorized [User] from local source
   ///
   /// may throw [AuthException]
-  Future<User> getUser();
+  Future<User?> getAuthorisedUser();
 
   /// edits [User] in local source
   ///
@@ -24,6 +24,11 @@ abstract class AuthLocalDataSource {
   ///
   /// may throw [AuthException]
   Future<void> deleteUser(User user);
+
+  /// returns true if any [User] is in local source
+  ///
+  /// may throw [AuthException]
+  Future<bool> doesAnyUserExist();
 }
 
 @LazySingleton(as: AuthLocalDataSource)
@@ -39,7 +44,7 @@ class AuthHiveDataSource implements AuthLocalDataSource {
     Logger.d('save user: $user');
     try {
       final box = _hive.box<User>('users');
-      await box.put(user, user);
+      await box.put(user.uniqueId, user);
     } on Exception catch (e) {
       Logger.e(e.toString());
       throw AuthException.memoryException();
@@ -47,11 +52,13 @@ class AuthHiveDataSource implements AuthLocalDataSource {
   }
 
   @override
-  Future<User> getUser() async {
+  Future<User?> getAuthorisedUser() async {
     Logger.d('get user');
     try {
       final box = _hive.box<User>('users');
-      return box.values.first;
+      final user = box.values.firstWhere((element) => element.isAuthorized);
+      Logger.d(user.toString());
+      return user;
     } on Exception catch (e) {
       Logger.e(e.toString());
       throw AuthException.memoryException();
@@ -76,6 +83,20 @@ class AuthHiveDataSource implements AuthLocalDataSource {
     try {
       final box = _hive.box<User>('users');
       await box.delete(user.uniqueId);
+    } on Exception catch (e) {
+      Logger.e(e.toString());
+      throw AuthException.memoryException();
+    }
+  }
+
+  @override
+  Future<bool> doesAnyUserExist() async {
+    Logger.d('does Any User Exist');
+    try {
+      final box = _hive.box<User>('users');
+      final doExist = box.isNotEmpty;
+      Logger.d('doExist: $doExist');
+      return doExist;
     } on Exception catch (e) {
       Logger.e(e.toString());
       throw AuthException.memoryException();

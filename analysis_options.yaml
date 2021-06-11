@@ -12,3 +12,4 @@ analyzer:
     - lib/**/*.config.dart
     - lib/**/*.g.dart
     - lib/**/*.gr.dart
+    - lib/tools/**

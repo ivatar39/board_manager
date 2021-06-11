@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hive/hive.dart';
 import 'package:flutter/foundation.dart';
+import 'package:uuid/uuid.dart';
 
 part 'user.g.dart';
 part 'user.freezed.dart';
@@ -13,4 +14,12 @@ class User with _$User {
     @HiveField(1) required String name,
     @HiveField(2) required bool isAuthorized,
   }) = _User;
+
+  const User._();
+
+  factory User.create({required String name}) => User(
+        uniqueId: const Uuid().v4(),
+        name: name,
+        isAuthorized: true,
+      );
 }

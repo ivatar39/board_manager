@@ -130,11 +130,12 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_User with DiagnosticableTreeMixin implements _User {
+class _$_User extends _User with DiagnosticableTreeMixin {
   const _$_User(
       {@HiveField(0) required this.uniqueId,
       @HiveField(1) required this.name,
-      @HiveField(2) required this.isAuthorized});
+      @HiveField(2) required this.isAuthorized})
+      : super._();
 
   @override
   @HiveField(0)
@@ -188,11 +189,12 @@ class _$_User with DiagnosticableTreeMixin implements _User {
       __$UserCopyWithImpl<_User>(this, _$identity);
 }
 
-abstract class _User implements User {
+abstract class _User extends User {
   const factory _User(
       {@HiveField(0) required String uniqueId,
       @HiveField(1) required String name,
       @HiveField(2) required bool isAuthorized}) = _$_User;
+  const _User._() : super._();
 
   @override
   @HiveField(0)

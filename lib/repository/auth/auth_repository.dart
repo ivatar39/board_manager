@@ -10,22 +10,43 @@ class AuthRepository {
 
   AuthRepository(this._localDataSource);
 
-  Future<void> registerUser(User user) async {
+  Future<User?> registerUser(String name) async {
     try {
+      final user = User.create(name: name);
+      Logger.d(user.toString());
       await _localDataSource.saveUser(user);
+      return user;
     } on AuthException catch (e) {
       Logger.e(e.toString());
+      return null;
     }
   }
 
   Future<bool> isUserAuthorized() async {
     try {
-      final user = await _localDataSource.getUser();
-      Logger.d(user.toString());
-      return user.isAuthorized;
+      // Checking if there is any user in data source.
+      // If user exists, we check if they're authorized.
+      final doesAnyUserExist = await _localDataSource.doesAnyUserExist();
+      Logger.d(doesAnyUserExist.toString());
+
+      if (doesAnyUserExist) {
+        final user = await _localDataSource.getAuthorisedUser();
+        return user != null;
+      }
+      return false;
     } on AuthException catch (e) {
       Logger.e(e.toString());
       return false;
+    }
+  }
+
+  Future<void> signOut(User user) async {
+    try {
+      final signedOutUser = user.copyWith(isAuthorized: false);
+      Logger.d(signedOutUser.toString());
+      await _localDataSource.saveUser(signedOutUser);
+    } on AuthException catch (e) {
+      Logger.e(e.toString());
     }
   }
 }
