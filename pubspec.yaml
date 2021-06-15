@@ -20,7 +20,7 @@ dependencies:
   cupertino_icons: ^1.0.3
 
   # Architecture
-  surf_mwwm: ^2.0.0
+  surf_mwwm: ^2.0.1
   freezed_annotation: ^0.14.2
 
   # Logging
@@ -52,7 +52,7 @@ dev_dependencies:
   auto_route_generator: ^2.1.0
 
   # Linting
-  surf_lint_rules: ^1.2.0
+  surf_lint_rules: ^1.3.0
 
   # Build
   build_runner: ^2.0.4
