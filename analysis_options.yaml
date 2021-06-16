@@ -8,6 +8,8 @@ analyzer:
     sort_unnamed_constructors_first: ignore
     sort_pub_dependencies: ignore
   exclude:
+    - lib/**/*.freezed.dart
     - lib/**/*.config.dart
     - lib/**/*.g.dart
     - lib/**/*.gr.dart
+    - lib/tools/**

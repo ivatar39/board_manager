@@ -13,25 +13,53 @@ dependencies:
     sdk: flutter
 
   # Firebase
-  firebase_core: ^1.2.1
-  firebase_analytics: ^8.1.1
+  firebase_core: ^1.3.0
+  firebase_analytics: ^8.1.2
 
   # UI
   cupertino_icons: ^1.0.3
 
   # Architecture
-  surf_mwwm: ^2.0.0
+  surf_mwwm: ^2.0.1
+  freezed_annotation: ^0.14.2
 
   # Logging
   surf_logger: ^1.0.1
+
+  # Storage
+  hive: ^2.0.4
+
+  # Dependency Injection
+  get_it: ^7.1.3
+  injectable: ^1.4.1
+
+  # Tools
+  path_provider: ^2.0.2
+  uuid: ^3.0.4
+
+  # Routing
+  auto_route: 2.2.0
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  # Auto-gen
+  hive_generator: ^1.1.0
+  injectable_generator: ^1.4.1
+  freezed: ^0.14.2
+  auto_route_generator: ^2.1.0
+
   # Linting
-  surf_lint_rules: ^1.2.0
+  surf_lint_rules: ^1.3.0
+
+  # Build
+  build_runner: ^2.0.4
 
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/board_game_icon.png
+
