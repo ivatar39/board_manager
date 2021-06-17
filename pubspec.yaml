@@ -40,6 +40,9 @@ dependencies:
   # Routing
   auto_route: 2.2.0
 
+  # Network
+  dio: ^4.0.0
+
 
 dev_dependencies:
   flutter_test:

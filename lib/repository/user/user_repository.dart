@@ -1,4 +1,4 @@
-import 'package:board_manager/data/auth/data_source/auth_local_data_source.dart';
+import 'package:board_manager/data/auth/data_sources/auth_local_data_source.dart';
 import 'package:board_manager/data/auth/user/user.dart';
 import 'package:board_manager/repository/user/user_failure.dart';
 import 'package:injectable/injectable.dart';

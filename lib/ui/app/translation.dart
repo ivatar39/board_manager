@@ -6,3 +6,5 @@ const String kSignIn = 'Sign in';
 const String kAuthorization = 'Authorization';
 const String kProfile = 'Profile';
 const String kSignOut = 'Sign out';
+const String kCollection = 'Collection';
+const String kCatalog = 'Catalog';
