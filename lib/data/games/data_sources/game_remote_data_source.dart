@@ -28,7 +28,6 @@ class GameApiRemoteDataSource implements GameRemoteDataSource {
         '/search',
         queryParameters: <String, dynamic>{'name': query},
       );
-      Logger.d(result.requestOptions.uri.toString());
 
       final games = <Game>[];
       if (result.data != null) {
@@ -38,7 +37,6 @@ class GameApiRemoteDataSource implements GameRemoteDataSource {
           games.add(Game.fromJson(element as Map<String, dynamic>));
         }
       }
-      Logger.d(games.toString());
 
       return games;
     } on DioError catch (e) {
