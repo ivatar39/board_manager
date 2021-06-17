@@ -13,3 +13,7 @@ analyzer:
     - lib/**/*.g.dart
     - lib/**/*.gr.dart
     - lib/tools/**
+
+linter:
+  rules:
+    - prefer_const_constructors

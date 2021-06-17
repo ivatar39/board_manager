@@ -42,6 +42,9 @@ class ProfileWidgetModel extends WidgetModel {
 
   Future<void> signOutAndExit(User user) async {
     await _authRepository.signOut(user);
-    await _router.replace(const AuthScreenRoute());
+    await _router.pushAndPopUntil(
+      const AuthScreenRoute(),
+      predicate: (_) => false,
+    );
   }
 }

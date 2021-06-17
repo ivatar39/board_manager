@@ -1,4 +1,5 @@
 import 'package:board_manager/ui/app/translation.dart';
+import 'package:board_manager/ui/collection/collection_menu_button.dart';
 import 'package:board_manager/ui/collection/collection_wm.dart';
 import 'package:board_manager/ui/collection/collection_wm_builder.dart';
 import 'package:flutter/material.dart';
@@ -23,6 +24,11 @@ class _CollectionScreenState extends WidgetState<CollectionScreen, CollectionWid
     return Scaffold(
       appBar: AppBar(
         title: const Text(kCollection),
+        actions: [
+          CollectionMenuButton(
+            wm: wm,
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => wm.openCatalog(),

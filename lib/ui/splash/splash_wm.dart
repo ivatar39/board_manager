@@ -23,7 +23,7 @@ class SplashWidgetModel extends WidgetModel {
     if (!isAuthorized) {
       await _router.replace(const AuthScreenRoute());
     } else {
-      await _router.replace(const CatalogScreenRoute());
+      await _router.replace(const CollectionScreenRoute());
     }
   }
 }
