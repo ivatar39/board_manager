@@ -18,4 +18,10 @@ class UserRepository {
     }
     return user;
   }
+
+  List<User> getAllUsers() {
+    final users = _authLocalDataSource.getAllUsers();
+
+    return users;
+  }
 }

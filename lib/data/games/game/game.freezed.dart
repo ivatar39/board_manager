@@ -21,18 +21,27 @@ class _$GameTearOff {
   const _$GameTearOff();
 
   _Game call(
-      {required String id,
-      required String url,
+      {@HiveField(0)
+          required String id,
+      @HiveField(1)
+          required String url,
+      @HiveField(2)
       @JsonKey(defaultValue: kDefaultThumbnailUrl, name: 'thumb_url')
           required String thumbnailUrl,
-      required String name,
+      @HiveField(3)
+          required String name,
+      @HiveField(4)
       @JsonKey(defaultValue: '', name: 'description_preview')
           required String shortDescription,
-      required String description,
+      @HiveField(5)
+          required String description,
+      @HiveField(6)
       @JsonKey(name: 'min_players')
           required int? minPlayers,
+      @HiveField(7)
       @JsonKey(name: 'max_players')
           required int? maxPlayers,
+      @HiveField(8)
       @JsonKey(ignore: true)
           User? owner}) {
     return _Game(
@@ -58,18 +67,27 @@ const $Game = _$GameTearOff();
 
 /// @nodoc
 mixin _$Game {
+  @HiveField(0)
   String get id => throw _privateConstructorUsedError;
+  @HiveField(1)
   String get url => throw _privateConstructorUsedError;
+  @HiveField(2)
   @JsonKey(defaultValue: kDefaultThumbnailUrl, name: 'thumb_url')
   String get thumbnailUrl => throw _privateConstructorUsedError;
+  @HiveField(3)
   String get name => throw _privateConstructorUsedError;
+  @HiveField(4)
   @JsonKey(defaultValue: '', name: 'description_preview')
   String get shortDescription => throw _privateConstructorUsedError;
+  @HiveField(5)
   String get description => throw _privateConstructorUsedError;
+  @HiveField(6)
   @JsonKey(name: 'min_players')
   int? get minPlayers => throw _privateConstructorUsedError;
+  @HiveField(7)
   @JsonKey(name: 'max_players')
   int? get maxPlayers => throw _privateConstructorUsedError;
+  @HiveField(8)
   @JsonKey(ignore: true)
   User? get owner => throw _privateConstructorUsedError;
 
@@ -83,18 +101,27 @@ abstract class $GameCopyWith<$Res> {
   factory $GameCopyWith(Game value, $Res Function(Game) then) =
       _$GameCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      String url,
+      {@HiveField(0)
+          String id,
+      @HiveField(1)
+          String url,
+      @HiveField(2)
       @JsonKey(defaultValue: kDefaultThumbnailUrl, name: 'thumb_url')
           String thumbnailUrl,
-      String name,
+      @HiveField(3)
+          String name,
+      @HiveField(4)
       @JsonKey(defaultValue: '', name: 'description_preview')
           String shortDescription,
-      String description,
+      @HiveField(5)
+          String description,
+      @HiveField(6)
       @JsonKey(name: 'min_players')
           int? minPlayers,
+      @HiveField(7)
       @JsonKey(name: 'max_players')
           int? maxPlayers,
+      @HiveField(8)
       @JsonKey(ignore: true)
           User? owner});
 
@@ -179,18 +206,27 @@ abstract class _$GameCopyWith<$Res> implements $GameCopyWith<$Res> {
       __$GameCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      String url,
+      {@HiveField(0)
+          String id,
+      @HiveField(1)
+          String url,
+      @HiveField(2)
       @JsonKey(defaultValue: kDefaultThumbnailUrl, name: 'thumb_url')
           String thumbnailUrl,
-      String name,
+      @HiveField(3)
+          String name,
+      @HiveField(4)
       @JsonKey(defaultValue: '', name: 'description_preview')
           String shortDescription,
-      String description,
+      @HiveField(5)
+          String description,
+      @HiveField(6)
       @JsonKey(name: 'min_players')
           int? minPlayers,
+      @HiveField(7)
       @JsonKey(name: 'max_players')
           int? maxPlayers,
+      @HiveField(8)
       @JsonKey(ignore: true)
           User? owner});
 
@@ -265,18 +301,27 @@ class __$GameCopyWithImpl<$Res> extends _$GameCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_Game with DiagnosticableTreeMixin implements _Game {
   const _$_Game(
-      {required this.id,
-      required this.url,
+      {@HiveField(0)
+          required this.id,
+      @HiveField(1)
+          required this.url,
+      @HiveField(2)
       @JsonKey(defaultValue: kDefaultThumbnailUrl, name: 'thumb_url')
           required this.thumbnailUrl,
-      required this.name,
+      @HiveField(3)
+          required this.name,
+      @HiveField(4)
       @JsonKey(defaultValue: '', name: 'description_preview')
           required this.shortDescription,
-      required this.description,
+      @HiveField(5)
+          required this.description,
+      @HiveField(6)
       @JsonKey(name: 'min_players')
           required this.minPlayers,
+      @HiveField(7)
       @JsonKey(name: 'max_players')
           required this.maxPlayers,
+      @HiveField(8)
       @JsonKey(ignore: true)
           this.owner});
 
@@ -284,26 +329,35 @@ class _$_Game with DiagnosticableTreeMixin implements _Game {
       _$_$_GameFromJson(json);
 
   @override
+  @HiveField(0)
   final String id;
   @override
+  @HiveField(1)
   final String url;
   @override
+  @HiveField(2)
   @JsonKey(defaultValue: kDefaultThumbnailUrl, name: 'thumb_url')
   final String thumbnailUrl;
   @override
+  @HiveField(3)
   final String name;
   @override
+  @HiveField(4)
   @JsonKey(defaultValue: '', name: 'description_preview')
   final String shortDescription;
   @override
+  @HiveField(5)
   final String description;
   @override
+  @HiveField(6)
   @JsonKey(name: 'min_players')
   final int? minPlayers;
   @override
+  @HiveField(7)
   @JsonKey(name: 'max_players')
   final int? maxPlayers;
   @override
+  @HiveField(8)
   @JsonKey(ignore: true)
   final User? owner;
 
@@ -383,44 +437,62 @@ class _$_Game with DiagnosticableTreeMixin implements _Game {
 
 abstract class _Game implements Game {
   const factory _Game(
-      {required String id,
-      required String url,
+      {@HiveField(0)
+          required String id,
+      @HiveField(1)
+          required String url,
+      @HiveField(2)
       @JsonKey(defaultValue: kDefaultThumbnailUrl, name: 'thumb_url')
           required String thumbnailUrl,
-      required String name,
+      @HiveField(3)
+          required String name,
+      @HiveField(4)
       @JsonKey(defaultValue: '', name: 'description_preview')
           required String shortDescription,
-      required String description,
+      @HiveField(5)
+          required String description,
+      @HiveField(6)
       @JsonKey(name: 'min_players')
           required int? minPlayers,
+      @HiveField(7)
       @JsonKey(name: 'max_players')
           required int? maxPlayers,
+      @HiveField(8)
       @JsonKey(ignore: true)
           User? owner}) = _$_Game;
 
   factory _Game.fromJson(Map<String, dynamic> json) = _$_Game.fromJson;
 
   @override
+  @HiveField(0)
   String get id => throw _privateConstructorUsedError;
   @override
+  @HiveField(1)
   String get url => throw _privateConstructorUsedError;
   @override
+  @HiveField(2)
   @JsonKey(defaultValue: kDefaultThumbnailUrl, name: 'thumb_url')
   String get thumbnailUrl => throw _privateConstructorUsedError;
   @override
+  @HiveField(3)
   String get name => throw _privateConstructorUsedError;
   @override
+  @HiveField(4)
   @JsonKey(defaultValue: '', name: 'description_preview')
   String get shortDescription => throw _privateConstructorUsedError;
   @override
+  @HiveField(5)
   String get description => throw _privateConstructorUsedError;
   @override
+  @HiveField(6)
   @JsonKey(name: 'min_players')
   int? get minPlayers => throw _privateConstructorUsedError;
   @override
+  @HiveField(7)
   @JsonKey(name: 'max_players')
   int? get maxPlayers => throw _privateConstructorUsedError;
   @override
+  @HiveField(8)
   @JsonKey(ignore: true)
   User? get owner => throw _privateConstructorUsedError;
   @override

@@ -37,7 +37,7 @@ class AuthWidgetModel extends WidgetModel {
 
   Future<void> signInAndEnter(String name) async {
     try {
-      await _authRepository.registerUser(name);
+      await _authRepository.signInOrRegisterUser(name);
       await _router.replace(const CollectionScreenRoute());
     } on AuthFailure catch (e) {
       e.map(

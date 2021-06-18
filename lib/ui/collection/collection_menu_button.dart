@@ -1,12 +1,11 @@
 import 'package:board_manager/ui/app/translation.dart';
-import 'package:board_manager/ui/collection/collection_wm.dart';
 import 'package:flutter/material.dart';
 
 class CollectionMenuButton extends StatefulWidget {
-  final CollectionWidgetModel wm;
+  final Function() onOpenProfile;
 
   const CollectionMenuButton({
-    required this.wm,
+    required this.onOpenProfile,
     Key? key,
   }) : super(key: key);
 
@@ -35,7 +34,7 @@ class _CollectionMenuButtonState extends State<CollectionMenuButton> {
   void handleSelect(String value) {
     switch (value) {
       case profile:
-        widget.wm.openProfile();
+        widget.onOpenProfile();
         break;
     }
   }

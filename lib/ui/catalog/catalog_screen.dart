@@ -24,29 +24,35 @@ class CatalogScreen extends CoreMwwmWidget<CatalogWidgetModel> {
 class _CatalogScreenState extends WidgetState<CatalogScreen, CatalogWidgetModel> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: _CatalogScreenAppBar(searchController: wm.textEditingSearchController),
-      body: EntityStateBuilder<List<Game>>(
-        streamedState: wm.catalogState,
-        builder: (context, games) {
-          if (games.isNotEmpty) {
-            return ListView.builder(
-              physics: const BouncingScrollPhysics(),
-              itemCount: games.length,
-              itemBuilder: (context, index) {
-                final game = games[index];
-                return CatalogGameCard(
-                  game: game,
-                );
-              },
-            );
-          }
-          return const Center(child: Text(noResults));
-        },
-        loadingBuilder: (context, games) => const LoadingWidget(),
-        errorBuilder: (context, exception) => FailureWidget(
-          exception: exception,
-          onRetry: wm.onLoad,
+    return ScaffoldMessenger(
+      key: wm.scaffoldMessengerKey,
+      child: Scaffold(
+        appBar: _CatalogScreenAppBar(searchController: wm.textEditingSearchController),
+        body: EntityStateBuilder<List<Game>>(
+          streamedState: wm.catalogState,
+          builder: (context, games) {
+            if (games.isNotEmpty) {
+              return ListView.builder(
+                physics: const BouncingScrollPhysics(),
+                itemCount: games.length,
+                itemBuilder: (context, index) {
+                  final game = games[index];
+                  return CatalogGameCard(
+                    game: game,
+                    onAddingGame: () async {
+                      await wm.addGameToCollection(game);
+                    },
+                  );
+                },
+              );
+            }
+            return const Center(child: Text(noResults));
+          },
+          loadingBuilder: (context, games) => const LoadingWidget(),
+          errorBuilder: (context, exception) => FailureWidget(
+            exception: exception,
+            onRetry: wm.onLoad,
+          ),
         ),
       ),
     );
