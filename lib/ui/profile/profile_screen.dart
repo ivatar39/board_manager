@@ -24,7 +24,7 @@ class _ProfilePageState extends WidgetState<ProfileScreen, ProfileWidgetModel> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(kProfile),
+        title: const Text(profile),
       ),
       body: EntityStateBuilder<User>(
         streamedState: wm.userState,
@@ -41,7 +41,7 @@ class _ProfilePageState extends WidgetState<ProfileScreen, ProfileWidgetModel> {
                   onPressed: () {
                     wm.signOutAndExit(user);
                   },
-                  child: const Text(kSignOut),
+                  child: const Text(signOut),
                 ),
               ],
             ),
