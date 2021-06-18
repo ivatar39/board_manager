@@ -45,7 +45,6 @@ class CollectionWidgetModel extends WidgetModel {
 
   List<String> getAllUserNames() {
     final users = _userRepository.getAllUsers();
-    Logger.d(users.toString());
     return users.map((e) => e.name).toList();
   }
 
