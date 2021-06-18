@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
-part of 'game_exception.dart';
+part of 'core_exception.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -13,8 +13,8 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-class _$GameExceptionTearOff {
-  const _$GameExceptionTearOff();
+class _$CoreExceptionTearOff {
+  const _$CoreExceptionTearOff();
 
   NoInternetConnection noInternetConnection() {
     return const NoInternetConnection();
@@ -32,10 +32,10 @@ class _$GameExceptionTearOff {
 }
 
 /// @nodoc
-const $GameException = _$GameExceptionTearOff();
+const $CoreException = _$CoreExceptionTearOff();
 
 /// @nodoc
-mixin _$GameException {
+mixin _$CoreException {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() noInternetConnection,
@@ -69,20 +69,20 @@ mixin _$GameException {
 }
 
 /// @nodoc
-abstract class $GameExceptionCopyWith<$Res> {
-  factory $GameExceptionCopyWith(
-          GameException value, $Res Function(GameException) then) =
-      _$GameExceptionCopyWithImpl<$Res>;
+abstract class $CoreExceptionCopyWith<$Res> {
+  factory $CoreExceptionCopyWith(
+          CoreException value, $Res Function(CoreException) then) =
+      _$CoreExceptionCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$GameExceptionCopyWithImpl<$Res>
-    implements $GameExceptionCopyWith<$Res> {
-  _$GameExceptionCopyWithImpl(this._value, this._then);
+class _$CoreExceptionCopyWithImpl<$Res>
+    implements $CoreExceptionCopyWith<$Res> {
+  _$CoreExceptionCopyWithImpl(this._value, this._then);
 
-  final GameException _value;
+  final CoreException _value;
   // ignore: unused_field
-  final $Res Function(GameException) _then;
+  final $Res Function(CoreException) _then;
 }
 
 /// @nodoc
@@ -94,7 +94,7 @@ abstract class $NoInternetConnectionCopyWith<$Res> {
 
 /// @nodoc
 class _$NoInternetConnectionCopyWithImpl<$Res>
-    extends _$GameExceptionCopyWithImpl<$Res>
+    extends _$CoreExceptionCopyWithImpl<$Res>
     implements $NoInternetConnectionCopyWith<$Res> {
   _$NoInternetConnectionCopyWithImpl(
       NoInternetConnection _value, $Res Function(NoInternetConnection) _then)
@@ -113,14 +113,14 @@ class _$NoInternetConnection
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'GameException.noInternetConnection()';
+    return 'CoreException.noInternetConnection()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'GameException.noInternetConnection'));
+      ..add(DiagnosticsProperty('type', 'CoreException.noInternetConnection'));
   }
 
   @override
@@ -180,7 +180,7 @@ class _$NoInternetConnection
   }
 }
 
-abstract class NoInternetConnection implements GameException {
+abstract class NoInternetConnection implements CoreException {
   const factory NoInternetConnection() = _$NoInternetConnection;
 }
 
@@ -193,7 +193,7 @@ abstract class $TimeOutExceptionCopyWith<$Res> {
 
 /// @nodoc
 class _$TimeOutExceptionCopyWithImpl<$Res>
-    extends _$GameExceptionCopyWithImpl<$Res>
+    extends _$CoreExceptionCopyWithImpl<$Res>
     implements $TimeOutExceptionCopyWith<$Res> {
   _$TimeOutExceptionCopyWithImpl(
       TimeOutException _value, $Res Function(TimeOutException) _then)
@@ -212,14 +212,14 @@ class _$TimeOutException
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'GameException.timeOutException()';
+    return 'CoreException.timeOutException()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'GameException.timeOutException'));
+      ..add(DiagnosticsProperty('type', 'CoreException.timeOutException'));
   }
 
   @override
@@ -279,7 +279,7 @@ class _$TimeOutException
   }
 }
 
-abstract class TimeOutException implements GameException {
+abstract class TimeOutException implements CoreException {
   const factory TimeOutException() = _$TimeOutException;
 }
 
@@ -293,7 +293,7 @@ abstract class $ServerExceptionCopyWith<$Res> {
 
 /// @nodoc
 class _$ServerExceptionCopyWithImpl<$Res>
-    extends _$GameExceptionCopyWithImpl<$Res>
+    extends _$CoreExceptionCopyWithImpl<$Res>
     implements $ServerExceptionCopyWith<$Res> {
   _$ServerExceptionCopyWithImpl(
       ServerException _value, $Res Function(ServerException) _then)
@@ -327,14 +327,14 @@ class _$ServerException
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'GameException.serverException(message: $message)';
+    return 'CoreException.serverException(message: $message)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'GameException.serverException'))
+      ..add(DiagnosticsProperty('type', 'CoreException.serverException'))
       ..add(DiagnosticsProperty('message', message));
   }
 
@@ -404,7 +404,7 @@ class _$ServerException
   }
 }
 
-abstract class ServerException implements GameException {
+abstract class ServerException implements CoreException {
   const factory ServerException(String message) = _$ServerException;
 
   String get message => throw _privateConstructorUsedError;

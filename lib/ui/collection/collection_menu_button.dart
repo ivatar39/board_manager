@@ -20,7 +20,7 @@ class _CollectionMenuButtonState extends State<CollectionMenuButton> {
     return PopupMenuButton<String>(
       onSelected: handleSelect,
       itemBuilder: (context) {
-        return {kProfile}
+        return {profile}
             .map(
               (choice) => PopupMenuItem<String>(
                 child: Text(choice),
@@ -34,7 +34,7 @@ class _CollectionMenuButtonState extends State<CollectionMenuButton> {
 
   void handleSelect(String value) {
     switch (value) {
-      case kProfile:
+      case profile:
         widget.wm.openProfile();
         break;
     }

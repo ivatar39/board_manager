@@ -3,19 +3,21 @@ import 'package:dio_firebase_performance/dio_firebase_performance.dart';
 import 'package:injectable/injectable.dart';
 import 'package:board_manager/tools/api_secrets.dart';
 
-const String kApiUrl = 'https://api.boardgameatlas.com/api';
+const String apiUrl = 'https://api.boardgameatlas.com/api';
+const connectTime0ut = 60000;
+const receiveTimeout = 40000;
 
 @module
 abstract class DioInjectableModule {
   @lazySingleton
   Dio get dio {
     final options = BaseOptions(
-      baseUrl: kApiUrl,
+      baseUrl: apiUrl,
       queryParameters: <String, dynamic>{
-        'client_id': kClientId,
+        'client_id': clientId,
       },
-      connectTimeout: 5000,
-      receiveTimeout: 3000,
+      connectTimeout: connectTime0ut,
+      receiveTimeout: receiveTimeout,
     );
     final dio = Dio(options);
 

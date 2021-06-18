@@ -23,7 +23,7 @@ class _CollectionScreenState extends WidgetState<CollectionScreen, CollectionWid
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(kCollection),
+        title: const Text(collection),
         actions: [
           CollectionMenuButton(
             wm: wm,

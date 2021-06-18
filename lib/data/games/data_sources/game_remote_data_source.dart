@@ -1,5 +1,6 @@
-import 'package:board_manager/data/games/exceptions/game_exception.dart';
+import 'package:board_manager/data/core/exceptions/core_exception.dart';
 import 'package:board_manager/data/games/game/game.dart';
+import 'package:board_manager/injection/modules/dio_injectable_module.dart';
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:surf_logger/surf_logger.dart';
@@ -9,9 +10,11 @@ abstract class GameRemoteDataSource {
   /// returns list of [Game]s, names of which
   /// contain query
   ///
-  /// may throw [GameException]
+  /// may throw [CoreException]
   Future<List<Game>> getGamesByQuery(String query);
 }
+
+const String apiSearchPath = '$apiUrl/search';
 
 @LazySingleton(as: GameRemoteDataSource)
 class GameApiRemoteDataSource implements GameRemoteDataSource {
@@ -25,7 +28,7 @@ class GameApiRemoteDataSource implements GameRemoteDataSource {
   Future<List<Game>> getGamesByQuery(String query) async {
     try {
       final result = await _dio.get<Map<String, dynamic>>(
-        '/search',
+        apiSearchPath,
         queryParameters: <String, dynamic>{'name': query},
       );
 
@@ -41,15 +44,17 @@ class GameApiRemoteDataSource implements GameRemoteDataSource {
       return games;
     } on DioError catch (e) {
       Logger.e(e.message);
-      Logger.e(e.error.toString());
       if (e.response?.data != null) {
         Logger.e(e.response!.data.toString());
       }
       if (e.message.contains('SocketException')) {
-        throw const GameException.noInternetConnection();
+        throw const CoreException.noInternetConnection();
+      }
+      if (e.type == DioErrorType.connectTimeout || e.type == DioErrorType.receiveTimeout || e.type == DioErrorType.sendTimeout) {
+        throw const CoreException.timeOutException();
       }
 
-      throw GameException.serverException(e.message);
+      throw CoreException.serverException(e.message);
     }
   }
 }

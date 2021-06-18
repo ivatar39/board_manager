@@ -8,6 +8,5 @@ CatalogWidgetModel createCatalogWidgetModel(BuildContext context) {
   return CatalogWidgetModel(
     const WidgetModelDependencies(),
     getIt<GameRepository>(),
-    TextEditingController(),
   );
 }

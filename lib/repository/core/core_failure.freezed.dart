@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
-part of 'game_failure.dart';
+part of 'core_failure.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -13,8 +13,8 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-class _$GameFailureTearOff {
-  const _$GameFailureTearOff();
+class _$CoreFailureTearOff {
+  const _$CoreFailureTearOff();
 
   CheckInternetConnection checkInternetConnection() {
     return const CheckInternetConnection();
@@ -28,10 +28,10 @@ class _$GameFailureTearOff {
 }
 
 /// @nodoc
-const $GameFailure = _$GameFailureTearOff();
+const $CoreFailure = _$CoreFailureTearOff();
 
 /// @nodoc
-mixin _$GameFailure {
+mixin _$CoreFailure {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() checkInternetConnection,
@@ -62,19 +62,19 @@ mixin _$GameFailure {
 }
 
 /// @nodoc
-abstract class $GameFailureCopyWith<$Res> {
-  factory $GameFailureCopyWith(
-          GameFailure value, $Res Function(GameFailure) then) =
-      _$GameFailureCopyWithImpl<$Res>;
+abstract class $CoreFailureCopyWith<$Res> {
+  factory $CoreFailureCopyWith(
+          CoreFailure value, $Res Function(CoreFailure) then) =
+      _$CoreFailureCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$GameFailureCopyWithImpl<$Res> implements $GameFailureCopyWith<$Res> {
-  _$GameFailureCopyWithImpl(this._value, this._then);
+class _$CoreFailureCopyWithImpl<$Res> implements $CoreFailureCopyWith<$Res> {
+  _$CoreFailureCopyWithImpl(this._value, this._then);
 
-  final GameFailure _value;
+  final CoreFailure _value;
   // ignore: unused_field
-  final $Res Function(GameFailure) _then;
+  final $Res Function(CoreFailure) _then;
 }
 
 /// @nodoc
@@ -86,7 +86,7 @@ abstract class $CheckInternetConnectionCopyWith<$Res> {
 
 /// @nodoc
 class _$CheckInternetConnectionCopyWithImpl<$Res>
-    extends _$GameFailureCopyWithImpl<$Res>
+    extends _$CoreFailureCopyWithImpl<$Res>
     implements $CheckInternetConnectionCopyWith<$Res> {
   _$CheckInternetConnectionCopyWithImpl(CheckInternetConnection _value,
       $Res Function(CheckInternetConnection) _then)
@@ -105,14 +105,14 @@ class _$CheckInternetConnection
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'GameFailure.checkInternetConnection()';
+    return 'CoreFailure.checkInternetConnection()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'GameFailure.checkInternetConnection'));
+      ..add(DiagnosticsProperty('type', 'CoreFailure.checkInternetConnection'));
   }
 
   @override
@@ -169,7 +169,7 @@ class _$CheckInternetConnection
   }
 }
 
-abstract class CheckInternetConnection implements GameFailure {
+abstract class CheckInternetConnection implements CoreFailure {
   const factory CheckInternetConnection() = _$CheckInternetConnection;
 }
 
@@ -182,7 +182,7 @@ abstract class $ServerFailureCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ServerFailureCopyWithImpl<$Res> extends _$GameFailureCopyWithImpl<$Res>
+class _$ServerFailureCopyWithImpl<$Res> extends _$CoreFailureCopyWithImpl<$Res>
     implements $ServerFailureCopyWith<$Res> {
   _$ServerFailureCopyWithImpl(
       ServerFailure _value, $Res Function(ServerFailure) _then)
@@ -214,14 +214,14 @@ class _$ServerFailure with DiagnosticableTreeMixin implements ServerFailure {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'GameFailure.serverFailure(message: $message)';
+    return 'CoreFailure.serverFailure(message: $message)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'GameFailure.serverFailure'))
+      ..add(DiagnosticsProperty('type', 'CoreFailure.serverFailure'))
       ..add(DiagnosticsProperty('message', message));
   }
 
@@ -288,7 +288,7 @@ class _$ServerFailure with DiagnosticableTreeMixin implements ServerFailure {
   }
 }
 
-abstract class ServerFailure implements GameFailure {
+abstract class ServerFailure implements CoreFailure {
   const factory ServerFailure(String message) = _$ServerFailure;
 
   String get message => throw _privateConstructorUsedError;

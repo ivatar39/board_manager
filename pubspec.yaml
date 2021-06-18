@@ -24,6 +24,7 @@ dependencies:
   # Architecture
   surf_mwwm: ^2.0.1
   freezed_annotation: ^0.14.2
+  rxdart: ^0.27.1
 
   # Logging
   surf_logger: ^1.0.1

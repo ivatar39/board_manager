@@ -20,10 +20,10 @@ class NoInternetWidget extends StatelessWidget {
             size: 100,
           ),
           const SizedBox(height: 18),
-          const Text(kNoConnection),
+          const Text(noConnection),
           TextButton(
             onPressed: onTap,
-            child: const Text(kRetry),
+            child: const Text(retry),
           ),
         ],
       ),

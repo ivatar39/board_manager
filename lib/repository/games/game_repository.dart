@@ -1,7 +1,7 @@
+import 'package:board_manager/data/core/exceptions/core_exception.dart';
 import 'package:board_manager/data/games/data_sources/game_remote_data_source.dart';
-import 'package:board_manager/data/games/exceptions/game_exception.dart';
 import 'package:board_manager/data/games/game/game.dart';
-import 'package:board_manager/repository/games/game_failure.dart';
+import 'package:board_manager/repository/core/core_failure.dart';
 import 'package:injectable/injectable.dart';
 import 'package:surf_logger/surf_logger.dart';
 
@@ -17,12 +17,13 @@ class GameRepository {
     try {
       final games = await _gameRemoteDataSource.getGamesByQuery(query);
       return games;
-    } on GameException catch (e) {
+    } on CoreException catch (e) {
       Logger.e(e.toString());
-      e.map(
-        noInternetConnection: (e) => throw const GameFailure.checkInternetConnection(),
-        timeOutException: (e) => throw GameFailure.serverFailure(e.toString()),
-        serverException: (e) => throw GameFailure.serverFailure(e.message),
+      // [CoreException] to failure mapping.
+      throw e.map(
+        noInternetConnection: (e) => const CoreFailure.checkInternetConnection(),
+        timeOutException: (e) => CoreFailure.serverFailure(e.toString()),
+        serverException: (e) => CoreFailure.serverFailure(e.message),
       );
     }
   }

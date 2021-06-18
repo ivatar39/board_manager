@@ -24,7 +24,7 @@ class _AuthPageState extends WidgetState<AuthScreen, AuthWidgetModel> {
       key: wm.scaffoldMessengerKey,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text(kAuthorization),
+          title: const Text(authorization),
         ),
         body: Form(
           key: wm.formKey,
@@ -47,14 +47,14 @@ class _AuthPageState extends WidgetState<AuthScreen, AuthWidgetModel> {
                   validator: wm.fieldValidator,
                   onEditingComplete: _submitNameForm,
                   decoration: const InputDecoration(
-                    labelText: kName,
+                    labelText: name,
                     prefixIcon: Icon(Icons.person),
                   ),
                 ),
                 const SizedBox(height: 8),
                 ElevatedButton(
                   onPressed: _submitNameForm,
-                  child: const Text(kSignIn),
+                  child: const Text(signIn),
                 ),
               ],
             ),

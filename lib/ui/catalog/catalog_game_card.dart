@@ -40,8 +40,8 @@ class CatalogGameCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 8),
-                  Text('$kMaxPlayers: ${game.maxPlayers}'),
-                  Text('$kMinPlayers: ${game.minPlayers}'),
+                  Text('$maxPlayers: ${game.maxPlayers}'),
+                  Text('$minPlayers: ${game.minPlayers}'),
                 ],
               ),
               visible: game.minPlayers != null && game.maxPlayers != null,
@@ -50,7 +50,9 @@ class CatalogGameCard extends StatelessWidget {
         ),
         trailing: IconButton(
           icon: const Icon(Icons.add),
-          onPressed: () {},
+          onPressed: () {
+            // TODO(ivatar39): implement 'add to library' functionality
+          },
         ),
       ),
     );

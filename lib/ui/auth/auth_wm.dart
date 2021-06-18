@@ -27,10 +27,10 @@ class AuthWidgetModel extends WidgetModel {
 
   String? fieldValidator(String? value) {
     if (value == null || value.isEmpty) {
-      return kNameCannotBeEmpty;
+      return nameCannotBeEmpty;
     }
     if (value.length > kMaxNameLength) {
-      return kIncorrectName;
+      return incorrectName;
     }
     return null;
   }
@@ -41,7 +41,7 @@ class AuthWidgetModel extends WidgetModel {
       await _router.replace(const CollectionScreenRoute());
     } on AuthFailure catch (e) {
       e.map(
-        systemMemoryFailure: (e) => showSnackBar(kMemoryFailure),
+        systemMemoryFailure: (e) => showSnackBar(memoryFailure),
       );
     }
   }

@@ -1,14 +1,14 @@
 import 'package:board_manager/ui/app/translation.dart';
 import 'package:flutter/material.dart';
 
-class ServerFailureWidget extends StatelessWidget {
+class CriticalFailureWidget extends StatelessWidget {
   final Function() onTap;
-  final String? message;
+  final Exception? exception;
 
-  const ServerFailureWidget({
+  const CriticalFailureWidget({
     required this.onTap,
     Key? key,
-    this.message,
+    this.exception,
   }) : super(key: key);
 
   @override
@@ -16,18 +16,18 @@ class ServerFailureWidget extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Icon(Icons.warning, size: 100),
+        const Icon(Icons.warning, size: 100, color: Colors.red),
         const SizedBox(height: 18),
-        const Text(serverError),
+        const Text(criticalError),
         Visibility(
-          visible: message != null,
+          visible: exception != null,
           child: Padding(
             padding: const EdgeInsets.all(8),
             child: Column(
               children: [
                 const Text('$additionalInformation: '),
                 Text(
-                  message ?? '',
+                  exception.toString(),
                   style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
               ],
