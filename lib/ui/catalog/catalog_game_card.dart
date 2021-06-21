@@ -5,9 +5,11 @@ import 'package:flutter/material.dart';
 
 class CatalogGameCard extends StatelessWidget {
   final Game game;
+  final Function() onAddingGame;
 
   const CatalogGameCard({
     required this.game,
+    required this.onAddingGame,
     Key? key,
   }) : super(key: key);
 
@@ -50,9 +52,7 @@ class CatalogGameCard extends StatelessWidget {
         ),
         trailing: IconButton(
           icon: const Icon(Icons.add),
-          onPressed: () {
-            // TODO(ivatar39): implement 'add to library' functionality
-          },
+          onPressed: onAddingGame,
         ),
       ),
     );

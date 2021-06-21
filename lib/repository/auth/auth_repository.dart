@@ -11,10 +11,19 @@ class AuthRepository {
 
   AuthRepository(this._localDataSource);
 
-  Future<void> registerUser(String name) async {
+  Future<void> signInOrRegisterUser(String name) async {
     try {
-      final user = User.create(name: name);
-      await _localDataSource.saveUser(user);
+      final users = _localDataSource.getAllUsers();
+      final isUserAlreadyRegistered = users.any((u) => u.name == name);
+      if (isUserAlreadyRegistered) {
+        // Getting user with given name
+        final user = users.firstWhere((u) => u.name == name);
+        // Editing user, since he was authorized
+        await _localDataSource.editUser(user.copyWith(isAuthorized: true));
+      } else {
+        final user = User.create(name: name);
+        await _localDataSource.saveUser(user);
+      }
     } on AuthException catch (e) {
       Logger.e(e.toString());
 

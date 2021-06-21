@@ -18,4 +18,8 @@ class UserRepository {
     }
     return user;
   }
+
+  List<String> getAllUserNames() {
+    return _authLocalDataSource.getAllUsers().map((e) => e.name).toList();
+  }
 }

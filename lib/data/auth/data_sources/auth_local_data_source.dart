@@ -29,6 +29,11 @@ abstract class AuthLocalDataSource {
   ///
   ///
   Future<bool> doesAnyUserExist();
+
+  /// returns all of [User]s is in local source
+  ///
+  ///
+  List<User> getAllUsers();
 }
 
 @LazySingleton(as: AuthLocalDataSource)
@@ -83,6 +88,12 @@ class AuthHiveDataSource implements AuthLocalDataSource {
   Future<bool> doesAnyUserExist() async {
     final doExist = _userBox.isNotEmpty;
     return doExist;
+  }
+
+  @override
+  List<User> getAllUsers() {
+    final users = _userBox.values;
+    return users.toList();
   }
 
   Future<void> performActionOnUserBox(
