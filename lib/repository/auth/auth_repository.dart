@@ -14,9 +14,12 @@ class AuthRepository {
   Future<void> signInOrRegisterUser(String name) async {
     try {
       final users = _localDataSource.getAllUsers();
-      if (users.any((u) => u.name == name)) {
-        final user = users.firstWhere((u) => u.name == name).copyWith(isAuthorized: true);
-        await _localDataSource.editUser(user);
+      final isUserAlreadyRegistered = users.any((u) => u.name == name);
+      if (isUserAlreadyRegistered) {
+        // Getting user with given name
+        final user = users.firstWhere((u) => u.name == name);
+        // Editing user, since he was authorized
+        await _localDataSource.editUser(user.copyWith(isAuthorized: true));
       } else {
         final user = User.create(name: name);
         await _localDataSource.saveUser(user);

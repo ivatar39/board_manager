@@ -11,13 +11,12 @@ abstract class HiveInjectableModule {
   Future<HiveInterface> get hive async {
     final appDocumentDirectory = await path.getApplicationDocumentsDirectory();
 
-    Hive.init(appDocumentDirectory.path);
-    // ignore: cascade_invocations
-    Hive.registerAdapter(UserAdapter());
-    // ignore: cascade_invocations
-    Hive.registerAdapter(GameAdapter());
+    final _hive = Hive
+      ..init(appDocumentDirectory.path)
+      ..registerAdapter(UserAdapter())
+      ..registerAdapter(GameAdapter());
 
-    return Hive;
+    return _hive;
   }
 
   @preResolve

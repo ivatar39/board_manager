@@ -22,4 +22,5 @@ const String couldNotAddGame = 'Some problem occurred with adding this game to c
 const String gameAlreadyInCollection = 'This game is already in your collection.';
 const String owner = 'Owner';
 const String couldNotChangeOwner = 'Could not change owner';
+const String noOwner = 'No owner';
 String getGameAddedString(String gameName) => 'Game "$gameName" successfully added!';

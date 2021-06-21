@@ -40,7 +40,7 @@ class _CatalogScreenState extends WidgetState<CatalogScreen, CatalogWidgetModel>
                   return CatalogGameCard(
                     game: game,
                     onAddingGame: () async {
-                      await wm.addGameToCollection(game);
+                      await wm.addGamePressed(game);
                     },
                   );
                 },

@@ -1,4 +1,4 @@
-import 'package:board_manager/data/auth/user/user.dart';
+import 'package:board_manager/data/auth/data_sources/auth_local_data_source.dart';
 import 'package:board_manager/data/games/data_sources/game_collection_local_data_source.dart';
 import 'package:board_manager/data/games/exceptions/game_exception.dart';
 import 'package:board_manager/data/games/game/game.dart';
@@ -9,9 +9,11 @@ import 'package:surf_logger/surf_logger.dart';
 @injectable
 class CollectionRepository {
   final GameCollectionLocalDataSource _gameCollectionLocalDataSource;
+  final AuthLocalDataSource _authLocalDataSource;
 
   CollectionRepository(
     this._gameCollectionLocalDataSource,
+    this._authLocalDataSource,
   );
 
   Stream<List<Game>> watchGameCollection() async* {
@@ -23,8 +25,9 @@ class CollectionRepository {
     }
   }
 
-  Future<void> changeGameOwner(Game game, User newOwner) async {
+  Future<void> changeGameOwner(Game game, String ownerName) async {
     try {
+      final newOwner = _authLocalDataSource.getAllUsers().firstWhere((u) => u.name == ownerName);
       final gameWithChangedOwner = game.copyWith(owner: newOwner);
       await _gameCollectionLocalDataSource.editGame(gameWithChangedOwner);
     } on GameException catch (e) {

@@ -4,8 +4,8 @@ import 'package:board_manager/data/games/game/game.dart';
 import 'package:board_manager/repository/core/core_failure.dart';
 import 'package:board_manager/repository/games/game_failure.dart';
 import 'package:board_manager/repository/games/game_repository.dart';
-import 'package:board_manager/repository/user/user_repository.dart';
 import 'package:board_manager/ui/app/translation.dart';
+import 'package:board_manager/ui/catalog/catalog_Interactor.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
@@ -22,12 +22,12 @@ class CatalogWidgetModel extends WidgetModel {
   final _debounceTimer = BehaviorSubject<int>()..add(0);
 
   final GameRepository _gameRepository;
-  final UserRepository _userRepository;
+  final CatalogInteractor _catalogInteractor;
 
   CatalogWidgetModel(
     WidgetModelDependencies baseDependencies,
     this._gameRepository,
-    this._userRepository,
+    this._catalogInteractor,
   ) : super(baseDependencies);
 
   @override
@@ -70,10 +70,9 @@ class CatalogWidgetModel extends WidgetModel {
     }
   }
 
-  Future<void> addGameToCollection(Game game) async {
+  Future<void> addGamePressed(Game game) async {
     try {
-      final currentUser = await _userRepository.getCurrentAuthorisedUser();
-      await _gameRepository.addGameToCollection(game, owner: currentUser);
+      await _catalogInteractor.addGameToCollection(game);
       showSnackBar(getGameAddedString(game.name));
     } on Exception catch (e) {
       Logger.e(e.toString());

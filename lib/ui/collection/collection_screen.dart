@@ -1,4 +1,3 @@
-import 'package:board_manager/data/auth/user/user.dart';
 import 'package:board_manager/data/games/game/game.dart';
 import 'package:board_manager/ui/app/translation.dart';
 import 'package:board_manager/ui/collection/collection_menu_button.dart';
@@ -50,9 +49,9 @@ class _CollectionScreenState extends WidgetState<CollectionScreen, CollectionWid
                 return ListTile(
                   title: Text(game.name),
                   trailing: DropdownButton<String>(
-                    value: game.owner!.name,
-                    onChanged: (newOwner) => wm.changeGameOwner(game, newOwner!),
-                    items: wm.getAllUserNames().map<DropdownMenuItem<String>>(
+                    value: game.owner?.name ?? noOwner,
+                    onChanged: (newOwnerName) => wm.changeGameOwner(game, newOwnerName ?? noOwner),
+                    items: wm.getUserNamesAndEmptyName().map<DropdownMenuItem<String>>(
                       (name) {
                         return DropdownMenuItem<String>(
                           child: Text(name),

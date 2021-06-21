@@ -53,7 +53,8 @@ class GameCollectionHiveDataSource implements GameCollectionLocalDataSource {
   @override
   Stream<List<Game>> watchGames() async* {
     // Staring to watch with initial null event to get initial data
-    final stream = _gameBox.watch().startWith(BoxEvent(null, null, false));
+    final initialEvent = BoxEvent(null, null, false);
+    final stream = _gameBox.watch().startWith(initialEvent);
     yield* stream.map((event) => _gameBox.values.toList());
   }
 

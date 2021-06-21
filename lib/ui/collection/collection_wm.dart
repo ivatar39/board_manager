@@ -43,15 +43,14 @@ class CollectionWidgetModel extends WidgetModel {
     );
   }
 
-  List<String> getAllUserNames() {
-    final users = _userRepository.getAllUsers();
-    return users.map((e) => e.name).toList();
+  List<String> getUserNamesAndEmptyName() {
+    final users = _userRepository.getAllUserNames()..add(noOwner);
+    return users;
   }
 
-  Future<void> changeGameOwner(Game game, String name) async {
+  Future<void> changeGameOwner(Game game, String ownerName) async {
     try {
-      final newOwner = _userRepository.getAllUsers().firstWhere((u) => u.name == name);
-      await _collectionRepository.changeGameOwner(game, newOwner);
+      await _collectionRepository.changeGameOwner(game, name);
     } on CollectionFailure catch (e) {
       Logger.e(e.toString());
       showSnackBar(
