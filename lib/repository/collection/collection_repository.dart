@@ -3,6 +3,7 @@ import 'package:board_manager/data/games/data_sources/game_collection_local_data
 import 'package:board_manager/data/games/exceptions/game_exception.dart';
 import 'package:board_manager/data/games/game/game.dart';
 import 'package:board_manager/repository/collection/collection_failure.dart';
+import 'package:board_manager/ui/app/translation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:surf_logger/surf_logger.dart';
 
@@ -27,9 +28,12 @@ class CollectionRepository {
 
   Future<void> changeGameOwner(Game game, String ownerName) async {
     try {
-      final newOwner = _authLocalDataSource.getAllUsers().firstWhere((u) => u.name == ownerName);
-      final gameWithChangedOwner = game.copyWith(owner: newOwner);
-      await _gameCollectionLocalDataSource.editGame(gameWithChangedOwner);
+      if (ownerName != noOwner) {
+        final newOwner = _authLocalDataSource.getAllUsers().firstWhere((u) => u.name == ownerName);
+        final gameWithChangedOwner = game.copyWith(owner: newOwner);
+        return await _gameCollectionLocalDataSource.editGame(gameWithChangedOwner);
+      }
+      await _gameCollectionLocalDataSource.editGame(game.copyWith(owner: null));
     } on GameException catch (e) {
       Logger.e(e.toString());
       throw const CollectionFailure.couldNotChangeOwner();

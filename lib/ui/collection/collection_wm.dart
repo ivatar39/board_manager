@@ -50,7 +50,7 @@ class CollectionWidgetModel extends WidgetModel {
 
   Future<void> changeGameOwner(Game game, String ownerName) async {
     try {
-      await _collectionRepository.changeGameOwner(game, name);
+      await _collectionRepository.changeGameOwner(game, ownerName);
     } on CollectionFailure catch (e) {
       Logger.e(e.toString());
       showSnackBar(
