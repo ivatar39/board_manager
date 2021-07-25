@@ -5,8 +5,8 @@
 // **************************************************************************
 
 import 'package:board_manager/data/auth/data_sources/auth_local_data_source.dart'
-    as _i9;
-import 'package:board_manager/data/auth/user/user.dart' as _i10;
+    as _i8;
+import 'package:board_manager/data/auth/user/user.dart' as _i9;
 import 'package:board_manager/data/games/data_sources/game_collection_local_data_source.dart'
     as _i5;
 import 'package:board_manager/data/games/data_sources/game_remote_data_source.dart'
@@ -18,12 +18,12 @@ import 'package:board_manager/injection/modules/dio_injectable_module.dart'
     as _i17;
 import 'package:board_manager/injection/modules/hive_injectable_module.dart'
     as _i18;
-import 'package:board_manager/repository/auth/auth_repository.dart' as _i11;
+import 'package:board_manager/repository/auth/auth_repository.dart' as _i10;
 import 'package:board_manager/repository/collection/collection_repository.dart'
-    as _i12;
-import 'package:board_manager/repository/games/game_repository.dart' as _i8;
-import 'package:board_manager/repository/user/user_repository.dart' as _i13;
-import 'package:board_manager/ui/catalog/catalog_interactor.dart' as _i14;
+    as _i11;
+import 'package:board_manager/repository/games/game_repository.dart' as _i14;
+import 'package:board_manager/repository/user/user_repository.dart' as _i12;
+import 'package:board_manager/ui/catalog/catalog_interactor.dart' as _i13;
 import 'package:board_manager/ui/router/app_router.gr.dart' as _i15;
 import 'package:dio/dio.dart' as _i3;
 import 'package:get_it/get_it.dart' as _i1;
@@ -44,29 +44,29 @@ Future<_i1.GetIt> $initGetIt(_i1.GetIt get,
       () => _i4.GameApiRemoteDataSource(get<_i3.Dio>()));
   gh.lazySingleton<_i5.GameCollectionLocalDataSource>(
       () => _i5.GameCollectionHiveDataSource(get<_i6.Box<_i7.Game>>()));
-  gh.lazySingleton<_i8.GameRepository>(() => _i8.GameRepository(
-      get<_i4.GameRemoteDataSource>(),
-      get<_i5.GameCollectionLocalDataSource>()));
-  gh.lazySingleton<_i9.AuthLocalDataSource>(
-      () => _i9.AuthHiveDataSource(get<_i6.Box<_i10.User>>()));
-  gh.lazySingleton<_i11.AuthRepository>(
-      () => _i11.AuthRepository(get<_i9.AuthLocalDataSource>()));
-  gh.factory<_i12.CollectionRepository>(() => _i12.CollectionRepository(
+  gh.lazySingleton<_i8.AuthLocalDataSource>(
+      () => _i8.AuthHiveDataSource(get<_i6.Box<_i9.User>>()));
+  gh.lazySingleton<_i10.AuthRepository>(
+      () => _i10.AuthRepository(get<_i8.AuthLocalDataSource>()));
+  gh.factory<_i11.CollectionRepository>(() => _i11.CollectionRepository(
       get<_i5.GameCollectionLocalDataSource>(),
-      get<_i9.AuthLocalDataSource>()));
-  gh.lazySingleton<_i13.UserRepository>(
-      () => _i13.UserRepository(get<_i9.AuthLocalDataSource>()));
-  gh.lazySingleton<_i14.CatalogInteractor>(() => _i14.CatalogInteractor(
-      get<_i13.UserRepository>(), get<_i8.GameRepository>()));
+      get<_i8.AuthLocalDataSource>()));
+  gh.lazySingleton<_i12.UserRepository>(
+      () => _i12.UserRepository(get<_i8.AuthLocalDataSource>()));
+  gh.lazySingleton<_i13.CatalogInteractor>(() => _i13.CatalogInteractor(
+      get<_i12.UserRepository>(), get<_i14.GameRepository>()));
   gh.singleton<_i15.AppRouter>(autoRouteInjectableModule.router);
   await gh.singletonAsync<_i6.HiveInterface>(() => hiveInjectableModule.hive,
       preResolve: true);
-  await gh.singletonAsync<_i6.Box<_i10.User>>(
+  await gh.singletonAsync<_i6.Box<_i9.User>>(
       () => hiveInjectableModule.userBox(get<_i6.HiveInterface>()),
       preResolve: true);
   await gh.singletonAsync<_i6.Box<_i7.Game>>(
       () => hiveInjectableModule.gameBox(get<_i6.HiveInterface>()),
       preResolve: true);
+  gh.singleton<_i14.GameRepository>(_i14.GameRepository(
+      get<_i4.GameRemoteDataSource>(),
+      get<_i5.GameCollectionLocalDataSource>()));
   return get;
 }
 

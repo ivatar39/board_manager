@@ -1,6 +1,6 @@
 import 'package:board_manager/repository/core/failure.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'core_failure.freezed.dart';
 

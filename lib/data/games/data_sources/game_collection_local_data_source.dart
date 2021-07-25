@@ -1,9 +1,9 @@
-import 'package:board_manager/data/games/game/game.dart';
 import 'package:board_manager/data/games/exceptions/game_exception.dart';
+import 'package:board_manager/data/games/game/game.dart';
 import 'package:hive/hive.dart';
 import 'package:injectable/injectable.dart';
-import 'package:surf_logger/surf_logger.dart';
 import 'package:rxdart/rxdart.dart';
+import 'package:surf_logger/surf_logger.dart';
 
 abstract class GameCollectionLocalDataSource {
   /// saves [Game] in local data storage

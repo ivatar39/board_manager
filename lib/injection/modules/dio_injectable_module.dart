@@ -1,7 +1,7 @@
+import 'package:board_manager/tools/api_secrets.dart';
 import 'package:dio/dio.dart';
 import 'package:dio_firebase_performance/dio_firebase_performance.dart';
 import 'package:injectable/injectable.dart';
-import 'package:board_manager/tools/api_secrets.dart';
 
 const String apiUrl = 'https://api.boardgameatlas.com/api';
 const connectTime0ut = 60000;

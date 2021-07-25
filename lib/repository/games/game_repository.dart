@@ -9,7 +9,7 @@ import 'package:board_manager/repository/games/game_failure.dart';
 import 'package:injectable/injectable.dart';
 import 'package:surf_logger/surf_logger.dart';
 
-@lazySingleton
+@singleton
 class GameRepository {
   final GameRemoteDataSource _gameRemoteDataSource;
   final GameCollectionLocalDataSource _gameCollectionLocalDataSource;

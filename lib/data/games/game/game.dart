@@ -1,6 +1,6 @@
 import 'package:board_manager/data/auth/user/user.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hive/hive.dart';
 
 part 'game.freezed.dart';

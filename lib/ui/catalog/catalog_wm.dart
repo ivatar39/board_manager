@@ -5,7 +5,7 @@ import 'package:board_manager/repository/core/core_failure.dart';
 import 'package:board_manager/repository/games/game_failure.dart';
 import 'package:board_manager/repository/games/game_repository.dart';
 import 'package:board_manager/ui/app/translation.dart';
-import 'package:board_manager/ui/catalog/catalog_Interactor.dart';
+import 'package:board_manager/ui/catalog/catalog_interactor.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
