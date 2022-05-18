@@ -79,7 +79,7 @@ class _CatalogScreenAppBar extends StatelessWidget implements PreferredSizeWidge
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
+            ColoredBox(
               color: Colors.white,
               child: Padding(
                 padding: const EdgeInsets.all(8),

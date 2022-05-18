@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'user_failure.dart';
 
@@ -10,25 +12,18 @@ part of 'user_failure.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$UserFailureTearOff {
-  const _$UserFailureTearOff();
-
-  UserNotAuthorized userNotAuthorized() {
-    return const UserNotAuthorized();
-  }
-}
-
-/// @nodoc
-const $UserFailure = _$UserFailureTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$UserFailure {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() userNotAuthorized,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? userNotAuthorized,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -40,6 +35,11 @@ mixin _$UserFailure {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(UserNotAuthorized value) userNotAuthorized,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(UserNotAuthorized value)? userNotAuthorized,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -67,22 +67,22 @@ class _$UserFailureCopyWithImpl<$Res> implements $UserFailureCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $UserNotAuthorizedCopyWith<$Res> {
-  factory $UserNotAuthorizedCopyWith(
-          UserNotAuthorized value, $Res Function(UserNotAuthorized) then) =
-      _$UserNotAuthorizedCopyWithImpl<$Res>;
+abstract class _$$UserNotAuthorizedCopyWith<$Res> {
+  factory _$$UserNotAuthorizedCopyWith(
+          _$UserNotAuthorized value, $Res Function(_$UserNotAuthorized) then) =
+      __$$UserNotAuthorizedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$UserNotAuthorizedCopyWithImpl<$Res>
+class __$$UserNotAuthorizedCopyWithImpl<$Res>
     extends _$UserFailureCopyWithImpl<$Res>
-    implements $UserNotAuthorizedCopyWith<$Res> {
-  _$UserNotAuthorizedCopyWithImpl(
-      UserNotAuthorized _value, $Res Function(UserNotAuthorized) _then)
-      : super(_value, (v) => _then(v as UserNotAuthorized));
+    implements _$$UserNotAuthorizedCopyWith<$Res> {
+  __$$UserNotAuthorizedCopyWithImpl(
+      _$UserNotAuthorized _value, $Res Function(_$UserNotAuthorized) _then)
+      : super(_value, (v) => _then(v as _$UserNotAuthorized));
 
   @override
-  UserNotAuthorized get _value => super._value as UserNotAuthorized;
+  _$UserNotAuthorized get _value => super._value as _$UserNotAuthorized;
 }
 
 /// @nodoc
@@ -101,12 +101,13 @@ class _$UserNotAuthorized
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'UserFailure.userNotAuthorized'));
+        .add(DiagnosticsProperty('type', 'UserFailure.userNotAuthorized'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is UserNotAuthorized);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UserNotAuthorized);
   }
 
   @override
@@ -118,6 +119,14 @@ class _$UserNotAuthorized
     required TResult Function() userNotAuthorized,
   }) {
     return userNotAuthorized();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? userNotAuthorized,
+  }) {
+    return userNotAuthorized?.call();
   }
 
   @override
@@ -138,6 +147,14 @@ class _$UserNotAuthorized
     required TResult Function(UserNotAuthorized value) userNotAuthorized,
   }) {
     return userNotAuthorized(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(UserNotAuthorized value)? userNotAuthorized,
+  }) {
+    return userNotAuthorized?.call(this);
   }
 
   @override

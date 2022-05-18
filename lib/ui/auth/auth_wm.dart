@@ -2,7 +2,6 @@ import 'package:board_manager/repository/auth/auth_failure.dart';
 import 'package:board_manager/repository/auth/auth_repository.dart';
 import 'package:board_manager/ui/app/translation.dart';
 import 'package:board_manager/ui/router/app_router.gr.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:surf_mwwm/surf_mwwm.dart';
 

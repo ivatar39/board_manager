@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'auth_failure.dart';
 
@@ -10,25 +12,18 @@ part of 'auth_failure.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$AuthFailureTearOff {
-  const _$AuthFailureTearOff();
-
-  SystemMemoryFailure systemMemoryFailure() {
-    return const SystemMemoryFailure();
-  }
-}
-
-/// @nodoc
-const $AuthFailure = _$AuthFailureTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$AuthFailure {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() systemMemoryFailure,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? systemMemoryFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -40,6 +35,11 @@ mixin _$AuthFailure {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(SystemMemoryFailure value) systemMemoryFailure,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(SystemMemoryFailure value)? systemMemoryFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -67,22 +67,22 @@ class _$AuthFailureCopyWithImpl<$Res> implements $AuthFailureCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $SystemMemoryFailureCopyWith<$Res> {
-  factory $SystemMemoryFailureCopyWith(
-          SystemMemoryFailure value, $Res Function(SystemMemoryFailure) then) =
-      _$SystemMemoryFailureCopyWithImpl<$Res>;
+abstract class _$$SystemMemoryFailureCopyWith<$Res> {
+  factory _$$SystemMemoryFailureCopyWith(_$SystemMemoryFailure value,
+          $Res Function(_$SystemMemoryFailure) then) =
+      __$$SystemMemoryFailureCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$SystemMemoryFailureCopyWithImpl<$Res>
+class __$$SystemMemoryFailureCopyWithImpl<$Res>
     extends _$AuthFailureCopyWithImpl<$Res>
-    implements $SystemMemoryFailureCopyWith<$Res> {
-  _$SystemMemoryFailureCopyWithImpl(
-      SystemMemoryFailure _value, $Res Function(SystemMemoryFailure) _then)
-      : super(_value, (v) => _then(v as SystemMemoryFailure));
+    implements _$$SystemMemoryFailureCopyWith<$Res> {
+  __$$SystemMemoryFailureCopyWithImpl(
+      _$SystemMemoryFailure _value, $Res Function(_$SystemMemoryFailure) _then)
+      : super(_value, (v) => _then(v as _$SystemMemoryFailure));
 
   @override
-  SystemMemoryFailure get _value => super._value as SystemMemoryFailure;
+  _$SystemMemoryFailure get _value => super._value as _$SystemMemoryFailure;
 }
 
 /// @nodoc
@@ -101,12 +101,13 @@ class _$SystemMemoryFailure
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'AuthFailure.systemMemoryFailure'));
+        .add(DiagnosticsProperty('type', 'AuthFailure.systemMemoryFailure'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is SystemMemoryFailure);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SystemMemoryFailure);
   }
 
   @override
@@ -118,6 +119,14 @@ class _$SystemMemoryFailure
     required TResult Function() systemMemoryFailure,
   }) {
     return systemMemoryFailure();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? systemMemoryFailure,
+  }) {
+    return systemMemoryFailure?.call();
   }
 
   @override
@@ -138,6 +147,14 @@ class _$SystemMemoryFailure
     required TResult Function(SystemMemoryFailure value) systemMemoryFailure,
   }) {
     return systemMemoryFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(SystemMemoryFailure value)? systemMemoryFailure,
+  }) {
+    return systemMemoryFailure?.call(this);
   }
 
   @override

@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'core_failure.dart';
 
@@ -10,25 +12,7 @@ part of 'core_failure.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$CoreFailureTearOff {
-  const _$CoreFailureTearOff();
-
-  CheckInternetConnection checkInternetConnection() {
-    return const CheckInternetConnection();
-  }
-
-  ServerFailure serverFailure(String message) {
-    return ServerFailure(
-      message,
-    );
-  }
-}
-
-/// @nodoc
-const $CoreFailure = _$CoreFailureTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$CoreFailure {
@@ -36,6 +20,12 @@ mixin _$CoreFailure {
   TResult when<TResult extends Object?>({
     required TResult Function() checkInternetConnection,
     required TResult Function(String message) serverFailure,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? checkInternetConnection,
+    TResult Function(String message)? serverFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +40,12 @@ mixin _$CoreFailure {
     required TResult Function(CheckInternetConnection value)
         checkInternetConnection,
     required TResult Function(ServerFailure value) serverFailure,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(CheckInternetConnection value)? checkInternetConnection,
+    TResult Function(ServerFailure value)? serverFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -78,22 +74,23 @@ class _$CoreFailureCopyWithImpl<$Res> implements $CoreFailureCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $CheckInternetConnectionCopyWith<$Res> {
-  factory $CheckInternetConnectionCopyWith(CheckInternetConnection value,
-          $Res Function(CheckInternetConnection) then) =
-      _$CheckInternetConnectionCopyWithImpl<$Res>;
+abstract class _$$CheckInternetConnectionCopyWith<$Res> {
+  factory _$$CheckInternetConnectionCopyWith(_$CheckInternetConnection value,
+          $Res Function(_$CheckInternetConnection) then) =
+      __$$CheckInternetConnectionCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$CheckInternetConnectionCopyWithImpl<$Res>
+class __$$CheckInternetConnectionCopyWithImpl<$Res>
     extends _$CoreFailureCopyWithImpl<$Res>
-    implements $CheckInternetConnectionCopyWith<$Res> {
-  _$CheckInternetConnectionCopyWithImpl(CheckInternetConnection _value,
-      $Res Function(CheckInternetConnection) _then)
-      : super(_value, (v) => _then(v as CheckInternetConnection));
+    implements _$$CheckInternetConnectionCopyWith<$Res> {
+  __$$CheckInternetConnectionCopyWithImpl(_$CheckInternetConnection _value,
+      $Res Function(_$CheckInternetConnection) _then)
+      : super(_value, (v) => _then(v as _$CheckInternetConnection));
 
   @override
-  CheckInternetConnection get _value => super._value as CheckInternetConnection;
+  _$CheckInternetConnection get _value =>
+      super._value as _$CheckInternetConnection;
 }
 
 /// @nodoc
@@ -111,13 +108,15 @@ class _$CheckInternetConnection
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'CoreFailure.checkInternetConnection'));
+    properties.add(
+        DiagnosticsProperty('type', 'CoreFailure.checkInternetConnection'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is CheckInternetConnection);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CheckInternetConnection);
   }
 
   @override
@@ -130,6 +129,15 @@ class _$CheckInternetConnection
     required TResult Function(String message) serverFailure,
   }) {
     return checkInternetConnection();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? checkInternetConnection,
+    TResult Function(String message)? serverFailure,
+  }) {
+    return checkInternetConnection?.call();
   }
 
   @override
@@ -157,6 +165,15 @@ class _$CheckInternetConnection
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(CheckInternetConnection value)? checkInternetConnection,
+    TResult Function(ServerFailure value)? serverFailure,
+  }) {
+    return checkInternetConnection?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(CheckInternetConnection value)? checkInternetConnection,
     TResult Function(ServerFailure value)? serverFailure,
@@ -174,28 +191,29 @@ abstract class CheckInternetConnection implements CoreFailure {
 }
 
 /// @nodoc
-abstract class $ServerFailureCopyWith<$Res> {
-  factory $ServerFailureCopyWith(
-          ServerFailure value, $Res Function(ServerFailure) then) =
-      _$ServerFailureCopyWithImpl<$Res>;
+abstract class _$$ServerFailureCopyWith<$Res> {
+  factory _$$ServerFailureCopyWith(
+          _$ServerFailure value, $Res Function(_$ServerFailure) then) =
+      __$$ServerFailureCopyWithImpl<$Res>;
   $Res call({String message});
 }
 
 /// @nodoc
-class _$ServerFailureCopyWithImpl<$Res> extends _$CoreFailureCopyWithImpl<$Res>
-    implements $ServerFailureCopyWith<$Res> {
-  _$ServerFailureCopyWithImpl(
-      ServerFailure _value, $Res Function(ServerFailure) _then)
-      : super(_value, (v) => _then(v as ServerFailure));
+class __$$ServerFailureCopyWithImpl<$Res>
+    extends _$CoreFailureCopyWithImpl<$Res>
+    implements _$$ServerFailureCopyWith<$Res> {
+  __$$ServerFailureCopyWithImpl(
+      _$ServerFailure _value, $Res Function(_$ServerFailure) _then)
+      : super(_value, (v) => _then(v as _$ServerFailure));
 
   @override
-  ServerFailure get _value => super._value as ServerFailure;
+  _$ServerFailure get _value => super._value as _$ServerFailure;
 
   @override
   $Res call({
     Object? message = freezed,
   }) {
-    return _then(ServerFailure(
+    return _then(_$ServerFailure(
       message == freezed
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -228,19 +246,19 @@ class _$ServerFailure with DiagnosticableTreeMixin implements ServerFailure {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is ServerFailure &&
-            (identical(other.message, message) ||
-                const DeepCollectionEquality().equals(other.message, message)));
+        (other.runtimeType == runtimeType &&
+            other is _$ServerFailure &&
+            const DeepCollectionEquality().equals(other.message, message));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(message);
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
 
   @JsonKey(ignore: true)
   @override
-  $ServerFailureCopyWith<ServerFailure> get copyWith =>
-      _$ServerFailureCopyWithImpl<ServerFailure>(this, _$identity);
+  _$$ServerFailureCopyWith<_$ServerFailure> get copyWith =>
+      __$$ServerFailureCopyWithImpl<_$ServerFailure>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -249,6 +267,15 @@ class _$ServerFailure with DiagnosticableTreeMixin implements ServerFailure {
     required TResult Function(String message) serverFailure,
   }) {
     return serverFailure(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? checkInternetConnection,
+    TResult Function(String message)? serverFailure,
+  }) {
+    return serverFailure?.call(message);
   }
 
   @override
@@ -276,6 +303,15 @@ class _$ServerFailure with DiagnosticableTreeMixin implements ServerFailure {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(CheckInternetConnection value)? checkInternetConnection,
+    TResult Function(ServerFailure value)? serverFailure,
+  }) {
+    return serverFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(CheckInternetConnection value)? checkInternetConnection,
     TResult Function(ServerFailure value)? serverFailure,
@@ -289,10 +325,10 @@ class _$ServerFailure with DiagnosticableTreeMixin implements ServerFailure {
 }
 
 abstract class ServerFailure implements CoreFailure {
-  const factory ServerFailure(String message) = _$ServerFailure;
+  const factory ServerFailure(final String message) = _$ServerFailure;
 
   String get message => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ServerFailureCopyWith<ServerFailure> get copyWith =>
+  _$$ServerFailureCopyWith<_$ServerFailure> get copyWith =>
       throw _privateConstructorUsedError;
 }

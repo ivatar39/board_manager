@@ -17,15 +17,15 @@ class GameAdapter extends TypeAdapter<Game> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return Game(
-      id: fields[0] as String,
-      url: fields[1] as String,
-      thumbnailUrl: fields[2] as String,
-      name: fields[3] as String,
-      shortDescription: fields[4] as String,
-      description: fields[5] as String,
-      minPlayers: fields[6] as int?,
-      maxPlayers: fields[7] as int?,
-      owner: fields[8] as User?,
+      fields[0] as String,
+      fields[1] as String,
+      fields[2] as String,
+      fields[3] as String,
+      fields[4] as String,
+      fields[5] as String,
+      fields[6] as int?,
+      fields[7] as int?,
+      fields[8] as User?,
     );
   }
 
@@ -68,21 +68,22 @@ class GameAdapter extends TypeAdapter<Game> {
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Game _$_$_GameFromJson(Map<String, dynamic> json) {
-  return _$_Game(
-    id: json['id'] as String,
-    url: json['url'] as String,
-    thumbnailUrl: json['thumb_url'] as String? ??
-        'https://img.icons8.com/ios/452/board-game.png',
-    name: json['name'] as String,
-    shortDescription: json['description_preview'] as String? ?? '',
-    description: json['description'] as String,
-    minPlayers: json['min_players'] as int?,
-    maxPlayers: json['max_players'] as int?,
-  );
-}
+_$_Game _$$_GameFromJson(Map<String, dynamic> json) => _$_Game(
+      json['id'] as String,
+      json['url'] as String,
+      json['thumb_url'] as String? ??
+          'https://img.icons8.com/ios/452/board-game.png',
+      json['name'] as String,
+      json['description_preview'] as String? ?? '',
+      json['description'] as String,
+      json['min_players'] as int?,
+      json['max_players'] as int?,
+      json['owner'] == null
+          ? null
+          : User.fromJson(json['owner'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_GameToJson(_$_Game instance) => <String, dynamic>{
+Map<String, dynamic> _$$_GameToJson(_$_Game instance) => <String, dynamic>{
       'id': instance.id,
       'url': instance.url,
       'thumb_url': instance.thumbnailUrl,
@@ -91,4 +92,5 @@ Map<String, dynamic> _$_$_GameToJson(_$_Game instance) => <String, dynamic>{
       'description': instance.description,
       'min_players': instance.minPlayers,
       'max_players': instance.maxPlayers,
+      'owner': instance.owner?.toJson(),
     };
