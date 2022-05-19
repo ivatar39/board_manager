@@ -1,6 +1,5 @@
 import 'package:board_manager/tools/api_secrets.dart';
 import 'package:dio/dio.dart';
-import 'package:dio_firebase_performance/dio_firebase_performance.dart';
 import 'package:injectable/injectable.dart';
 
 const String apiUrl = 'https://api.boardgameatlas.com/api';
@@ -21,8 +20,6 @@ abstract class DioInjectableModule {
     );
     final dio = Dio(options);
 
-    final performanceInterceptor = DioFirebasePerformanceInterceptor();
-    dio.interceptors.add(performanceInterceptor);
     return dio;
   }
 }

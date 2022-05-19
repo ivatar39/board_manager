@@ -22,4 +22,6 @@ class User with _$User {
         name: name,
         isAuthorized: true,
       );
+
+  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 }

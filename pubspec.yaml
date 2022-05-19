@@ -6,70 +6,65 @@ publish_to: 'none'
 version: 1.0.2+3
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.17.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
   # Firebase
-  firebase_core: ^1.4.0
-  firebase_analytics: ^8.2.0
-  firebase_performance: ^0.7.0+7
-  firebase_crashlytics: ^2.1.1
+  firebase_core: ^1.17.0
+  firebase_analytics: ^9.1.8
+  firebase_performance: ^0.8.0+12
+  firebase_crashlytics: ^2.8.0
 
   # UI
-  cupertino_icons: ^1.0.3
-  cached_network_image: ^3.1.0
+  cupertino_icons: ^1.0.4
+  cached_network_image: ^3.2.1
 
   # Architecture
   surf_mwwm: ^2.0.2
-  freezed_annotation: ^0.14.3
-  rxdart: ^0.27.1
+  freezed_annotation: ^2.0.3
+  rxdart: ^0.27.3
 
   # Logging
-  surf_logger: ^1.0.1
+  surf_logger: ^1.1.0
 
   # Storage
-  hive: ^2.0.4
+  hive: ^2.2.0
 
   # Dependency Injection
   get_it: ^7.2.0
-  injectable: ^1.4.1
+  injectable: ^1.5.3
 
   # Tools
-  path_provider: ^2.0.2
-  uuid: ^3.0.4
-  json_annotation: ^4.1.0
-
+  path_provider: ^2.0.10
+  uuid: ^3.0.6
+  json_annotation: ^4.5.0
 
   # Routing
-  auto_route: ^2.3.0
+  auto_route: ^4.0.1
 
   # Network
-  dio: ^4.0.0
-  dio_firebase_performance: ^0.3.0
+  dio: ^4.0.6
 
-dependency_overrides:
-  meta: ^1.7.0
-  analyzer: ^2.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   # Auto-gen
-  hive_generator: ^1.1.0
-  injectable_generator: ^1.4.1
-  freezed: ^0.14.5
-  auto_route_generator: ^2.3.0
-  json_serializable: ^5.0.0
+  hive_generator: ^1.1.2
+  injectable_generator: ^1.5.3
+  freezed: ^2.0.3+1
+  auto_route_generator: ^4.0.0
+  json_serializable: ^6.2.0
 
   # Linting
-  surf_lint_rules: ^1.4.0
+  surf_lint_rules: ^1.5.0
 
   # Build
-  build_runner: ^2.1.1
+  build_runner: ^2.1.11
 
 
 flutter:

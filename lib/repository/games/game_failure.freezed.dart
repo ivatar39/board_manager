@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'game_failure.dart';
 
@@ -10,23 +12,7 @@ part of 'game_failure.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$GameFailureTearOff {
-  const _$GameFailureTearOff();
-
-  CouldNotAddToCollection couldNotAddToCollection() {
-    return const CouldNotAddToCollection();
-  }
-
-  AlreadyInCollection alreadyInCollection() {
-    return const AlreadyInCollection();
-  }
-}
-
-/// @nodoc
-const $GameFailure = _$GameFailureTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$GameFailure {
@@ -34,6 +20,12 @@ mixin _$GameFailure {
   TResult when<TResult extends Object?>({
     required TResult Function() couldNotAddToCollection,
     required TResult Function() alreadyInCollection,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? couldNotAddToCollection,
+    TResult Function()? alreadyInCollection,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -48,6 +40,12 @@ mixin _$GameFailure {
     required TResult Function(CouldNotAddToCollection value)
         couldNotAddToCollection,
     required TResult Function(AlreadyInCollection value) alreadyInCollection,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(CouldNotAddToCollection value)? couldNotAddToCollection,
+    TResult Function(AlreadyInCollection value)? alreadyInCollection,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -76,22 +74,23 @@ class _$GameFailureCopyWithImpl<$Res> implements $GameFailureCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $CouldNotAddToCollectionCopyWith<$Res> {
-  factory $CouldNotAddToCollectionCopyWith(CouldNotAddToCollection value,
-          $Res Function(CouldNotAddToCollection) then) =
-      _$CouldNotAddToCollectionCopyWithImpl<$Res>;
+abstract class _$$CouldNotAddToCollectionCopyWith<$Res> {
+  factory _$$CouldNotAddToCollectionCopyWith(_$CouldNotAddToCollection value,
+          $Res Function(_$CouldNotAddToCollection) then) =
+      __$$CouldNotAddToCollectionCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$CouldNotAddToCollectionCopyWithImpl<$Res>
+class __$$CouldNotAddToCollectionCopyWithImpl<$Res>
     extends _$GameFailureCopyWithImpl<$Res>
-    implements $CouldNotAddToCollectionCopyWith<$Res> {
-  _$CouldNotAddToCollectionCopyWithImpl(CouldNotAddToCollection _value,
-      $Res Function(CouldNotAddToCollection) _then)
-      : super(_value, (v) => _then(v as CouldNotAddToCollection));
+    implements _$$CouldNotAddToCollectionCopyWith<$Res> {
+  __$$CouldNotAddToCollectionCopyWithImpl(_$CouldNotAddToCollection _value,
+      $Res Function(_$CouldNotAddToCollection) _then)
+      : super(_value, (v) => _then(v as _$CouldNotAddToCollection));
 
   @override
-  CouldNotAddToCollection get _value => super._value as CouldNotAddToCollection;
+  _$CouldNotAddToCollection get _value =>
+      super._value as _$CouldNotAddToCollection;
 }
 
 /// @nodoc
@@ -109,13 +108,15 @@ class _$CouldNotAddToCollection
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'GameFailure.couldNotAddToCollection'));
+    properties.add(
+        DiagnosticsProperty('type', 'GameFailure.couldNotAddToCollection'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is CouldNotAddToCollection);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CouldNotAddToCollection);
   }
 
   @override
@@ -128,6 +129,15 @@ class _$CouldNotAddToCollection
     required TResult Function() alreadyInCollection,
   }) {
     return couldNotAddToCollection();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? couldNotAddToCollection,
+    TResult Function()? alreadyInCollection,
+  }) {
+    return couldNotAddToCollection?.call();
   }
 
   @override
@@ -155,6 +165,15 @@ class _$CouldNotAddToCollection
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(CouldNotAddToCollection value)? couldNotAddToCollection,
+    TResult Function(AlreadyInCollection value)? alreadyInCollection,
+  }) {
+    return couldNotAddToCollection?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(CouldNotAddToCollection value)? couldNotAddToCollection,
     TResult Function(AlreadyInCollection value)? alreadyInCollection,
@@ -172,22 +191,22 @@ abstract class CouldNotAddToCollection implements GameFailure {
 }
 
 /// @nodoc
-abstract class $AlreadyInCollectionCopyWith<$Res> {
-  factory $AlreadyInCollectionCopyWith(
-          AlreadyInCollection value, $Res Function(AlreadyInCollection) then) =
-      _$AlreadyInCollectionCopyWithImpl<$Res>;
+abstract class _$$AlreadyInCollectionCopyWith<$Res> {
+  factory _$$AlreadyInCollectionCopyWith(_$AlreadyInCollection value,
+          $Res Function(_$AlreadyInCollection) then) =
+      __$$AlreadyInCollectionCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AlreadyInCollectionCopyWithImpl<$Res>
+class __$$AlreadyInCollectionCopyWithImpl<$Res>
     extends _$GameFailureCopyWithImpl<$Res>
-    implements $AlreadyInCollectionCopyWith<$Res> {
-  _$AlreadyInCollectionCopyWithImpl(
-      AlreadyInCollection _value, $Res Function(AlreadyInCollection) _then)
-      : super(_value, (v) => _then(v as AlreadyInCollection));
+    implements _$$AlreadyInCollectionCopyWith<$Res> {
+  __$$AlreadyInCollectionCopyWithImpl(
+      _$AlreadyInCollection _value, $Res Function(_$AlreadyInCollection) _then)
+      : super(_value, (v) => _then(v as _$AlreadyInCollection));
 
   @override
-  AlreadyInCollection get _value => super._value as AlreadyInCollection;
+  _$AlreadyInCollection get _value => super._value as _$AlreadyInCollection;
 }
 
 /// @nodoc
@@ -206,12 +225,13 @@ class _$AlreadyInCollection
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'GameFailure.alreadyInCollection'));
+        .add(DiagnosticsProperty('type', 'GameFailure.alreadyInCollection'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is AlreadyInCollection);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AlreadyInCollection);
   }
 
   @override
@@ -224,6 +244,15 @@ class _$AlreadyInCollection
     required TResult Function() alreadyInCollection,
   }) {
     return alreadyInCollection();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? couldNotAddToCollection,
+    TResult Function()? alreadyInCollection,
+  }) {
+    return alreadyInCollection?.call();
   }
 
   @override
@@ -247,6 +276,15 @@ class _$AlreadyInCollection
     required TResult Function(AlreadyInCollection value) alreadyInCollection,
   }) {
     return alreadyInCollection(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(CouldNotAddToCollection value)? couldNotAddToCollection,
+    TResult Function(AlreadyInCollection value)? alreadyInCollection,
+  }) {
+    return alreadyInCollection?.call(this);
   }
 
   @override

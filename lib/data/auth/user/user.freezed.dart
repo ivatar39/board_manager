@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'user.dart';
 
@@ -10,26 +12,11 @@ part of 'user.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-/// @nodoc
-class _$UserTearOff {
-  const _$UserTearOff();
-
-  _User call(
-      {@HiveField(0) required String uniqueId,
-      @HiveField(1) required String name,
-      @HiveField(2) required bool isAuthorized}) {
-    return _User(
-      uniqueId: uniqueId,
-      name: name,
-      isAuthorized: isAuthorized,
-    );
-  }
+User _$UserFromJson(Map<String, dynamic> json) {
+  return _User.fromJson(json);
 }
-
-/// @nodoc
-const $User = _$UserTearOff();
 
 /// @nodoc
 mixin _$User {
@@ -40,6 +27,7 @@ mixin _$User {
   @HiveField(2)
   bool get isAuthorized => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $UserCopyWith<User> get copyWith => throw _privateConstructorUsedError;
 }
@@ -86,9 +74,9 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
-  factory _$UserCopyWith(_User value, $Res Function(_User) then) =
-      __$UserCopyWithImpl<$Res>;
+abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
+  factory _$$_UserCopyWith(_$_User value, $Res Function(_$_User) then) =
+      __$$_UserCopyWithImpl<$Res>;
   @override
   $Res call(
       {@HiveField(0) String uniqueId,
@@ -97,13 +85,13 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
-    implements _$UserCopyWith<$Res> {
-  __$UserCopyWithImpl(_User _value, $Res Function(_User) _then)
-      : super(_value, (v) => _then(v as _User));
+class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
+    implements _$$_UserCopyWith<$Res> {
+  __$$_UserCopyWithImpl(_$_User _value, $Res Function(_$_User) _then)
+      : super(_value, (v) => _then(v as _$_User));
 
   @override
-  _User get _value => super._value as _User;
+  _$_User get _value => super._value as _$_User;
 
   @override
   $Res call({
@@ -111,7 +99,7 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
     Object? name = freezed,
     Object? isAuthorized = freezed,
   }) {
-    return _then(_User(
+    return _then(_$_User(
       uniqueId: uniqueId == freezed
           ? _value.uniqueId
           : uniqueId // ignore: cast_nullable_to_non_nullable
@@ -129,13 +117,15 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_User extends _User with DiagnosticableTreeMixin {
   const _$_User(
       {@HiveField(0) required this.uniqueId,
       @HiveField(1) required this.name,
       @HiveField(2) required this.isAuthorized})
       : super._();
+
+  factory _$_User.fromJson(Map<String, dynamic> json) => _$$_UserFromJson(json);
 
   @override
   @HiveField(0)
@@ -165,36 +155,41 @@ class _$_User extends _User with DiagnosticableTreeMixin {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _User &&
-            (identical(other.uniqueId, uniqueId) ||
-                const DeepCollectionEquality()
-                    .equals(other.uniqueId, uniqueId)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.isAuthorized, isAuthorized) ||
-                const DeepCollectionEquality()
-                    .equals(other.isAuthorized, isAuthorized)));
+        (other.runtimeType == runtimeType &&
+            other is _$_User &&
+            const DeepCollectionEquality().equals(other.uniqueId, uniqueId) &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality()
+                .equals(other.isAuthorized, isAuthorized));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(uniqueId) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(isAuthorized);
 
   @JsonKey(ignore: true)
   @override
-  _$UserCopyWith<_User> get copyWith =>
-      __$UserCopyWithImpl<_User>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(uniqueId),
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(isAuthorized));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_UserCopyWith<_$_User> get copyWith =>
+      __$$_UserCopyWithImpl<_$_User>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_UserToJson(this);
+  }
 }
 
 abstract class _User extends User {
   const factory _User(
-      {@HiveField(0) required String uniqueId,
-      @HiveField(1) required String name,
-      @HiveField(2) required bool isAuthorized}) = _$_User;
+      {@HiveField(0) required final String uniqueId,
+      @HiveField(1) required final String name,
+      @HiveField(2) required final bool isAuthorized}) = _$_User;
   const _User._() : super._();
+
+  factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
 
   @override
   @HiveField(0)
@@ -207,5 +202,5 @@ abstract class _User extends User {
   bool get isAuthorized => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$UserCopyWith<_User> get copyWith => throw _privateConstructorUsedError;
+  _$$_UserCopyWith<_$_User> get copyWith => throw _privateConstructorUsedError;
 }

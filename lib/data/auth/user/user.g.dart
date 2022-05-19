@@ -45,3 +45,19 @@ class UserAdapter extends TypeAdapter<User> {
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_User _$$_UserFromJson(Map<String, dynamic> json) => _$_User(
+      uniqueId: json['uniqueId'] as String,
+      name: json['name'] as String,
+      isAuthorized: json['isAuthorized'] as bool,
+    );
+
+Map<String, dynamic> _$$_UserToJson(_$_User instance) => <String, dynamic>{
+      'uniqueId': instance.uniqueId,
+      'name': instance.name,
+      'isAuthorized': instance.isAuthorized,
+    };
