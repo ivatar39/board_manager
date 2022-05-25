@@ -4,11 +4,11 @@ import 'package:board_manager/ui/auth/auth_screen.dart';
 import 'package:board_manager/ui/catalog/catalog_screen.dart';
 import 'package:board_manager/ui/collection/collection_screen.dart';
 import 'package:board_manager/ui/profile/profile_screen.dart';
-import 'package:board_manager/ui/splash/splash_screen.dart';
+import 'package:board_manager/ui/splash/splash_widget.dart';
 
 @AdaptiveAutoRouter(
   routes: <AdaptiveRoute>[
-    AdaptiveRoute<dynamic>(page: SplashScreen, initial: true),
+    AdaptiveRoute<dynamic>(page: SplashWidget, initial: true),
     AdaptiveRoute<dynamic>(page: AuthScreen),
     AdaptiveRoute<dynamic>(page: CollectionScreen),
     AdaptiveRoute<dynamic>(page: CatalogScreen, fullscreenDialog: true),

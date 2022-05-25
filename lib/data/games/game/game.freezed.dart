@@ -206,39 +206,39 @@ class __$$_GameCopyWithImpl<$Res> extends _$GameCopyWithImpl<$Res>
     Object? owner = freezed,
   }) {
     return _then(_$_Game(
-      id == freezed
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      url == freezed
+      url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String,
-      thumbnailUrl == freezed
+      thumbnailUrl: thumbnailUrl == freezed
           ? _value.thumbnailUrl
           : thumbnailUrl // ignore: cast_nullable_to_non_nullable
               as String,
-      name == freezed
+      name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      shortDescription == freezed
+      shortDescription: shortDescription == freezed
           ? _value.shortDescription
           : shortDescription // ignore: cast_nullable_to_non_nullable
               as String,
-      description == freezed
+      description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      minPlayers == freezed
+      minPlayers: minPlayers == freezed
           ? _value.minPlayers
           : minPlayers // ignore: cast_nullable_to_non_nullable
               as int?,
-      maxPlayers == freezed
+      maxPlayers: maxPlayers == freezed
           ? _value.maxPlayers
           : maxPlayers // ignore: cast_nullable_to_non_nullable
               as int?,
-      owner == freezed
+      owner: owner == freezed
           ? _value.owner
           : owner // ignore: cast_nullable_to_non_nullable
               as User?,
@@ -248,30 +248,31 @@ class __$$_GameCopyWithImpl<$Res> extends _$GameCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 1, adapterName: 'GameAdapter')
 class _$_Game with DiagnosticableTreeMixin implements _Game {
-  _$_Game(
-      @HiveField(0)
-          this.id,
+  const _$_Game(
+      {@HiveField(0)
+          required this.id,
       @HiveField(1)
-          this.url,
+          required this.url,
       @HiveField(2)
       @JsonKey(defaultValue: kDefaultThumbnailUrl, name: 'thumb_url')
-          this.thumbnailUrl,
+          required this.thumbnailUrl,
       @HiveField(3)
-          this.name,
+          required this.name,
       @HiveField(4)
       @JsonKey(defaultValue: '', name: 'description_preview')
-          this.shortDescription,
+          required this.shortDescription,
       @HiveField(5)
-          this.description,
+          required this.description,
       @HiveField(6)
       @JsonKey(name: 'min_players')
-          this.minPlayers,
+          required this.minPlayers,
       @HiveField(7)
       @JsonKey(name: 'max_players')
-          this.maxPlayers,
+          required this.maxPlayers,
       @HiveField(8)
-          this.owner);
+          required this.owner});
 
   factory _$_Game.fromJson(Map<String, dynamic> json) => _$$_GameFromJson(json);
 
@@ -375,29 +376,29 @@ class _$_Game with DiagnosticableTreeMixin implements _Game {
 }
 
 abstract class _Game implements Game {
-  factory _Game(
-      @HiveField(0)
-          final String id,
+  const factory _Game(
+      {@HiveField(0)
+          required final String id,
       @HiveField(1)
-          final String url,
+          required final String url,
       @HiveField(2)
       @JsonKey(defaultValue: kDefaultThumbnailUrl, name: 'thumb_url')
-          final String thumbnailUrl,
+          required final String thumbnailUrl,
       @HiveField(3)
-          final String name,
+          required final String name,
       @HiveField(4)
       @JsonKey(defaultValue: '', name: 'description_preview')
-          final String shortDescription,
+          required final String shortDescription,
       @HiveField(5)
-          final String description,
+          required final String description,
       @HiveField(6)
       @JsonKey(name: 'min_players')
-          final int? minPlayers,
+          required final int? minPlayers,
       @HiveField(7)
       @JsonKey(name: 'max_players')
-          final int? maxPlayers,
+          required final int? maxPlayers,
       @HiveField(8)
-          final User? owner) = _$_Game;
+          required final User? owner}) = _$_Game;
 
   factory _Game.fromJson(Map<String, dynamic> json) = _$_Game.fromJson;
 

@@ -20,7 +20,7 @@ User _$UserFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$User {
-  @HiveField(0)
+  @HiveField(0, defaultValue: '')
   String get uniqueId => throw _privateConstructorUsedError;
   @HiveField(1)
   String get name => throw _privateConstructorUsedError;
@@ -37,7 +37,7 @@ abstract class $UserCopyWith<$Res> {
   factory $UserCopyWith(User value, $Res Function(User) then) =
       _$UserCopyWithImpl<$Res>;
   $Res call(
-      {@HiveField(0) String uniqueId,
+      {@HiveField(0, defaultValue: '') String uniqueId,
       @HiveField(1) String name,
       @HiveField(2) bool isAuthorized});
 }
@@ -79,7 +79,7 @@ abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       __$$_UserCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@HiveField(0) String uniqueId,
+      {@HiveField(0, defaultValue: '') String uniqueId,
       @HiveField(1) String name,
       @HiveField(2) bool isAuthorized});
 }
@@ -118,9 +118,10 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 0, adapterName: 'UserAdapter')
 class _$_User extends _User with DiagnosticableTreeMixin {
   const _$_User(
-      {@HiveField(0) required this.uniqueId,
+      {@HiveField(0, defaultValue: '') required this.uniqueId,
       @HiveField(1) required this.name,
       @HiveField(2) required this.isAuthorized})
       : super._();
@@ -128,7 +129,7 @@ class _$_User extends _User with DiagnosticableTreeMixin {
   factory _$_User.fromJson(Map<String, dynamic> json) => _$$_UserFromJson(json);
 
   @override
-  @HiveField(0)
+  @HiveField(0, defaultValue: '')
   final String uniqueId;
   @override
   @HiveField(1)
@@ -184,7 +185,7 @@ class _$_User extends _User with DiagnosticableTreeMixin {
 
 abstract class _User extends User {
   const factory _User(
-      {@HiveField(0) required final String uniqueId,
+      {@HiveField(0, defaultValue: '') required final String uniqueId,
       @HiveField(1) required final String name,
       @HiveField(2) required final bool isAuthorized}) = _$_User;
   const _User._() : super._();
@@ -192,7 +193,7 @@ abstract class _User extends User {
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
 
   @override
-  @HiveField(0)
+  @HiveField(0, defaultValue: '')
   String get uniqueId => throw _privateConstructorUsedError;
   @override
   @HiveField(1)

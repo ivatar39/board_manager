@@ -7,10 +7,10 @@ part 'user.freezed.dart';
 part 'user.g.dart';
 
 @freezed
-@HiveType(typeId: 0)
 class User with _$User {
+  @HiveType(typeId: 0, adapterName: 'UserAdapter')
   const factory User({
-    @HiveField(0) required String uniqueId,
+    @HiveField(0, defaultValue: '') required String uniqueId,
     @HiveField(1) required String name,
     @HiveField(2) required bool isAuthorized,
   }) = _User;
