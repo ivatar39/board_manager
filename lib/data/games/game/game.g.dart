@@ -6,31 +6,31 @@ part of 'game.dart';
 // TypeAdapterGenerator
 // **************************************************************************
 
-class GameAdapter extends TypeAdapter<Game> {
+class GameAdapter extends TypeAdapter<_$_Game> {
   @override
   final int typeId = 1;
 
   @override
-  Game read(BinaryReader reader) {
+  _$_Game read(BinaryReader reader) {
     final numOfFields = reader.readByte();
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return Game(
-      fields[0] as String,
-      fields[1] as String,
-      fields[2] as String,
-      fields[3] as String,
-      fields[4] as String,
-      fields[5] as String,
-      fields[6] as int?,
-      fields[7] as int?,
-      fields[8] as User?,
+    return _$_Game(
+      id: fields[0] as String,
+      url: fields[1] as String,
+      thumbnailUrl: fields[2] as String,
+      name: fields[3] as String,
+      shortDescription: fields[4] as String,
+      description: fields[5] as String,
+      minPlayers: fields[6] as int?,
+      maxPlayers: fields[7] as int?,
+      owner: fields[8] as User?,
     );
   }
 
   @override
-  void write(BinaryWriter writer, Game obj) {
+  void write(BinaryWriter writer, _$_Game obj) {
     writer
       ..writeByte(9)
       ..writeByte(0)
@@ -69,16 +69,16 @@ class GameAdapter extends TypeAdapter<Game> {
 // **************************************************************************
 
 _$_Game _$$_GameFromJson(Map<String, dynamic> json) => _$_Game(
-      json['id'] as String,
-      json['url'] as String,
-      json['thumb_url'] as String? ??
+      id: json['id'] as String,
+      url: json['url'] as String,
+      thumbnailUrl: json['thumb_url'] as String? ??
           'https://img.icons8.com/ios/452/board-game.png',
-      json['name'] as String,
-      json['description_preview'] as String? ?? '',
-      json['description'] as String,
-      json['min_players'] as int?,
-      json['max_players'] as int?,
-      json['owner'] == null
+      name: json['name'] as String,
+      shortDescription: json['description_preview'] as String? ?? '',
+      description: json['description'] as String,
+      minPlayers: json['min_players'] as int?,
+      maxPlayers: json['max_players'] as int?,
+      owner: json['owner'] == null
           ? null
           : User.fromJson(json['owner'] as Map<String, dynamic>),
     );
@@ -92,5 +92,5 @@ Map<String, dynamic> _$$_GameToJson(_$_Game instance) => <String, dynamic>{
       'description': instance.description,
       'min_players': instance.minPlayers,
       'max_players': instance.maxPlayers,
-      'owner': instance.owner?.toJson(),
+      'owner': instance.owner,
     };

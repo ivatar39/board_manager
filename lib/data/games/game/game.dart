@@ -9,19 +9,19 @@ part 'game.g.dart';
 const String kDefaultThumbnailUrl = 'https://img.icons8.com/ios/452/board-game.png';
 
 @freezed
-@HiveType(typeId: 1)
 class Game with _$Game {
-  factory Game(
-    @HiveField(0) String id,
-    @HiveField(1) String url,
-    @HiveField(2) @JsonKey(defaultValue: kDefaultThumbnailUrl, name: 'thumb_url') String thumbnailUrl,
-    @HiveField(3) String name,
-    @HiveField(4) @JsonKey(defaultValue: '', name: 'description_preview') String shortDescription,
-    @HiveField(5) String description,
-    @HiveField(6) @JsonKey(name: 'min_players') int? minPlayers,
-    @HiveField(7) @JsonKey(name: 'max_players') int? maxPlayers,
-    @HiveField(8) User? owner,
-  ) = _Game;
+  @HiveType(typeId: 1, adapterName: 'GameAdapter')
+  const factory Game({
+    @HiveField(0) required String id,
+    @HiveField(1) required String url,
+    @HiveField(2) @JsonKey(defaultValue: kDefaultThumbnailUrl, name: 'thumb_url') required String thumbnailUrl,
+    @HiveField(3) required String name,
+    @HiveField(4) @JsonKey(defaultValue: '', name: 'description_preview') required String shortDescription,
+    @HiveField(5) required String description,
+    @HiveField(6) @JsonKey(name: 'min_players') required int? minPlayers,
+    @HiveField(7) @JsonKey(name: 'max_players') required int? maxPlayers,
+    @HiveField(8) required User? owner,
+  }) = _Game;
 
   factory Game.fromJson(Map<String, dynamic> json) => _$GameFromJson(json);
 }

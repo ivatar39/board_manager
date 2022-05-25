@@ -15,7 +15,7 @@ import 'package:board_manager/ui/auth/auth_screen.dart' as _i2;
 import 'package:board_manager/ui/catalog/catalog_screen.dart' as _i4;
 import 'package:board_manager/ui/collection/collection_screen.dart' as _i3;
 import 'package:board_manager/ui/profile/profile_screen.dart' as _i5;
-import 'package:board_manager/ui/splash/splash_screen.dart' as _i1;
+import 'package:board_manager/ui/splash/splash_widget.dart' as _i1;
 import 'package:flutter/material.dart' as _i7;
 
 class AppRouter extends _i6.RootStackRouter {
@@ -24,9 +24,9 @@ class AppRouter extends _i6.RootStackRouter {
 
   @override
   final Map<String, _i6.PageFactory> pagesMap = {
-    SplashScreenRoute.name: (routeData) {
+    SplashWidgetRoute.name: (routeData) {
       return _i6.AdaptivePage<dynamic>(
-          routeData: routeData, child: const _i1.SplashScreen());
+          routeData: routeData, child: const _i1.SplashWidget());
     },
     AuthScreenRoute.name: (routeData) {
       return _i6.AdaptivePage<dynamic>(
@@ -50,7 +50,7 @@ class AppRouter extends _i6.RootStackRouter {
 
   @override
   List<_i6.RouteConfig> get routes => [
-        _i6.RouteConfig(SplashScreenRoute.name, path: '/'),
+        _i6.RouteConfig(SplashWidgetRoute.name, path: '/'),
         _i6.RouteConfig(AuthScreenRoute.name, path: '/auth-screen'),
         _i6.RouteConfig(CollectionScreenRoute.name, path: '/collection-screen'),
         _i6.RouteConfig(CatalogScreenRoute.name, path: '/catalog-screen'),
@@ -59,11 +59,11 @@ class AppRouter extends _i6.RootStackRouter {
 }
 
 /// generated route for
-/// [_i1.SplashScreen]
-class SplashScreenRoute extends _i6.PageRouteInfo<void> {
-  const SplashScreenRoute() : super(SplashScreenRoute.name, path: '/');
+/// [_i1.SplashWidget]
+class SplashWidgetRoute extends _i6.PageRouteInfo<void> {
+  const SplashWidgetRoute() : super(SplashWidgetRoute.name, path: '/');
 
-  static const String name = 'SplashScreenRoute';
+  static const String name = 'SplashWidgetRoute';
 }
 
 /// generated route for
