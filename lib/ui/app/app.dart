@@ -8,11 +8,11 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _router = getIt<AppRouter>();
+    final router = getIt<AppRouter>();
     return MaterialApp.router(
       title: 'BoardManager',
-      routerDelegate: _router.delegate(),
-      routeInformationParser: _router.defaultRouteParser(),
+      routerDelegate: router.delegate(),
+      routeInformationParser: router.defaultRouteParser(),
       theme: appTheme,
     );
   }
