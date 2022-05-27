@@ -14,7 +14,7 @@ import 'package:auto_route/auto_route.dart' as _i6;
 import 'package:board_manager/ui/auth/auth_screen.dart' as _i2;
 import 'package:board_manager/ui/catalog/catalog_screen.dart' as _i4;
 import 'package:board_manager/ui/collection/collection_screen.dart' as _i3;
-import 'package:board_manager/ui/profile/profile_screen.dart' as _i5;
+import 'package:board_manager/ui/profile/profile_widget.dart' as _i5;
 import 'package:board_manager/ui/splash/splash_widget.dart' as _i1;
 import 'package:flutter/material.dart' as _i7;
 
@@ -42,9 +42,9 @@ class AppRouter extends _i6.RootStackRouter {
           child: const _i4.CatalogScreen(),
           fullscreenDialog: true);
     },
-    ProfileScreenRoute.name: (routeData) {
+    ProfileWidgetRoute.name: (routeData) {
       return _i6.AdaptivePage<dynamic>(
-          routeData: routeData, child: const _i5.ProfileScreen());
+          routeData: routeData, child: const _i5.ProfileWidget());
     }
   };
 
@@ -54,7 +54,7 @@ class AppRouter extends _i6.RootStackRouter {
         _i6.RouteConfig(AuthScreenRoute.name, path: '/auth-screen'),
         _i6.RouteConfig(CollectionScreenRoute.name, path: '/collection-screen'),
         _i6.RouteConfig(CatalogScreenRoute.name, path: '/catalog-screen'),
-        _i6.RouteConfig(ProfileScreenRoute.name, path: '/profile-screen')
+        _i6.RouteConfig(ProfileWidgetRoute.name, path: '/profile-widget')
       ];
 }
 
@@ -93,10 +93,10 @@ class CatalogScreenRoute extends _i6.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i5.ProfileScreen]
-class ProfileScreenRoute extends _i6.PageRouteInfo<void> {
-  const ProfileScreenRoute()
-      : super(ProfileScreenRoute.name, path: '/profile-screen');
+/// [_i5.ProfileWidget]
+class ProfileWidgetRoute extends _i6.PageRouteInfo<void> {
+  const ProfileWidgetRoute()
+      : super(ProfileWidgetRoute.name, path: '/profile-widget');
 
-  static const String name = 'ProfileScreenRoute';
+  static const String name = 'ProfileWidgetRoute';
 }

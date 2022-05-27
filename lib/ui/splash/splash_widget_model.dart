@@ -6,7 +6,6 @@ import 'package:board_manager/ui/splash/splash_widget.dart';
 import 'package:elementary/elementary.dart';
 import 'package:flutter/material.dart';
 
-/// Builder for
 SplashWidgetModel splashWidgetModelFactory(BuildContext context) {
   return SplashWidgetModel(
     SplashModel(
