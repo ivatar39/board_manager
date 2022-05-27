@@ -69,7 +69,7 @@ class AuthWidgetModel extends WidgetModel<AuthWidget, AuthModel> implements IAut
   Future<void> _signInAndEnter(String name) async {
     try {
       await model.authRepository.signInOrRegisterUser(name);
-      await model.router.replace(const CollectionScreenRoute());
+      await model.router.replace(const CollectionWidgetRoute());
     } on AuthFailure catch (e) {
       e.map(
         systemMemoryFailure: (e) => _showSnackBar(memoryFailure),

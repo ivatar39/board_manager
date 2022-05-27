@@ -13,7 +13,7 @@
 import 'package:auto_route/auto_route.dart' as _i6;
 import 'package:board_manager/ui/auth/auth_widget.dart' as _i2;
 import 'package:board_manager/ui/catalog/catalog_widget.dart' as _i4;
-import 'package:board_manager/ui/collection/collection_screen.dart' as _i3;
+import 'package:board_manager/ui/collection/collection_widget.dart' as _i3;
 import 'package:board_manager/ui/profile/profile_widget.dart' as _i5;
 import 'package:board_manager/ui/splash/splash_widget.dart' as _i1;
 import 'package:flutter/material.dart' as _i7;
@@ -32,9 +32,9 @@ class AppRouter extends _i6.RootStackRouter {
       return _i6.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i2.AuthWidget());
     },
-    CollectionScreenRoute.name: (routeData) {
+    CollectionWidgetRoute.name: (routeData) {
       return _i6.AdaptivePage<dynamic>(
-          routeData: routeData, child: const _i3.CollectionScreen());
+          routeData: routeData, child: const _i3.CollectionWidget());
     },
     CatalogWidgetRoute.name: (routeData) {
       return _i6.AdaptivePage<dynamic>(
@@ -52,7 +52,7 @@ class AppRouter extends _i6.RootStackRouter {
   List<_i6.RouteConfig> get routes => [
         _i6.RouteConfig(SplashWidgetRoute.name, path: '/'),
         _i6.RouteConfig(AuthWidgetRoute.name, path: '/auth-widget'),
-        _i6.RouteConfig(CollectionScreenRoute.name, path: '/collection-screen'),
+        _i6.RouteConfig(CollectionWidgetRoute.name, path: '/collection-widget'),
         _i6.RouteConfig(CatalogWidgetRoute.name, path: '/catalog-widget'),
         _i6.RouteConfig(ProfileWidgetRoute.name, path: '/profile-widget')
       ];
@@ -75,12 +75,12 @@ class AuthWidgetRoute extends _i6.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i3.CollectionScreen]
-class CollectionScreenRoute extends _i6.PageRouteInfo<void> {
-  const CollectionScreenRoute()
-      : super(CollectionScreenRoute.name, path: '/collection-screen');
+/// [_i3.CollectionWidget]
+class CollectionWidgetRoute extends _i6.PageRouteInfo<void> {
+  const CollectionWidgetRoute()
+      : super(CollectionWidgetRoute.name, path: '/collection-widget');
 
-  static const String name = 'CollectionScreenRoute';
+  static const String name = 'CollectionWidgetRoute';
 }
 
 /// generated route for
