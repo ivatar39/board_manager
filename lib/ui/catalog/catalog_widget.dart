@@ -1,37 +1,27 @@
 import 'package:board_manager/data/games/game/game.dart';
 import 'package:board_manager/ui/app/translation.dart';
-import 'package:board_manager/ui/catalog/catalog_game_card.dart';
-import 'package:board_manager/ui/catalog/catalog_wm.dart';
-import 'package:board_manager/ui/catalog/catalog_wm_builder.dart';
+import 'package:board_manager/ui/catalog/catalog_widget_model.dart';
+import 'package:board_manager/ui/catalog/widgets/catalog_game_card.dart';
 import 'package:board_manager/ui/core/failure_wiget.dart';
 import 'package:board_manager/ui/core/loading_widget.dart';
+import 'package:elementary/elementary.dart';
 import 'package:flutter/material.dart';
-import 'package:surf_mwwm/surf_mwwm.dart';
 
-class CatalogScreen extends CoreMwwmWidget<CatalogWidgetModel> {
-  const CatalogScreen({Key? key})
-      : super(
-          key: key,
-          widgetModelBuilder: createCatalogWidgetModel,
-        );
+class CatalogWidget extends ElementaryWidget<ICatalogWidgetModel> {
+  const CatalogWidget({
+    Key? key,
+  }) : super(key: key, catalogWidgetModelFactory);
 
   @override
-  WidgetState<CoreMwwmWidget<CatalogWidgetModel>, CatalogWidgetModel> createWidgetState() {
-    return _CatalogScreenState();
-  }
-}
-
-class _CatalogScreenState extends WidgetState<CatalogScreen, CatalogWidgetModel> {
-  @override
-  Widget build(BuildContext context) {
+  Widget build(ICatalogWidgetModel wm) {
     return ScaffoldMessenger(
       key: wm.scaffoldMessengerKey,
       child: Scaffold(
         appBar: _CatalogScreenAppBar(searchController: wm.textEditingSearchController),
-        body: EntityStateBuilder<List<Game>>(
-          streamedState: wm.catalogState,
+        body: EntityStateNotifierBuilder<List<Game>>(
+          listenableEntityState: wm.catalogState,
           builder: (context, games) {
-            if (games.isNotEmpty) {
+            if (games!.isNotEmpty) {
               return ListView.builder(
                 physics: const BouncingScrollPhysics(),
                 itemCount: games.length,
@@ -48,10 +38,10 @@ class _CatalogScreenState extends WidgetState<CatalogScreen, CatalogWidgetModel>
             }
             return const Center(child: Text(noResults));
           },
-          loadingBuilder: (context, games) => const LoadingWidget(),
-          errorBuilder: (context, exception) => FailureWidget(
+          loadingBuilder: (_, __) => const LoadingWidget(),
+          errorBuilder: (_, exception, ___) => FailureWidget(
             exception: exception,
-            onRetry: wm.onLoad,
+            onRetry: wm.onRetryPressed,
           ),
         ),
       ),

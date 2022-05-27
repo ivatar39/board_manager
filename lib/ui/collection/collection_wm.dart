@@ -71,7 +71,7 @@ class CollectionWidgetModel extends WidgetModel {
   }
 
   void openCatalog() {
-    _router.push(const CatalogScreenRoute());
+    _router.push(const CatalogWidgetRoute());
   }
 
   void openProfile() {

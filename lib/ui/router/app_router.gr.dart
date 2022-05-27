@@ -12,7 +12,7 @@
 
 import 'package:auto_route/auto_route.dart' as _i6;
 import 'package:board_manager/ui/auth/auth_widget.dart' as _i2;
-import 'package:board_manager/ui/catalog/catalog_screen.dart' as _i4;
+import 'package:board_manager/ui/catalog/catalog_widget.dart' as _i4;
 import 'package:board_manager/ui/collection/collection_screen.dart' as _i3;
 import 'package:board_manager/ui/profile/profile_widget.dart' as _i5;
 import 'package:board_manager/ui/splash/splash_widget.dart' as _i1;
@@ -36,10 +36,10 @@ class AppRouter extends _i6.RootStackRouter {
       return _i6.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i3.CollectionScreen());
     },
-    CatalogScreenRoute.name: (routeData) {
+    CatalogWidgetRoute.name: (routeData) {
       return _i6.AdaptivePage<dynamic>(
           routeData: routeData,
-          child: const _i4.CatalogScreen(),
+          child: const _i4.CatalogWidget(),
           fullscreenDialog: true);
     },
     ProfileWidgetRoute.name: (routeData) {
@@ -53,7 +53,7 @@ class AppRouter extends _i6.RootStackRouter {
         _i6.RouteConfig(SplashWidgetRoute.name, path: '/'),
         _i6.RouteConfig(AuthWidgetRoute.name, path: '/auth-widget'),
         _i6.RouteConfig(CollectionScreenRoute.name, path: '/collection-screen'),
-        _i6.RouteConfig(CatalogScreenRoute.name, path: '/catalog-screen'),
+        _i6.RouteConfig(CatalogWidgetRoute.name, path: '/catalog-widget'),
         _i6.RouteConfig(ProfileWidgetRoute.name, path: '/profile-widget')
       ];
 }
@@ -84,12 +84,12 @@ class CollectionScreenRoute extends _i6.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i4.CatalogScreen]
-class CatalogScreenRoute extends _i6.PageRouteInfo<void> {
-  const CatalogScreenRoute()
-      : super(CatalogScreenRoute.name, path: '/catalog-screen');
+/// [_i4.CatalogWidget]
+class CatalogWidgetRoute extends _i6.PageRouteInfo<void> {
+  const CatalogWidgetRoute()
+      : super(CatalogWidgetRoute.name, path: '/catalog-widget');
 
-  static const String name = 'CatalogScreenRoute';
+  static const String name = 'CatalogWidgetRoute';
 }
 
 /// generated route for
