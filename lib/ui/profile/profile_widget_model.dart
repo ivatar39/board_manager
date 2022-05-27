@@ -41,7 +41,7 @@ class ProfileWidgetModel extends WidgetModel<ProfileWidget, ProfileModel> implem
     } on UserFailure catch (e) {
       await e.map(
         userNotAuthorized: (_) async {
-          await model.router.replace(const AuthScreenRoute());
+          await model.router.replace(const AuthWidgetRoute());
         },
       );
     }
@@ -57,7 +57,7 @@ class ProfileWidgetModel extends WidgetModel<ProfileWidget, ProfileModel> implem
   Future<void> signOutAndExit(User user) async {
     await model.authRepository.signOut(user);
     await model.router.pushAndPopUntil(
-      const AuthScreenRoute(),
+      const AuthWidgetRoute(),
       predicate: (_) => false,
     );
   }

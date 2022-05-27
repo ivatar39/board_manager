@@ -27,7 +27,7 @@ class SplashWidgetModel extends WidgetModel<SplashWidget, SplashModel> implement
   Future<void> signInIfAuthorized() async {
     final isAuthorized = await model.authRepository.isUserAuthorized();
     if (!isAuthorized) {
-      await model.router.replace(const AuthScreenRoute());
+      await model.router.replace(const AuthWidgetRoute());
     } else {
       await model.router.replace(const CollectionScreenRoute());
     }

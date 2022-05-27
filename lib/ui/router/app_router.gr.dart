@@ -11,7 +11,7 @@
 // ignore_for_file: type=lint
 
 import 'package:auto_route/auto_route.dart' as _i6;
-import 'package:board_manager/ui/auth/auth_screen.dart' as _i2;
+import 'package:board_manager/ui/auth/auth_widget.dart' as _i2;
 import 'package:board_manager/ui/catalog/catalog_screen.dart' as _i4;
 import 'package:board_manager/ui/collection/collection_screen.dart' as _i3;
 import 'package:board_manager/ui/profile/profile_widget.dart' as _i5;
@@ -28,9 +28,9 @@ class AppRouter extends _i6.RootStackRouter {
       return _i6.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i1.SplashWidget());
     },
-    AuthScreenRoute.name: (routeData) {
+    AuthWidgetRoute.name: (routeData) {
       return _i6.AdaptivePage<dynamic>(
-          routeData: routeData, child: const _i2.AuthScreen());
+          routeData: routeData, child: const _i2.AuthWidget());
     },
     CollectionScreenRoute.name: (routeData) {
       return _i6.AdaptivePage<dynamic>(
@@ -51,7 +51,7 @@ class AppRouter extends _i6.RootStackRouter {
   @override
   List<_i6.RouteConfig> get routes => [
         _i6.RouteConfig(SplashWidgetRoute.name, path: '/'),
-        _i6.RouteConfig(AuthScreenRoute.name, path: '/auth-screen'),
+        _i6.RouteConfig(AuthWidgetRoute.name, path: '/auth-widget'),
         _i6.RouteConfig(CollectionScreenRoute.name, path: '/collection-screen'),
         _i6.RouteConfig(CatalogScreenRoute.name, path: '/catalog-screen'),
         _i6.RouteConfig(ProfileWidgetRoute.name, path: '/profile-widget')
@@ -67,11 +67,11 @@ class SplashWidgetRoute extends _i6.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i2.AuthScreen]
-class AuthScreenRoute extends _i6.PageRouteInfo<void> {
-  const AuthScreenRoute() : super(AuthScreenRoute.name, path: '/auth-screen');
+/// [_i2.AuthWidget]
+class AuthWidgetRoute extends _i6.PageRouteInfo<void> {
+  const AuthWidgetRoute() : super(AuthWidgetRoute.name, path: '/auth-widget');
 
-  static const String name = 'AuthScreenRoute';
+  static const String name = 'AuthWidgetRoute';
 }
 
 /// generated route for

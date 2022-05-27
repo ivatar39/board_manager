@@ -1,25 +1,15 @@
 import 'package:board_manager/ui/app/translation.dart';
-import 'package:board_manager/ui/auth/auth_wm.dart';
-import 'package:board_manager/ui/auth/auth_wm_builder.dart';
+import 'package:board_manager/ui/auth/auth_widget_model.dart';
+import 'package:elementary/elementary.dart';
 import 'package:flutter/material.dart';
-import 'package:surf_mwwm/surf_mwwm.dart';
 
-class AuthScreen extends CoreMwwmWidget<AuthWidgetModel> {
-  const AuthScreen({Key? key})
-      : super(
-          key: key,
-          widgetModelBuilder: createAuthWidgetModel,
-        );
+class AuthWidget extends ElementaryWidget<IAuthWidgetModel> {
+  const AuthWidget({
+    Key? key,
+  }) : super(key: key, authWidgetModelFactory);
 
   @override
-  WidgetState<CoreMwwmWidget<AuthWidgetModel>, AuthWidgetModel> createWidgetState() {
-    return _AuthPageState();
-  }
-}
-
-class _AuthPageState extends WidgetState<AuthScreen, AuthWidgetModel> {
-  @override
-  Widget build(BuildContext context) {
+  Widget build(IAuthWidgetModel wm) {
     return ScaffoldMessenger(
       key: wm.scaffoldMessengerKey,
       child: Scaffold(
@@ -45,7 +35,7 @@ class _AuthPageState extends WidgetState<AuthScreen, AuthWidgetModel> {
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   controller: wm.nameController,
                   validator: wm.fieldValidator,
-                  onEditingComplete: _submitNameForm,
+                  onEditingComplete: wm.submitNameForm,
                   decoration: const InputDecoration(
                     labelText: name,
                     prefixIcon: Icon(Icons.person),
@@ -53,7 +43,7 @@ class _AuthPageState extends WidgetState<AuthScreen, AuthWidgetModel> {
                 ),
                 const SizedBox(height: 8),
                 ElevatedButton(
-                  onPressed: _submitNameForm,
+                  onPressed: wm.submitNameForm,
                   child: const Text(signIn),
                 ),
               ],
@@ -62,11 +52,5 @@ class _AuthPageState extends WidgetState<AuthScreen, AuthWidgetModel> {
         ),
       ),
     );
-  }
-
-  void _submitNameForm() {
-    if (wm.formKey.currentState!.validate()) {
-      wm.signInAndEnter(wm.nameController.value.text);
-    }
   }
 }
