@@ -1,6 +1,7 @@
 import 'package:board_manager/data/games/game/game.dart';
 import 'package:board_manager/ui/app/translation.dart';
 import 'package:board_manager/ui/catalog/catalog_widget_model.dart';
+import 'package:board_manager/ui/catalog/catalog_widget_model_builder.dart';
 import 'package:board_manager/ui/catalog/widgets/catalog_game_card.dart';
 import 'package:board_manager/ui/core/failure_wiget.dart';
 import 'package:board_manager/ui/core/loading_widget.dart';
@@ -18,7 +19,7 @@ class CatalogWidget extends ElementaryWidget<ICatalogWidgetModel> {
       key: wm.scaffoldMessengerKey,
       child: Scaffold(
         appBar: _CatalogScreenAppBar(searchController: wm.textEditingSearchController),
-        body: EntityStateNotifierBuilder<List<Game>>(
+        body: EntityStateNotifierBuilder<Iterable<Game>>(
           listenableEntityState: wm.catalogState,
           builder: (context, games) {
             if (games!.isNotEmpty) {
@@ -26,7 +27,7 @@ class CatalogWidget extends ElementaryWidget<ICatalogWidgetModel> {
                 physics: const BouncingScrollPhysics(),
                 itemCount: games.length,
                 itemBuilder: (context, index) {
-                  final game = games[index];
+                  final game = games.elementAt(index);
                   return CatalogGameCard(
                     game: game,
                     onAddingGame: () async {

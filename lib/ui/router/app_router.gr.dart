@@ -19,32 +19,24 @@ import 'package:board_manager/ui/splash/splash_widget.dart' as _i1;
 import 'package:flutter/material.dart' as _i7;
 
 class AppRouter extends _i6.RootStackRouter {
-  AppRouter([_i7.GlobalKey<_i7.NavigatorState>? navigatorKey])
-      : super(navigatorKey);
+  AppRouter([_i7.GlobalKey<_i7.NavigatorState>? navigatorKey]) : super(navigatorKey);
 
   @override
   final Map<String, _i6.PageFactory> pagesMap = {
     SplashWidgetRoute.name: (routeData) {
-      return _i6.AdaptivePage<dynamic>(
-          routeData: routeData, child: const _i1.SplashWidget());
+      return _i6.AdaptivePage<dynamic>(routeData: routeData, child: const _i1.SplashWidget());
     },
     AuthWidgetRoute.name: (routeData) {
-      return _i6.AdaptivePage<dynamic>(
-          routeData: routeData, child: const _i2.AuthWidget());
+      return _i6.AdaptivePage<dynamic>(routeData: routeData, child: const _i2.AuthWidget());
     },
     CollectionWidgetRoute.name: (routeData) {
-      return _i6.AdaptivePage<dynamic>(
-          routeData: routeData, child: const _i3.CollectionWidget());
+      return _i6.AdaptivePage<dynamic>(routeData: routeData, child: const _i3.CollectionWidget());
     },
     CatalogWidgetRoute.name: (routeData) {
-      return _i6.AdaptivePage<dynamic>(
-          routeData: routeData,
-          child: const _i4.CatalogWidget(),
-          fullscreenDialog: true);
+      return _i6.AdaptivePage<dynamic>(routeData: routeData, child: const _i4.CatalogWidget(), fullscreenDialog: true);
     },
     ProfileWidgetRoute.name: (routeData) {
-      return _i6.AdaptivePage<dynamic>(
-          routeData: routeData, child: const _i5.ProfileWidget());
+      return _i6.AdaptivePage<dynamic>(routeData: routeData, child: const _i5.ProfileWidget());
     }
   };
 
@@ -77,8 +69,7 @@ class AuthWidgetRoute extends _i6.PageRouteInfo<void> {
 /// generated route for
 /// [_i3.CollectionWidget]
 class CollectionWidgetRoute extends _i6.PageRouteInfo<void> {
-  const CollectionWidgetRoute()
-      : super(CollectionWidgetRoute.name, path: '/collection-widget');
+  const CollectionWidgetRoute() : super(CollectionWidgetRoute.name, path: '/collection-widget');
 
   static const String name = 'CollectionWidgetRoute';
 }
@@ -86,8 +77,7 @@ class CollectionWidgetRoute extends _i6.PageRouteInfo<void> {
 /// generated route for
 /// [_i4.CatalogWidget]
 class CatalogWidgetRoute extends _i6.PageRouteInfo<void> {
-  const CatalogWidgetRoute()
-      : super(CatalogWidgetRoute.name, path: '/catalog-widget');
+  const CatalogWidgetRoute() : super(CatalogWidgetRoute.name, path: '/catalog-widget');
 
   static const String name = 'CatalogWidgetRoute';
 }
@@ -95,8 +85,7 @@ class CatalogWidgetRoute extends _i6.PageRouteInfo<void> {
 /// generated route for
 /// [_i5.ProfileWidget]
 class ProfileWidgetRoute extends _i6.PageRouteInfo<void> {
-  const ProfileWidgetRoute()
-      : super(ProfileWidgetRoute.name, path: '/profile-widget');
+  const ProfileWidgetRoute() : super(ProfileWidgetRoute.name, path: '/profile-widget');
 
   static const String name = 'ProfileWidgetRoute';
 }

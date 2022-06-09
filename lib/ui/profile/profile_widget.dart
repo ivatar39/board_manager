@@ -1,6 +1,7 @@
 import 'package:board_manager/data/auth/user/user.dart';
 import 'package:board_manager/ui/app/translation.dart';
 import 'package:board_manager/ui/profile/profile_widget_model.dart';
+import 'package:board_manager/ui/profile/profile_widget_model_builder.dart';
 import 'package:elementary/elementary.dart';
 import 'package:flutter/material.dart';
 

@@ -52,9 +52,7 @@ mixin _$AuthFailure {
 
 /// @nodoc
 abstract class $AuthFailureCopyWith<$Res> {
-  factory $AuthFailureCopyWith(
-          AuthFailure value, $Res Function(AuthFailure) then) =
-      _$AuthFailureCopyWithImpl<$Res>;
+  factory $AuthFailureCopyWith(AuthFailure value, $Res Function(AuthFailure) then) = _$AuthFailureCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -68,17 +66,14 @@ class _$AuthFailureCopyWithImpl<$Res> implements $AuthFailureCopyWith<$Res> {
 
 /// @nodoc
 abstract class _$$SystemMemoryFailureCopyWith<$Res> {
-  factory _$$SystemMemoryFailureCopyWith(_$SystemMemoryFailure value,
-          $Res Function(_$SystemMemoryFailure) then) =
+  factory _$$SystemMemoryFailureCopyWith(_$SystemMemoryFailure value, $Res Function(_$SystemMemoryFailure) then) =
       __$$SystemMemoryFailureCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$SystemMemoryFailureCopyWithImpl<$Res>
-    extends _$AuthFailureCopyWithImpl<$Res>
+class __$$SystemMemoryFailureCopyWithImpl<$Res> extends _$AuthFailureCopyWithImpl<$Res>
     implements _$$SystemMemoryFailureCopyWith<$Res> {
-  __$$SystemMemoryFailureCopyWithImpl(
-      _$SystemMemoryFailure _value, $Res Function(_$SystemMemoryFailure) _then)
+  __$$SystemMemoryFailureCopyWithImpl(_$SystemMemoryFailure _value, $Res Function(_$SystemMemoryFailure) _then)
       : super(_value, (v) => _then(v as _$SystemMemoryFailure));
 
   @override
@@ -87,9 +82,7 @@ class __$$SystemMemoryFailureCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SystemMemoryFailure
-    with DiagnosticableTreeMixin
-    implements SystemMemoryFailure {
+class _$SystemMemoryFailure with DiagnosticableTreeMixin implements SystemMemoryFailure {
   const _$SystemMemoryFailure();
 
   @override
@@ -100,14 +93,12 @@ class _$SystemMemoryFailure
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties
-        .add(DiagnosticsProperty('type', 'AuthFailure.systemMemoryFailure'));
+    properties.add(DiagnosticsProperty('type', 'AuthFailure.systemMemoryFailure'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SystemMemoryFailure);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$SystemMemoryFailure);
   }
 
   @override

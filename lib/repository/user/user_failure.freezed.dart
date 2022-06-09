@@ -52,9 +52,7 @@ mixin _$UserFailure {
 
 /// @nodoc
 abstract class $UserFailureCopyWith<$Res> {
-  factory $UserFailureCopyWith(
-          UserFailure value, $Res Function(UserFailure) then) =
-      _$UserFailureCopyWithImpl<$Res>;
+  factory $UserFailureCopyWith(UserFailure value, $Res Function(UserFailure) then) = _$UserFailureCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -68,17 +66,14 @@ class _$UserFailureCopyWithImpl<$Res> implements $UserFailureCopyWith<$Res> {
 
 /// @nodoc
 abstract class _$$UserNotAuthorizedCopyWith<$Res> {
-  factory _$$UserNotAuthorizedCopyWith(
-          _$UserNotAuthorized value, $Res Function(_$UserNotAuthorized) then) =
+  factory _$$UserNotAuthorizedCopyWith(_$UserNotAuthorized value, $Res Function(_$UserNotAuthorized) then) =
       __$$UserNotAuthorizedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$UserNotAuthorizedCopyWithImpl<$Res>
-    extends _$UserFailureCopyWithImpl<$Res>
+class __$$UserNotAuthorizedCopyWithImpl<$Res> extends _$UserFailureCopyWithImpl<$Res>
     implements _$$UserNotAuthorizedCopyWith<$Res> {
-  __$$UserNotAuthorizedCopyWithImpl(
-      _$UserNotAuthorized _value, $Res Function(_$UserNotAuthorized) _then)
+  __$$UserNotAuthorizedCopyWithImpl(_$UserNotAuthorized _value, $Res Function(_$UserNotAuthorized) _then)
       : super(_value, (v) => _then(v as _$UserNotAuthorized));
 
   @override
@@ -87,9 +82,7 @@ class __$$UserNotAuthorizedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$UserNotAuthorized
-    with DiagnosticableTreeMixin
-    implements UserNotAuthorized {
+class _$UserNotAuthorized with DiagnosticableTreeMixin implements UserNotAuthorized {
   const _$UserNotAuthorized();
 
   @override
@@ -100,14 +93,12 @@ class _$UserNotAuthorized
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties
-        .add(DiagnosticsProperty('type', 'UserFailure.userNotAuthorized'));
+    properties.add(DiagnosticsProperty('type', 'UserFailure.userNotAuthorized'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$UserNotAuthorized);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$UserNotAuthorized);
   }
 
   @override

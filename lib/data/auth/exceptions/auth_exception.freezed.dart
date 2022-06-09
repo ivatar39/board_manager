@@ -52,14 +52,12 @@ mixin _$AuthException {
 
 /// @nodoc
 abstract class $AuthExceptionCopyWith<$Res> {
-  factory $AuthExceptionCopyWith(
-          AuthException value, $Res Function(AuthException) then) =
+  factory $AuthExceptionCopyWith(AuthException value, $Res Function(AuthException) then) =
       _$AuthExceptionCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AuthExceptionCopyWithImpl<$Res>
-    implements $AuthExceptionCopyWith<$Res> {
+class _$AuthExceptionCopyWithImpl<$Res> implements $AuthExceptionCopyWith<$Res> {
   _$AuthExceptionCopyWithImpl(this._value, this._then);
 
   final AuthException _value;
@@ -69,17 +67,14 @@ class _$AuthExceptionCopyWithImpl<$Res>
 
 /// @nodoc
 abstract class _$$MemoryExceptionCopyWith<$Res> {
-  factory _$$MemoryExceptionCopyWith(
-          _$MemoryException value, $Res Function(_$MemoryException) then) =
+  factory _$$MemoryExceptionCopyWith(_$MemoryException value, $Res Function(_$MemoryException) then) =
       __$$MemoryExceptionCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$MemoryExceptionCopyWithImpl<$Res>
-    extends _$AuthExceptionCopyWithImpl<$Res>
+class __$$MemoryExceptionCopyWithImpl<$Res> extends _$AuthExceptionCopyWithImpl<$Res>
     implements _$$MemoryExceptionCopyWith<$Res> {
-  __$$MemoryExceptionCopyWithImpl(
-      _$MemoryException _value, $Res Function(_$MemoryException) _then)
+  __$$MemoryExceptionCopyWithImpl(_$MemoryException _value, $Res Function(_$MemoryException) _then)
       : super(_value, (v) => _then(v as _$MemoryException));
 
   @override
@@ -88,9 +83,7 @@ class __$$MemoryExceptionCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$MemoryException
-    with DiagnosticableTreeMixin
-    implements MemoryException {
+class _$MemoryException with DiagnosticableTreeMixin implements MemoryException {
   _$MemoryException();
 
   @override
@@ -101,14 +94,12 @@ class _$MemoryException
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties
-        .add(DiagnosticsProperty('type', 'AuthException.memoryException'));
+    properties.add(DiagnosticsProperty('type', 'AuthException.memoryException'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$MemoryException);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$MemoryException);
   }
 
   @override

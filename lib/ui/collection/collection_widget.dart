@@ -1,6 +1,7 @@
 import 'package:board_manager/data/games/game/game.dart';
 import 'package:board_manager/ui/app/translation.dart';
 import 'package:board_manager/ui/collection/collection_widget_model.dart';
+import 'package:board_manager/ui/collection/collection_widget_model_builder.dart';
 import 'package:board_manager/ui/collection/widgets/collection_menu_button.dart';
 import 'package:board_manager/ui/core/failure_wiget.dart';
 import 'package:board_manager/ui/core/loading_widget.dart';
@@ -27,7 +28,7 @@ class CollectionWidget extends ElementaryWidget<ICollectionWidgetModel> {
         onPressed: () => wm.openCatalog(),
         child: const Icon(Icons.add),
       ),
-      body: EntityStateNotifierBuilder<List<Game>>(
+      body: EntityStateNotifierBuilder<Iterable<Game>>(
         listenableEntityState: wm.collectionState,
         builder: (_, games) {
           if (games!.isNotEmpty) {
@@ -35,7 +36,7 @@ class CollectionWidget extends ElementaryWidget<ICollectionWidgetModel> {
               physics: const BouncingScrollPhysics(),
               itemCount: games.length,
               itemBuilder: (_, index) {
-                final game = games[index];
+                final game = games.elementAt(index);
                 return ListTile(
                   title: Text(game.name),
                   trailing: DropdownButton<String>(

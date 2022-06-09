@@ -16,7 +16,7 @@ class CollectionRepository {
     this._authLocalDataSource,
   );
 
-  Stream<List<Game>> watchGameCollection() async* {
+  Stream<Iterable<Game>> watchGameCollection() async* {
     try {
       yield* _gameCollectionLocalDataSource.watchGames();
     } on GameException catch (e) {

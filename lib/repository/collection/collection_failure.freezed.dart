@@ -37,8 +37,7 @@ mixin _$CollectionFailure {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CouldNotWatchCollection value)
-        couldNotWatchCollection,
+    required TResult Function(CouldNotWatchCollection value) couldNotWatchCollection,
     required TResult Function(CouldNotChangeOwner value) couldNotChangeOwner,
   }) =>
       throw _privateConstructorUsedError;
@@ -59,14 +58,12 @@ mixin _$CollectionFailure {
 
 /// @nodoc
 abstract class $CollectionFailureCopyWith<$Res> {
-  factory $CollectionFailureCopyWith(
-          CollectionFailure value, $Res Function(CollectionFailure) then) =
+  factory $CollectionFailureCopyWith(CollectionFailure value, $Res Function(CollectionFailure) then) =
       _$CollectionFailureCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$CollectionFailureCopyWithImpl<$Res>
-    implements $CollectionFailureCopyWith<$Res> {
+class _$CollectionFailureCopyWithImpl<$Res> implements $CollectionFailureCopyWith<$Res> {
   _$CollectionFailureCopyWithImpl(this._value, this._then);
 
   final CollectionFailure _value;
@@ -76,29 +73,25 @@ class _$CollectionFailureCopyWithImpl<$Res>
 
 /// @nodoc
 abstract class _$$CouldNotWatchCollectionCopyWith<$Res> {
-  factory _$$CouldNotWatchCollectionCopyWith(_$CouldNotWatchCollection value,
-          $Res Function(_$CouldNotWatchCollection) then) =
+  factory _$$CouldNotWatchCollectionCopyWith(
+          _$CouldNotWatchCollection value, $Res Function(_$CouldNotWatchCollection) then) =
       __$$CouldNotWatchCollectionCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$CouldNotWatchCollectionCopyWithImpl<$Res>
-    extends _$CollectionFailureCopyWithImpl<$Res>
+class __$$CouldNotWatchCollectionCopyWithImpl<$Res> extends _$CollectionFailureCopyWithImpl<$Res>
     implements _$$CouldNotWatchCollectionCopyWith<$Res> {
-  __$$CouldNotWatchCollectionCopyWithImpl(_$CouldNotWatchCollection _value,
-      $Res Function(_$CouldNotWatchCollection) _then)
+  __$$CouldNotWatchCollectionCopyWithImpl(
+      _$CouldNotWatchCollection _value, $Res Function(_$CouldNotWatchCollection) _then)
       : super(_value, (v) => _then(v as _$CouldNotWatchCollection));
 
   @override
-  _$CouldNotWatchCollection get _value =>
-      super._value as _$CouldNotWatchCollection;
+  _$CouldNotWatchCollection get _value => super._value as _$CouldNotWatchCollection;
 }
 
 /// @nodoc
 
-class _$CouldNotWatchCollection
-    with DiagnosticableTreeMixin
-    implements CouldNotWatchCollection {
+class _$CouldNotWatchCollection with DiagnosticableTreeMixin implements CouldNotWatchCollection {
   const _$CouldNotWatchCollection();
 
   @override
@@ -109,15 +102,12 @@ class _$CouldNotWatchCollection
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty(
-        'type', 'CollectionFailure.couldNotWatchCollection'));
+    properties.add(DiagnosticsProperty('type', 'CollectionFailure.couldNotWatchCollection'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CouldNotWatchCollection);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$CouldNotWatchCollection);
   }
 
   @override
@@ -157,8 +147,7 @@ class _$CouldNotWatchCollection
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CouldNotWatchCollection value)
-        couldNotWatchCollection,
+    required TResult Function(CouldNotWatchCollection value) couldNotWatchCollection,
     required TResult Function(CouldNotChangeOwner value) couldNotChangeOwner,
   }) {
     return couldNotWatchCollection(this);
@@ -193,17 +182,14 @@ abstract class CouldNotWatchCollection implements CollectionFailure {
 
 /// @nodoc
 abstract class _$$CouldNotChangeOwnerCopyWith<$Res> {
-  factory _$$CouldNotChangeOwnerCopyWith(_$CouldNotChangeOwner value,
-          $Res Function(_$CouldNotChangeOwner) then) =
+  factory _$$CouldNotChangeOwnerCopyWith(_$CouldNotChangeOwner value, $Res Function(_$CouldNotChangeOwner) then) =
       __$$CouldNotChangeOwnerCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$CouldNotChangeOwnerCopyWithImpl<$Res>
-    extends _$CollectionFailureCopyWithImpl<$Res>
+class __$$CouldNotChangeOwnerCopyWithImpl<$Res> extends _$CollectionFailureCopyWithImpl<$Res>
     implements _$$CouldNotChangeOwnerCopyWith<$Res> {
-  __$$CouldNotChangeOwnerCopyWithImpl(
-      _$CouldNotChangeOwner _value, $Res Function(_$CouldNotChangeOwner) _then)
+  __$$CouldNotChangeOwnerCopyWithImpl(_$CouldNotChangeOwner _value, $Res Function(_$CouldNotChangeOwner) _then)
       : super(_value, (v) => _then(v as _$CouldNotChangeOwner));
 
   @override
@@ -212,9 +198,7 @@ class __$$CouldNotChangeOwnerCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$CouldNotChangeOwner
-    with DiagnosticableTreeMixin
-    implements CouldNotChangeOwner {
+class _$CouldNotChangeOwner with DiagnosticableTreeMixin implements CouldNotChangeOwner {
   const _$CouldNotChangeOwner();
 
   @override
@@ -225,14 +209,12 @@ class _$CouldNotChangeOwner
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(
-        DiagnosticsProperty('type', 'CollectionFailure.couldNotChangeOwner'));
+    properties.add(DiagnosticsProperty('type', 'CollectionFailure.couldNotChangeOwner'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$CouldNotChangeOwner);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$CouldNotChangeOwner);
   }
 
   @override
@@ -272,8 +254,7 @@ class _$CouldNotChangeOwner
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CouldNotWatchCollection value)
-        couldNotWatchCollection,
+    required TResult Function(CouldNotWatchCollection value) couldNotWatchCollection,
     required TResult Function(CouldNotChangeOwner value) couldNotChangeOwner,
   }) {
     return couldNotChangeOwner(this);

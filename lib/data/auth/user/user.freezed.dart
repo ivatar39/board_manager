@@ -34,12 +34,9 @@ mixin _$User {
 
 /// @nodoc
 abstract class $UserCopyWith<$Res> {
-  factory $UserCopyWith(User value, $Res Function(User) then) =
-      _$UserCopyWithImpl<$Res>;
+  factory $UserCopyWith(User value, $Res Function(User) then) = _$UserCopyWithImpl<$Res>;
   $Res call(
-      {@HiveField(0, defaultValue: '') String uniqueId,
-      @HiveField(1) String name,
-      @HiveField(2) bool isAuthorized});
+      {@HiveField(0, defaultValue: '') String uniqueId, @HiveField(1) String name, @HiveField(2) bool isAuthorized});
 }
 
 /// @nodoc
@@ -75,20 +72,15 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
 
 /// @nodoc
 abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
-  factory _$$_UserCopyWith(_$_User value, $Res Function(_$_User) then) =
-      __$$_UserCopyWithImpl<$Res>;
+  factory _$$_UserCopyWith(_$_User value, $Res Function(_$_User) then) = __$$_UserCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@HiveField(0, defaultValue: '') String uniqueId,
-      @HiveField(1) String name,
-      @HiveField(2) bool isAuthorized});
+      {@HiveField(0, defaultValue: '') String uniqueId, @HiveField(1) String name, @HiveField(2) bool isAuthorized});
 }
 
 /// @nodoc
-class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
-    implements _$$_UserCopyWith<$Res> {
-  __$$_UserCopyWithImpl(_$_User _value, $Res Function(_$_User) _then)
-      : super(_value, (v) => _then(v as _$_User));
+class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res> implements _$$_UserCopyWith<$Res> {
+  __$$_UserCopyWithImpl(_$_User _value, $Res Function(_$_User) _then) : super(_value, (v) => _then(v as _$_User));
 
   @override
   _$_User get _value => super._value as _$_User;
@@ -160,22 +152,17 @@ class _$_User extends _User with DiagnosticableTreeMixin {
             other is _$_User &&
             const DeepCollectionEquality().equals(other.uniqueId, uniqueId) &&
             const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.isAuthorized, isAuthorized));
+            const DeepCollectionEquality().equals(other.isAuthorized, isAuthorized));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(uniqueId),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(isAuthorized));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(uniqueId),
+      const DeepCollectionEquality().hash(name), const DeepCollectionEquality().hash(isAuthorized));
 
   @JsonKey(ignore: true)
   @override
-  _$$_UserCopyWith<_$_User> get copyWith =>
-      __$$_UserCopyWithImpl<_$_User>(this, _$identity);
+  _$$_UserCopyWith<_$_User> get copyWith => __$$_UserCopyWithImpl<_$_User>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {

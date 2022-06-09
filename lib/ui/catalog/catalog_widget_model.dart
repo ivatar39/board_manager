@@ -1,10 +1,7 @@
 import 'package:board_manager/data/games/game/game.dart';
-import 'package:board_manager/injection/injection.dart';
 import 'package:board_manager/repository/core/core_failure.dart';
 import 'package:board_manager/repository/games/game_failure.dart';
-import 'package:board_manager/repository/games/game_repository.dart';
 import 'package:board_manager/ui/app/translation.dart';
-import 'package:board_manager/ui/catalog/catalog_interactor.dart';
 import 'package:board_manager/ui/catalog/catalog_model.dart';
 import 'package:board_manager/ui/catalog/catalog_widget.dart';
 import 'package:elementary/elementary.dart';
@@ -14,24 +11,15 @@ import 'package:surf_logger/surf_logger.dart';
 
 const debounceSeconds = 1;
 
-CatalogWidgetModel catalogWidgetModelFactory(BuildContext context) {
-  return CatalogWidgetModel(
-    CatalogModel(
-      getIt<CatalogInteractor>(),
-      getIt<GameRepository>(),
-    ),
-  );
-}
-
 class CatalogWidgetModel extends WidgetModel<CatalogWidget, CatalogModel> implements ICatalogWidgetModel {
-  final _catalogState = EntityStateNotifier<List<Game>>();
+  final _catalogState = EntityStateNotifier<Iterable<Game>>();
   final TextEditingController _textEditingSearchController = TextEditingController();
   final GlobalKey<ScaffoldMessengerState> _scaffoldMessengerKey = GlobalKey<ScaffoldMessengerState>();
 
   final _debounceTimer = BehaviorSubject<int>()..add(0);
 
   @override
-  ListenableState<EntityState<List<Game>>> get catalogState => _catalogState;
+  ListenableState<EntityState<Iterable<Game>>> get catalogState => _catalogState;
 
   @override
   GlobalKey<ScaffoldMessengerState> get scaffoldMessengerKey => _scaffoldMessengerKey;
@@ -55,29 +43,6 @@ class CatalogWidgetModel extends WidgetModel<CatalogWidget, CatalogModel> implem
     super.dispose();
   }
 
-  Future<void> _createSearchControllerListener() async {
-    _debounceTimer.debounceTime(const Duration(seconds: debounceSeconds)).listen(
-      (event) async {
-        await _loadCatalogBySearchQuery();
-      },
-    );
-  }
-
-  @override
-  void onRetryPressed() => _loadCatalogBySearchQuery();
-
-  Future<void> _loadCatalogBySearchQuery() async {
-    _catalogState.loading();
-    try {
-      final query = _textEditingSearchController.value.text;
-      final games = await model.gameRepository.searchGamesByQuery(query);
-
-      _catalogState.content(games);
-    } on CoreFailure catch (e) {
-      _catalogState.error(e);
-    }
-  }
-
   @override
   Future<void> addGamePressed(Game game) async {
     try {
@@ -98,6 +63,29 @@ class CatalogWidgetModel extends WidgetModel<CatalogWidget, CatalogModel> implem
     }
   }
 
+  @override
+  void onRetryPressed() => _loadCatalogBySearchQuery();
+
+  Future<void> _createSearchControllerListener() async {
+    _debounceTimer.debounceTime(const Duration(seconds: debounceSeconds)).listen(
+      (event) async {
+        await _loadCatalogBySearchQuery();
+      },
+    );
+  }
+
+  Future<void> _loadCatalogBySearchQuery() async {
+    _catalogState.loading();
+    try {
+      final query = _textEditingSearchController.value.text;
+      final games = await model.gameRepository.searchGamesByQuery(query);
+
+      _catalogState.content(games);
+    } on CoreFailure catch (e) {
+      _catalogState.error(e);
+    }
+  }
+
   void _showSnackBar(String message) {
     scaffoldMessengerKey.currentState!.showSnackBar(
       SnackBar(
@@ -108,9 +96,11 @@ class CatalogWidgetModel extends WidgetModel<CatalogWidget, CatalogModel> implem
 }
 
 abstract class ICatalogWidgetModel extends IWidgetModel {
-  ListenableState<EntityState<List<Game>>> get catalogState;
+  ListenableState<EntityState<Iterable<Game>>> get catalogState;
   TextEditingController get textEditingSearchController;
   GlobalKey<ScaffoldMessengerState> get scaffoldMessengerKey;
+
   Future<void> addGamePressed(Game game);
+
   void onRetryPressed();
 }

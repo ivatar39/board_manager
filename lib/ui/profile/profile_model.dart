@@ -10,7 +10,6 @@ class ProfileModel extends ElementaryModel {
   final AppRouter _router;
 
   AuthRepository get authRepository => _authRepository;
-  UserRepository get userRepository => _userRepository;
   AppRouter get router => _router;
 
   ProfileModel(this._authRepository, this._userRepository, this._router);

@@ -37,8 +37,7 @@ mixin _$GameFailure {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CouldNotAddToCollection value)
-        couldNotAddToCollection,
+    required TResult Function(CouldNotAddToCollection value) couldNotAddToCollection,
     required TResult Function(AlreadyInCollection value) alreadyInCollection,
   }) =>
       throw _privateConstructorUsedError;
@@ -59,9 +58,7 @@ mixin _$GameFailure {
 
 /// @nodoc
 abstract class $GameFailureCopyWith<$Res> {
-  factory $GameFailureCopyWith(
-          GameFailure value, $Res Function(GameFailure) then) =
-      _$GameFailureCopyWithImpl<$Res>;
+  factory $GameFailureCopyWith(GameFailure value, $Res Function(GameFailure) then) = _$GameFailureCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -75,29 +72,25 @@ class _$GameFailureCopyWithImpl<$Res> implements $GameFailureCopyWith<$Res> {
 
 /// @nodoc
 abstract class _$$CouldNotAddToCollectionCopyWith<$Res> {
-  factory _$$CouldNotAddToCollectionCopyWith(_$CouldNotAddToCollection value,
-          $Res Function(_$CouldNotAddToCollection) then) =
+  factory _$$CouldNotAddToCollectionCopyWith(
+          _$CouldNotAddToCollection value, $Res Function(_$CouldNotAddToCollection) then) =
       __$$CouldNotAddToCollectionCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$CouldNotAddToCollectionCopyWithImpl<$Res>
-    extends _$GameFailureCopyWithImpl<$Res>
+class __$$CouldNotAddToCollectionCopyWithImpl<$Res> extends _$GameFailureCopyWithImpl<$Res>
     implements _$$CouldNotAddToCollectionCopyWith<$Res> {
-  __$$CouldNotAddToCollectionCopyWithImpl(_$CouldNotAddToCollection _value,
-      $Res Function(_$CouldNotAddToCollection) _then)
+  __$$CouldNotAddToCollectionCopyWithImpl(
+      _$CouldNotAddToCollection _value, $Res Function(_$CouldNotAddToCollection) _then)
       : super(_value, (v) => _then(v as _$CouldNotAddToCollection));
 
   @override
-  _$CouldNotAddToCollection get _value =>
-      super._value as _$CouldNotAddToCollection;
+  _$CouldNotAddToCollection get _value => super._value as _$CouldNotAddToCollection;
 }
 
 /// @nodoc
 
-class _$CouldNotAddToCollection
-    with DiagnosticableTreeMixin
-    implements CouldNotAddToCollection {
+class _$CouldNotAddToCollection with DiagnosticableTreeMixin implements CouldNotAddToCollection {
   const _$CouldNotAddToCollection();
 
   @override
@@ -108,15 +101,12 @@ class _$CouldNotAddToCollection
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(
-        DiagnosticsProperty('type', 'GameFailure.couldNotAddToCollection'));
+    properties.add(DiagnosticsProperty('type', 'GameFailure.couldNotAddToCollection'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CouldNotAddToCollection);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$CouldNotAddToCollection);
   }
 
   @override
@@ -156,8 +146,7 @@ class _$CouldNotAddToCollection
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CouldNotAddToCollection value)
-        couldNotAddToCollection,
+    required TResult Function(CouldNotAddToCollection value) couldNotAddToCollection,
     required TResult Function(AlreadyInCollection value) alreadyInCollection,
   }) {
     return couldNotAddToCollection(this);
@@ -192,17 +181,14 @@ abstract class CouldNotAddToCollection implements GameFailure {
 
 /// @nodoc
 abstract class _$$AlreadyInCollectionCopyWith<$Res> {
-  factory _$$AlreadyInCollectionCopyWith(_$AlreadyInCollection value,
-          $Res Function(_$AlreadyInCollection) then) =
+  factory _$$AlreadyInCollectionCopyWith(_$AlreadyInCollection value, $Res Function(_$AlreadyInCollection) then) =
       __$$AlreadyInCollectionCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$AlreadyInCollectionCopyWithImpl<$Res>
-    extends _$GameFailureCopyWithImpl<$Res>
+class __$$AlreadyInCollectionCopyWithImpl<$Res> extends _$GameFailureCopyWithImpl<$Res>
     implements _$$AlreadyInCollectionCopyWith<$Res> {
-  __$$AlreadyInCollectionCopyWithImpl(
-      _$AlreadyInCollection _value, $Res Function(_$AlreadyInCollection) _then)
+  __$$AlreadyInCollectionCopyWithImpl(_$AlreadyInCollection _value, $Res Function(_$AlreadyInCollection) _then)
       : super(_value, (v) => _then(v as _$AlreadyInCollection));
 
   @override
@@ -211,9 +197,7 @@ class __$$AlreadyInCollectionCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AlreadyInCollection
-    with DiagnosticableTreeMixin
-    implements AlreadyInCollection {
+class _$AlreadyInCollection with DiagnosticableTreeMixin implements AlreadyInCollection {
   const _$AlreadyInCollection();
 
   @override
@@ -224,14 +208,12 @@ class _$AlreadyInCollection
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties
-        .add(DiagnosticsProperty('type', 'GameFailure.alreadyInCollection'));
+    properties.add(DiagnosticsProperty('type', 'GameFailure.alreadyInCollection'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$AlreadyInCollection);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$AlreadyInCollection);
   }
 
   @override
@@ -271,8 +253,7 @@ class _$AlreadyInCollection
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CouldNotAddToCollection value)
-        couldNotAddToCollection,
+    required TResult Function(CouldNotAddToCollection value) couldNotAddToCollection,
     required TResult Function(AlreadyInCollection value) alreadyInCollection,
   }) {
     return alreadyInCollection(this);

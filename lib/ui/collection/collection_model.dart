@@ -15,7 +15,7 @@ class CollectionModel extends ElementaryModel {
 
   CollectionModel(this._collectionRepository, this._userRepository, this._router);
 
-  Stream<List<Game>> watchGameCollection() {
+  Stream<Iterable<Game>> watchGameCollection() {
     return _collectionRepository.watchGameCollection();
   }
 }

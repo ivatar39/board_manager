@@ -1,6 +1,4 @@
-import 'package:board_manager/injection/injection.dart';
 import 'package:board_manager/repository/auth/auth_failure.dart';
-import 'package:board_manager/repository/auth/auth_repository.dart';
 import 'package:board_manager/ui/app/translation.dart';
 import 'package:board_manager/ui/auth/auth_model.dart';
 import 'package:board_manager/ui/auth/auth_widget.dart';
@@ -8,18 +6,7 @@ import 'package:board_manager/ui/router/app_router.gr.dart';
 import 'package:elementary/elementary.dart';
 import 'package:flutter/material.dart';
 
-const kMaxNameLength = 80;
-
-AuthWidgetModel authWidgetModelFactory(BuildContext context) {
-  return AuthWidgetModel(
-    AuthModel(
-      getIt<AuthRepository>(),
-      getIt<AppRouter>(),
-    ),
-    GlobalKey<FormState>(),
-    GlobalKey<ScaffoldMessengerState>(),
-  );
-}
+const _maxNameLength = 80;
 
 class AuthWidgetModel extends WidgetModel<AuthWidget, AuthModel> implements IAuthWidgetModel {
   final TextEditingController _nameController = TextEditingController();
@@ -53,7 +40,7 @@ class AuthWidgetModel extends WidgetModel<AuthWidget, AuthModel> implements IAut
     if (value == null || value.isEmpty) {
       return nameCannotBeEmpty;
     }
-    if (value.length > kMaxNameLength) {
+    if (value.length > _maxNameLength) {
       return incorrectName;
     }
     return null;
@@ -92,5 +79,6 @@ abstract class IAuthWidgetModel extends IWidgetModel {
   TextEditingController get nameController;
 
   String? fieldValidator(String? value);
+
   void submitNameForm();
 }

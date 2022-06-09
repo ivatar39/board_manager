@@ -64,14 +64,12 @@ mixin _$CoreException {
 
 /// @nodoc
 abstract class $CoreExceptionCopyWith<$Res> {
-  factory $CoreExceptionCopyWith(
-          CoreException value, $Res Function(CoreException) then) =
+  factory $CoreExceptionCopyWith(CoreException value, $Res Function(CoreException) then) =
       _$CoreExceptionCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$CoreExceptionCopyWithImpl<$Res>
-    implements $CoreExceptionCopyWith<$Res> {
+class _$CoreExceptionCopyWithImpl<$Res> implements $CoreExceptionCopyWith<$Res> {
   _$CoreExceptionCopyWithImpl(this._value, this._then);
 
   final CoreException _value;
@@ -81,17 +79,14 @@ class _$CoreExceptionCopyWithImpl<$Res>
 
 /// @nodoc
 abstract class _$$NoInternetConnectionCopyWith<$Res> {
-  factory _$$NoInternetConnectionCopyWith(_$NoInternetConnection value,
-          $Res Function(_$NoInternetConnection) then) =
+  factory _$$NoInternetConnectionCopyWith(_$NoInternetConnection value, $Res Function(_$NoInternetConnection) then) =
       __$$NoInternetConnectionCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$NoInternetConnectionCopyWithImpl<$Res>
-    extends _$CoreExceptionCopyWithImpl<$Res>
+class __$$NoInternetConnectionCopyWithImpl<$Res> extends _$CoreExceptionCopyWithImpl<$Res>
     implements _$$NoInternetConnectionCopyWith<$Res> {
-  __$$NoInternetConnectionCopyWithImpl(_$NoInternetConnection _value,
-      $Res Function(_$NoInternetConnection) _then)
+  __$$NoInternetConnectionCopyWithImpl(_$NoInternetConnection _value, $Res Function(_$NoInternetConnection) _then)
       : super(_value, (v) => _then(v as _$NoInternetConnection));
 
   @override
@@ -100,9 +95,7 @@ class __$$NoInternetConnectionCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$NoInternetConnection
-    with DiagnosticableTreeMixin
-    implements NoInternetConnection {
+class _$NoInternetConnection with DiagnosticableTreeMixin implements NoInternetConnection {
   const _$NoInternetConnection();
 
   @override
@@ -113,14 +106,12 @@ class _$NoInternetConnection
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties
-        .add(DiagnosticsProperty('type', 'CoreException.noInternetConnection'));
+    properties.add(DiagnosticsProperty('type', 'CoreException.noInternetConnection'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$NoInternetConnection);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$NoInternetConnection);
   }
 
   @override
@@ -201,17 +192,14 @@ abstract class NoInternetConnection implements CoreException {
 
 /// @nodoc
 abstract class _$$TimeOutExceptionCopyWith<$Res> {
-  factory _$$TimeOutExceptionCopyWith(
-          _$TimeOutException value, $Res Function(_$TimeOutException) then) =
+  factory _$$TimeOutExceptionCopyWith(_$TimeOutException value, $Res Function(_$TimeOutException) then) =
       __$$TimeOutExceptionCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$TimeOutExceptionCopyWithImpl<$Res>
-    extends _$CoreExceptionCopyWithImpl<$Res>
+class __$$TimeOutExceptionCopyWithImpl<$Res> extends _$CoreExceptionCopyWithImpl<$Res>
     implements _$$TimeOutExceptionCopyWith<$Res> {
-  __$$TimeOutExceptionCopyWithImpl(
-      _$TimeOutException _value, $Res Function(_$TimeOutException) _then)
+  __$$TimeOutExceptionCopyWithImpl(_$TimeOutException _value, $Res Function(_$TimeOutException) _then)
       : super(_value, (v) => _then(v as _$TimeOutException));
 
   @override
@@ -220,9 +208,7 @@ class __$$TimeOutExceptionCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$TimeOutException
-    with DiagnosticableTreeMixin
-    implements TimeOutException {
+class _$TimeOutException with DiagnosticableTreeMixin implements TimeOutException {
   const _$TimeOutException();
 
   @override
@@ -233,14 +219,12 @@ class _$TimeOutException
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties
-        .add(DiagnosticsProperty('type', 'CoreException.timeOutException'));
+    properties.add(DiagnosticsProperty('type', 'CoreException.timeOutException'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$TimeOutException);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$TimeOutException);
   }
 
   @override
@@ -321,18 +305,15 @@ abstract class TimeOutException implements CoreException {
 
 /// @nodoc
 abstract class _$$ServerExceptionCopyWith<$Res> {
-  factory _$$ServerExceptionCopyWith(
-          _$ServerException value, $Res Function(_$ServerException) then) =
+  factory _$$ServerExceptionCopyWith(_$ServerException value, $Res Function(_$ServerException) then) =
       __$$ServerExceptionCopyWithImpl<$Res>;
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$ServerExceptionCopyWithImpl<$Res>
-    extends _$CoreExceptionCopyWithImpl<$Res>
+class __$$ServerExceptionCopyWithImpl<$Res> extends _$CoreExceptionCopyWithImpl<$Res>
     implements _$$ServerExceptionCopyWith<$Res> {
-  __$$ServerExceptionCopyWithImpl(
-      _$ServerException _value, $Res Function(_$ServerException) _then)
+  __$$ServerExceptionCopyWithImpl(_$ServerException _value, $Res Function(_$ServerException) _then)
       : super(_value, (v) => _then(v as _$ServerException));
 
   @override
@@ -353,9 +334,7 @@ class __$$ServerExceptionCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ServerException
-    with DiagnosticableTreeMixin
-    implements ServerException {
+class _$ServerException with DiagnosticableTreeMixin implements ServerException {
   const _$ServerException(this.message);
 
   @override
@@ -383,8 +362,7 @@ class _$ServerException
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
 
   @JsonKey(ignore: true)
   @override
@@ -465,6 +443,5 @@ abstract class ServerException implements CoreException {
 
   String get message => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$$ServerExceptionCopyWith<_$ServerException> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ServerExceptionCopyWith<_$ServerException> get copyWith => throw _privateConstructorUsedError;
 }
