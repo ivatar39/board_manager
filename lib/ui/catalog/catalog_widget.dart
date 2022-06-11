@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 class CatalogWidget extends ElementaryWidget<ICatalogWidgetModel> {
   const CatalogWidget({
     Key? key,
-  }) : super(key: key, catalogWidgetModelFactory);
+  }) : super(key: key, buildCatalogWidgetModel);
 
   @override
   Widget build(ICatalogWidgetModel wm) {

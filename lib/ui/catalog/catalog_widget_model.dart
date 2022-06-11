@@ -68,7 +68,7 @@ class CatalogWidgetModel extends WidgetModel<CatalogWidget, CatalogModel> implem
 
   Future<void> _createSearchControllerListener() async {
     _debounceTimer.debounceTime(const Duration(seconds: debounceSeconds)).listen(
-      (event) async {
+      (_) async {
         await _loadCatalogBySearchQuery();
       },
     );

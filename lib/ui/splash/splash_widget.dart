@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 class SplashWidget extends ElementaryWidget<ISplashWidgetModel> {
   const SplashWidget({
     Key? key,
-  }) : super(key: key, splashWidgetModelFactory);
+  }) : super(key: key, buildSplashWidgetModel);
 
   @override
   Widget build(ISplashWidgetModel wm) {

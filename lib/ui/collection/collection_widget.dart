@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 class CollectionWidget extends ElementaryWidget<ICollectionWidgetModel> {
   const CollectionWidget({
     Key? key,
-  }) : super(key: key, collectionWidgetModelFactory);
+  }) : super(key: key, buildCollectionWidgetModel);
 
   @override
   Widget build(ICollectionWidgetModel wm) {

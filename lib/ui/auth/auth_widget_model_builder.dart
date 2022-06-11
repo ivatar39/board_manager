@@ -5,7 +5,7 @@ import 'package:board_manager/ui/auth/auth_widget_model.dart';
 import 'package:board_manager/ui/router/app_router.gr.dart';
 import 'package:flutter/material.dart';
 
-AuthWidgetModel authWidgetModelFactory(BuildContext context) {
+AuthWidgetModel buildAuthWidgetModel(BuildContext context) {
   return AuthWidgetModel(
     AuthModel(
       getIt<AuthRepository>(),

@@ -6,7 +6,7 @@ import 'package:board_manager/ui/profile/profile_widget_model.dart';
 import 'package:board_manager/ui/router/app_router.gr.dart';
 import 'package:flutter/material.dart';
 
-ProfileWidgetModel profileWidgetModelFactory(BuildContext context) {
+ProfileWidgetModel buildProfileWidgetModel(BuildContext context) {
   return ProfileWidgetModel(
     ProfileModel(
       getIt<AuthRepository>(),

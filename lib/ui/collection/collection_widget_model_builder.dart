@@ -6,7 +6,7 @@ import 'package:board_manager/ui/collection/collection_widget_model.dart';
 import 'package:board_manager/ui/router/app_router.gr.dart';
 import 'package:flutter/material.dart';
 
-CollectionWidgetModel collectionWidgetModelFactory(BuildContext context) {
+CollectionWidgetModel buildCollectionWidgetModel(BuildContext context) {
   return CollectionWidgetModel(CollectionModel(
     getIt<CollectionRepository>(),
     getIt<UserRepository>(),

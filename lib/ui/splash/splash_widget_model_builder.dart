@@ -5,7 +5,7 @@ import 'package:board_manager/ui/splash/splash_model.dart';
 import 'package:board_manager/ui/splash/splash_widget_model.dart';
 import 'package:flutter/material.dart';
 
-SplashWidgetModel splashWidgetModelFactory(BuildContext context) {
+SplashWidgetModel buildSplashWidgetModel(BuildContext context) {
   return SplashWidgetModel(
     SplashModel(
       getIt<AuthRepository>(),

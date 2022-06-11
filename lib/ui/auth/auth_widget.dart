@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class AuthWidget extends ElementaryWidget<IAuthWidgetModel> {
   const AuthWidget({
     Key? key,
-  }) : super(key: key, authWidgetModelFactory);
+  }) : super(key: key, buildAuthWidgetModel);
 
   @override
   Widget build(IAuthWidgetModel wm) {

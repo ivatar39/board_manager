@@ -5,7 +5,7 @@ import 'package:board_manager/ui/catalog/catalog_model.dart';
 import 'package:board_manager/ui/catalog/catalog_widget_model.dart';
 import 'package:flutter/material.dart';
 
-CatalogWidgetModel catalogWidgetModelFactory(BuildContext context) {
+CatalogWidgetModel buildCatalogWidgetModel(BuildContext context) {
   return CatalogWidgetModel(
     CatalogModel(
       getIt<CatalogInteractor>(),

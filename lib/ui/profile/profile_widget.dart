@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 class ProfileWidget extends ElementaryWidget<IProfileWidgetModel> {
   const ProfileWidget({
     Key? key,
-  }) : super(key: key, profileWidgetModelFactory);
+  }) : super(key: key, buildProfileWidgetModel);
 
   @override
   Widget build(IProfileWidgetModel wm) {
