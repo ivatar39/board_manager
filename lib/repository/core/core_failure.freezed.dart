@@ -37,8 +37,7 @@ mixin _$CoreFailure {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CheckInternetConnection value)
-        checkInternetConnection,
+    required TResult Function(CheckInternetConnection value) checkInternetConnection,
     required TResult Function(ServerFailure value) serverFailure,
   }) =>
       throw _privateConstructorUsedError;
@@ -59,9 +58,7 @@ mixin _$CoreFailure {
 
 /// @nodoc
 abstract class $CoreFailureCopyWith<$Res> {
-  factory $CoreFailureCopyWith(
-          CoreFailure value, $Res Function(CoreFailure) then) =
-      _$CoreFailureCopyWithImpl<$Res>;
+  factory $CoreFailureCopyWith(CoreFailure value, $Res Function(CoreFailure) then) = _$CoreFailureCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -75,29 +72,25 @@ class _$CoreFailureCopyWithImpl<$Res> implements $CoreFailureCopyWith<$Res> {
 
 /// @nodoc
 abstract class _$$CheckInternetConnectionCopyWith<$Res> {
-  factory _$$CheckInternetConnectionCopyWith(_$CheckInternetConnection value,
-          $Res Function(_$CheckInternetConnection) then) =
+  factory _$$CheckInternetConnectionCopyWith(
+          _$CheckInternetConnection value, $Res Function(_$CheckInternetConnection) then) =
       __$$CheckInternetConnectionCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$CheckInternetConnectionCopyWithImpl<$Res>
-    extends _$CoreFailureCopyWithImpl<$Res>
+class __$$CheckInternetConnectionCopyWithImpl<$Res> extends _$CoreFailureCopyWithImpl<$Res>
     implements _$$CheckInternetConnectionCopyWith<$Res> {
-  __$$CheckInternetConnectionCopyWithImpl(_$CheckInternetConnection _value,
-      $Res Function(_$CheckInternetConnection) _then)
+  __$$CheckInternetConnectionCopyWithImpl(
+      _$CheckInternetConnection _value, $Res Function(_$CheckInternetConnection) _then)
       : super(_value, (v) => _then(v as _$CheckInternetConnection));
 
   @override
-  _$CheckInternetConnection get _value =>
-      super._value as _$CheckInternetConnection;
+  _$CheckInternetConnection get _value => super._value as _$CheckInternetConnection;
 }
 
 /// @nodoc
 
-class _$CheckInternetConnection
-    with DiagnosticableTreeMixin
-    implements CheckInternetConnection {
+class _$CheckInternetConnection with DiagnosticableTreeMixin implements CheckInternetConnection {
   const _$CheckInternetConnection();
 
   @override
@@ -108,15 +101,12 @@ class _$CheckInternetConnection
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(
-        DiagnosticsProperty('type', 'CoreFailure.checkInternetConnection'));
+    properties.add(DiagnosticsProperty('type', 'CoreFailure.checkInternetConnection'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CheckInternetConnection);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$CheckInternetConnection);
   }
 
   @override
@@ -156,8 +146,7 @@ class _$CheckInternetConnection
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CheckInternetConnection value)
-        checkInternetConnection,
+    required TResult Function(CheckInternetConnection value) checkInternetConnection,
     required TResult Function(ServerFailure value) serverFailure,
   }) {
     return checkInternetConnection(this);
@@ -192,18 +181,15 @@ abstract class CheckInternetConnection implements CoreFailure {
 
 /// @nodoc
 abstract class _$$ServerFailureCopyWith<$Res> {
-  factory _$$ServerFailureCopyWith(
-          _$ServerFailure value, $Res Function(_$ServerFailure) then) =
+  factory _$$ServerFailureCopyWith(_$ServerFailure value, $Res Function(_$ServerFailure) then) =
       __$$ServerFailureCopyWithImpl<$Res>;
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$ServerFailureCopyWithImpl<$Res>
-    extends _$CoreFailureCopyWithImpl<$Res>
+class __$$ServerFailureCopyWithImpl<$Res> extends _$CoreFailureCopyWithImpl<$Res>
     implements _$$ServerFailureCopyWith<$Res> {
-  __$$ServerFailureCopyWithImpl(
-      _$ServerFailure _value, $Res Function(_$ServerFailure) _then)
+  __$$ServerFailureCopyWithImpl(_$ServerFailure _value, $Res Function(_$ServerFailure) _then)
       : super(_value, (v) => _then(v as _$ServerFailure));
 
   @override
@@ -252,8 +238,7 @@ class _$ServerFailure with DiagnosticableTreeMixin implements ServerFailure {
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
 
   @JsonKey(ignore: true)
   @override
@@ -294,8 +279,7 @@ class _$ServerFailure with DiagnosticableTreeMixin implements ServerFailure {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CheckInternetConnection value)
-        checkInternetConnection,
+    required TResult Function(CheckInternetConnection value) checkInternetConnection,
     required TResult Function(ServerFailure value) serverFailure,
   }) {
     return serverFailure(this);
@@ -329,6 +313,5 @@ abstract class ServerFailure implements CoreFailure {
 
   String get message => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$$ServerFailureCopyWith<_$ServerFailure> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ServerFailureCopyWith<_$ServerFailure> get copyWith => throw _privateConstructorUsedError;
 }

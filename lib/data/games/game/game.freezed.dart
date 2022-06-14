@@ -50,31 +50,17 @@ mixin _$Game {
 
 /// @nodoc
 abstract class $GameCopyWith<$Res> {
-  factory $GameCopyWith(Game value, $Res Function(Game) then) =
-      _$GameCopyWithImpl<$Res>;
+  factory $GameCopyWith(Game value, $Res Function(Game) then) = _$GameCopyWithImpl<$Res>;
   $Res call(
-      {@HiveField(0)
-          String id,
-      @HiveField(1)
-          String url,
-      @HiveField(2)
-      @JsonKey(defaultValue: kDefaultThumbnailUrl, name: 'thumb_url')
-          String thumbnailUrl,
-      @HiveField(3)
-          String name,
-      @HiveField(4)
-      @JsonKey(defaultValue: '', name: 'description_preview')
-          String shortDescription,
-      @HiveField(5)
-          String description,
-      @HiveField(6)
-      @JsonKey(name: 'min_players')
-          int? minPlayers,
-      @HiveField(7)
-      @JsonKey(name: 'max_players')
-          int? maxPlayers,
-      @HiveField(8)
-          User? owner});
+      {@HiveField(0) String id,
+      @HiveField(1) String url,
+      @HiveField(2) @JsonKey(defaultValue: kDefaultThumbnailUrl, name: 'thumb_url') String thumbnailUrl,
+      @HiveField(3) String name,
+      @HiveField(4) @JsonKey(defaultValue: '', name: 'description_preview') String shortDescription,
+      @HiveField(5) String description,
+      @HiveField(6) @JsonKey(name: 'min_players') int? minPlayers,
+      @HiveField(7) @JsonKey(name: 'max_players') int? maxPlayers,
+      @HiveField(8) User? owner});
 
   $UserCopyWith<$Res>? get owner;
 }
@@ -153,42 +139,26 @@ class _$GameCopyWithImpl<$Res> implements $GameCopyWith<$Res> {
 
 /// @nodoc
 abstract class _$$_GameCopyWith<$Res> implements $GameCopyWith<$Res> {
-  factory _$$_GameCopyWith(_$_Game value, $Res Function(_$_Game) then) =
-      __$$_GameCopyWithImpl<$Res>;
+  factory _$$_GameCopyWith(_$_Game value, $Res Function(_$_Game) then) = __$$_GameCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@HiveField(0)
-          String id,
-      @HiveField(1)
-          String url,
-      @HiveField(2)
-      @JsonKey(defaultValue: kDefaultThumbnailUrl, name: 'thumb_url')
-          String thumbnailUrl,
-      @HiveField(3)
-          String name,
-      @HiveField(4)
-      @JsonKey(defaultValue: '', name: 'description_preview')
-          String shortDescription,
-      @HiveField(5)
-          String description,
-      @HiveField(6)
-      @JsonKey(name: 'min_players')
-          int? minPlayers,
-      @HiveField(7)
-      @JsonKey(name: 'max_players')
-          int? maxPlayers,
-      @HiveField(8)
-          User? owner});
+      {@HiveField(0) String id,
+      @HiveField(1) String url,
+      @HiveField(2) @JsonKey(defaultValue: kDefaultThumbnailUrl, name: 'thumb_url') String thumbnailUrl,
+      @HiveField(3) String name,
+      @HiveField(4) @JsonKey(defaultValue: '', name: 'description_preview') String shortDescription,
+      @HiveField(5) String description,
+      @HiveField(6) @JsonKey(name: 'min_players') int? minPlayers,
+      @HiveField(7) @JsonKey(name: 'max_players') int? maxPlayers,
+      @HiveField(8) User? owner});
 
   @override
   $UserCopyWith<$Res>? get owner;
 }
 
 /// @nodoc
-class __$$_GameCopyWithImpl<$Res> extends _$GameCopyWithImpl<$Res>
-    implements _$$_GameCopyWith<$Res> {
-  __$$_GameCopyWithImpl(_$_Game _value, $Res Function(_$_Game) _then)
-      : super(_value, (v) => _then(v as _$_Game));
+class __$$_GameCopyWithImpl<$Res> extends _$GameCopyWithImpl<$Res> implements _$$_GameCopyWith<$Res> {
+  __$$_GameCopyWithImpl(_$_Game _value, $Res Function(_$_Game) _then) : super(_value, (v) => _then(v as _$_Game));
 
   @override
   _$_Game get _value => super._value as _$_Game;
@@ -251,28 +221,15 @@ class __$$_GameCopyWithImpl<$Res> extends _$GameCopyWithImpl<$Res>
 @HiveType(typeId: 1, adapterName: 'GameAdapter')
 class _$_Game with DiagnosticableTreeMixin implements _Game {
   const _$_Game(
-      {@HiveField(0)
-          required this.id,
-      @HiveField(1)
-          required this.url,
-      @HiveField(2)
-      @JsonKey(defaultValue: kDefaultThumbnailUrl, name: 'thumb_url')
-          required this.thumbnailUrl,
-      @HiveField(3)
-          required this.name,
-      @HiveField(4)
-      @JsonKey(defaultValue: '', name: 'description_preview')
-          required this.shortDescription,
-      @HiveField(5)
-          required this.description,
-      @HiveField(6)
-      @JsonKey(name: 'min_players')
-          required this.minPlayers,
-      @HiveField(7)
-      @JsonKey(name: 'max_players')
-          required this.maxPlayers,
-      @HiveField(8)
-          required this.owner});
+      {@HiveField(0) required this.id,
+      @HiveField(1) required this.url,
+      @HiveField(2) @JsonKey(defaultValue: kDefaultThumbnailUrl, name: 'thumb_url') required this.thumbnailUrl,
+      @HiveField(3) required this.name,
+      @HiveField(4) @JsonKey(defaultValue: '', name: 'description_preview') required this.shortDescription,
+      @HiveField(5) required this.description,
+      @HiveField(6) @JsonKey(name: 'min_players') required this.minPlayers,
+      @HiveField(7) @JsonKey(name: 'max_players') required this.maxPlayers,
+      @HiveField(8) required this.owner});
 
   factory _$_Game.fromJson(Map<String, dynamic> json) => _$$_GameFromJson(json);
 
@@ -336,17 +293,12 @@ class _$_Game with DiagnosticableTreeMixin implements _Game {
             other is _$_Game &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.url, url) &&
-            const DeepCollectionEquality()
-                .equals(other.thumbnailUrl, thumbnailUrl) &&
+            const DeepCollectionEquality().equals(other.thumbnailUrl, thumbnailUrl) &&
             const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.shortDescription, shortDescription) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality()
-                .equals(other.minPlayers, minPlayers) &&
-            const DeepCollectionEquality()
-                .equals(other.maxPlayers, maxPlayers) &&
+            const DeepCollectionEquality().equals(other.shortDescription, shortDescription) &&
+            const DeepCollectionEquality().equals(other.description, description) &&
+            const DeepCollectionEquality().equals(other.minPlayers, minPlayers) &&
+            const DeepCollectionEquality().equals(other.maxPlayers, maxPlayers) &&
             const DeepCollectionEquality().equals(other.owner, owner));
   }
 
@@ -366,8 +318,7 @@ class _$_Game with DiagnosticableTreeMixin implements _Game {
 
   @JsonKey(ignore: true)
   @override
-  _$$_GameCopyWith<_$_Game> get copyWith =>
-      __$$_GameCopyWithImpl<_$_Game>(this, _$identity);
+  _$$_GameCopyWith<_$_Game> get copyWith => __$$_GameCopyWithImpl<_$_Game>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -377,28 +328,15 @@ class _$_Game with DiagnosticableTreeMixin implements _Game {
 
 abstract class _Game implements Game {
   const factory _Game(
-      {@HiveField(0)
-          required final String id,
-      @HiveField(1)
-          required final String url,
-      @HiveField(2)
-      @JsonKey(defaultValue: kDefaultThumbnailUrl, name: 'thumb_url')
-          required final String thumbnailUrl,
-      @HiveField(3)
-          required final String name,
-      @HiveField(4)
-      @JsonKey(defaultValue: '', name: 'description_preview')
-          required final String shortDescription,
-      @HiveField(5)
-          required final String description,
-      @HiveField(6)
-      @JsonKey(name: 'min_players')
-          required final int? minPlayers,
-      @HiveField(7)
-      @JsonKey(name: 'max_players')
-          required final int? maxPlayers,
-      @HiveField(8)
-          required final User? owner}) = _$_Game;
+      {@HiveField(0) required final String id,
+      @HiveField(1) required final String url,
+      @HiveField(2) @JsonKey(defaultValue: kDefaultThumbnailUrl, name: 'thumb_url') required final String thumbnailUrl,
+      @HiveField(3) required final String name,
+      @HiveField(4) @JsonKey(defaultValue: '', name: 'description_preview') required final String shortDescription,
+      @HiveField(5) required final String description,
+      @HiveField(6) @JsonKey(name: 'min_players') required final int? minPlayers,
+      @HiveField(7) @JsonKey(name: 'max_players') required final int? maxPlayers,
+      @HiveField(8) required final User? owner}) = _$_Game;
 
   factory _Game.fromJson(Map<String, dynamic> json) = _$_Game.fromJson;
 

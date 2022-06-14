@@ -58,10 +58,7 @@ class GameAdapter extends TypeAdapter<_$_Game> {
 
   @override
   bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is GameAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
+      identical(this, other) || other is GameAdapter && runtimeType == other.runtimeType && typeId == other.typeId;
 }
 
 // **************************************************************************
@@ -71,16 +68,13 @@ class GameAdapter extends TypeAdapter<_$_Game> {
 _$_Game _$$_GameFromJson(Map<String, dynamic> json) => _$_Game(
       id: json['id'] as String,
       url: json['url'] as String,
-      thumbnailUrl: json['thumb_url'] as String? ??
-          'https://img.icons8.com/ios/452/board-game.png',
+      thumbnailUrl: json['thumb_url'] as String? ?? 'https://img.icons8.com/ios/452/board-game.png',
       name: json['name'] as String,
       shortDescription: json['description_preview'] as String? ?? '',
       description: json['description'] as String,
       minPlayers: json['min_players'] as int?,
       maxPlayers: json['max_players'] as int?,
-      owner: json['owner'] == null
-          ? null
-          : User.fromJson(json['owner'] as Map<String, dynamic>),
+      owner: json['owner'] == null ? null : User.fromJson(json['owner'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_GameToJson(_$_Game instance) => <String, dynamic>{

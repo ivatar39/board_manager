@@ -50,7 +50,9 @@ class GameApiRemoteDataSource implements GameRemoteDataSource {
       if (e.message.contains('SocketException')) {
         throw const CoreException.noInternetConnection();
       }
-      if (e.type == DioErrorType.connectTimeout || e.type == DioErrorType.receiveTimeout || e.type == DioErrorType.sendTimeout) {
+      if (e.type == DioErrorType.connectTimeout ||
+          e.type == DioErrorType.receiveTimeout ||
+          e.type == DioErrorType.sendTimeout) {
         throw const CoreException.timeOutException();
       }
 

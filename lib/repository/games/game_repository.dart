@@ -19,7 +19,7 @@ class GameRepository {
     this._gameCollectionLocalDataSource,
   );
 
-  Future<List<Game>> searchGamesByQuery(String query) async {
+  Future<Iterable<Game>> searchGamesByQuery(String query) async {
     try {
       final games = await _gameRemoteDataSource.getGamesByQuery(query);
       return games;

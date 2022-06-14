@@ -38,22 +38,19 @@ mixin _$GameException {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(MemoryException value) memoryException,
-    required TResult Function(AlreadyInStorageException value)
-        alreadyInStorageException,
+    required TResult Function(AlreadyInStorageException value) alreadyInStorageException,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(MemoryException value)? memoryException,
-    TResult Function(AlreadyInStorageException value)?
-        alreadyInStorageException,
+    TResult Function(AlreadyInStorageException value)? alreadyInStorageException,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(MemoryException value)? memoryException,
-    TResult Function(AlreadyInStorageException value)?
-        alreadyInStorageException,
+    TResult Function(AlreadyInStorageException value)? alreadyInStorageException,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -61,14 +58,12 @@ mixin _$GameException {
 
 /// @nodoc
 abstract class $GameExceptionCopyWith<$Res> {
-  factory $GameExceptionCopyWith(
-          GameException value, $Res Function(GameException) then) =
+  factory $GameExceptionCopyWith(GameException value, $Res Function(GameException) then) =
       _$GameExceptionCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$GameExceptionCopyWithImpl<$Res>
-    implements $GameExceptionCopyWith<$Res> {
+class _$GameExceptionCopyWithImpl<$Res> implements $GameExceptionCopyWith<$Res> {
   _$GameExceptionCopyWithImpl(this._value, this._then);
 
   final GameException _value;
@@ -78,17 +73,14 @@ class _$GameExceptionCopyWithImpl<$Res>
 
 /// @nodoc
 abstract class _$$MemoryExceptionCopyWith<$Res> {
-  factory _$$MemoryExceptionCopyWith(
-          _$MemoryException value, $Res Function(_$MemoryException) then) =
+  factory _$$MemoryExceptionCopyWith(_$MemoryException value, $Res Function(_$MemoryException) then) =
       __$$MemoryExceptionCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$MemoryExceptionCopyWithImpl<$Res>
-    extends _$GameExceptionCopyWithImpl<$Res>
+class __$$MemoryExceptionCopyWithImpl<$Res> extends _$GameExceptionCopyWithImpl<$Res>
     implements _$$MemoryExceptionCopyWith<$Res> {
-  __$$MemoryExceptionCopyWithImpl(
-      _$MemoryException _value, $Res Function(_$MemoryException) _then)
+  __$$MemoryExceptionCopyWithImpl(_$MemoryException _value, $Res Function(_$MemoryException) _then)
       : super(_value, (v) => _then(v as _$MemoryException));
 
   @override
@@ -97,9 +89,7 @@ class __$$MemoryExceptionCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$MemoryException
-    with DiagnosticableTreeMixin
-    implements MemoryException {
+class _$MemoryException with DiagnosticableTreeMixin implements MemoryException {
   const _$MemoryException();
 
   @override
@@ -110,14 +100,12 @@ class _$MemoryException
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties
-        .add(DiagnosticsProperty('type', 'GameException.memoryException'));
+    properties.add(DiagnosticsProperty('type', 'GameException.memoryException'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$MemoryException);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$MemoryException);
   }
 
   @override
@@ -158,8 +146,7 @@ class _$MemoryException
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(MemoryException value) memoryException,
-    required TResult Function(AlreadyInStorageException value)
-        alreadyInStorageException,
+    required TResult Function(AlreadyInStorageException value) alreadyInStorageException,
   }) {
     return memoryException(this);
   }
@@ -168,8 +155,7 @@ class _$MemoryException
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(MemoryException value)? memoryException,
-    TResult Function(AlreadyInStorageException value)?
-        alreadyInStorageException,
+    TResult Function(AlreadyInStorageException value)? alreadyInStorageException,
   }) {
     return memoryException?.call(this);
   }
@@ -178,8 +164,7 @@ class _$MemoryException
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(MemoryException value)? memoryException,
-    TResult Function(AlreadyInStorageException value)?
-        alreadyInStorageException,
+    TResult Function(AlreadyInStorageException value)? alreadyInStorageException,
     required TResult orElse(),
   }) {
     if (memoryException != null) {
@@ -196,29 +181,24 @@ abstract class MemoryException implements GameException {
 /// @nodoc
 abstract class _$$AlreadyInStorageExceptionCopyWith<$Res> {
   factory _$$AlreadyInStorageExceptionCopyWith(
-          _$AlreadyInStorageException value,
-          $Res Function(_$AlreadyInStorageException) then) =
+          _$AlreadyInStorageException value, $Res Function(_$AlreadyInStorageException) then) =
       __$$AlreadyInStorageExceptionCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$AlreadyInStorageExceptionCopyWithImpl<$Res>
-    extends _$GameExceptionCopyWithImpl<$Res>
+class __$$AlreadyInStorageExceptionCopyWithImpl<$Res> extends _$GameExceptionCopyWithImpl<$Res>
     implements _$$AlreadyInStorageExceptionCopyWith<$Res> {
-  __$$AlreadyInStorageExceptionCopyWithImpl(_$AlreadyInStorageException _value,
-      $Res Function(_$AlreadyInStorageException) _then)
+  __$$AlreadyInStorageExceptionCopyWithImpl(
+      _$AlreadyInStorageException _value, $Res Function(_$AlreadyInStorageException) _then)
       : super(_value, (v) => _then(v as _$AlreadyInStorageException));
 
   @override
-  _$AlreadyInStorageException get _value =>
-      super._value as _$AlreadyInStorageException;
+  _$AlreadyInStorageException get _value => super._value as _$AlreadyInStorageException;
 }
 
 /// @nodoc
 
-class _$AlreadyInStorageException
-    with DiagnosticableTreeMixin
-    implements AlreadyInStorageException {
+class _$AlreadyInStorageException with DiagnosticableTreeMixin implements AlreadyInStorageException {
   const _$AlreadyInStorageException();
 
   @override
@@ -229,15 +209,12 @@ class _$AlreadyInStorageException
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(
-        DiagnosticsProperty('type', 'GameException.alreadyInStorageException'));
+    properties.add(DiagnosticsProperty('type', 'GameException.alreadyInStorageException'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$AlreadyInStorageException);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$AlreadyInStorageException);
   }
 
   @override
@@ -278,8 +255,7 @@ class _$AlreadyInStorageException
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(MemoryException value) memoryException,
-    required TResult Function(AlreadyInStorageException value)
-        alreadyInStorageException,
+    required TResult Function(AlreadyInStorageException value) alreadyInStorageException,
   }) {
     return alreadyInStorageException(this);
   }
@@ -288,8 +264,7 @@ class _$AlreadyInStorageException
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(MemoryException value)? memoryException,
-    TResult Function(AlreadyInStorageException value)?
-        alreadyInStorageException,
+    TResult Function(AlreadyInStorageException value)? alreadyInStorageException,
   }) {
     return alreadyInStorageException?.call(this);
   }
@@ -298,8 +273,7 @@ class _$AlreadyInStorageException
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(MemoryException value)? memoryException,
-    TResult Function(AlreadyInStorageException value)?
-        alreadyInStorageException,
+    TResult Function(AlreadyInStorageException value)? alreadyInStorageException,
     required TResult orElse(),
   }) {
     if (alreadyInStorageException != null) {

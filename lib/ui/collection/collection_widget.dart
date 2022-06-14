@@ -1,29 +1,20 @@
 import 'package:board_manager/data/games/game/game.dart';
 import 'package:board_manager/ui/app/translation.dart';
-import 'package:board_manager/ui/collection/collection_menu_button.dart';
-import 'package:board_manager/ui/collection/collection_wm.dart';
-import 'package:board_manager/ui/collection/collection_wm_builder.dart';
+import 'package:board_manager/ui/collection/collection_widget_model.dart';
+import 'package:board_manager/ui/collection/collection_widget_model_builder.dart';
+import 'package:board_manager/ui/collection/widgets/collection_menu_button.dart';
 import 'package:board_manager/ui/core/failure_wiget.dart';
 import 'package:board_manager/ui/core/loading_widget.dart';
+import 'package:elementary/elementary.dart';
 import 'package:flutter/material.dart';
-import 'package:surf_mwwm/surf_mwwm.dart';
 
-class CollectionScreen extends CoreMwwmWidget<CollectionWidgetModel> {
-  const CollectionScreen({Key? key})
-      : super(
-          key: key,
-          widgetModelBuilder: createCollectionWidgetModel,
-        );
+class CollectionWidget extends ElementaryWidget<ICollectionWidgetModel> {
+  const CollectionWidget({
+    Key? key,
+  }) : super(key: key, buildCollectionWidgetModel);
 
   @override
-  WidgetState<CoreMwwmWidget<CollectionWidgetModel>, CollectionWidgetModel> createWidgetState() {
-    return _CollectionScreenState();
-  }
-}
-
-class _CollectionScreenState extends WidgetState<CollectionScreen, CollectionWidgetModel> {
-  @override
-  Widget build(BuildContext context) {
+  Widget build(ICollectionWidgetModel wm) {
     return Scaffold(
       appBar: AppBar(
         title: const Text(collection),
@@ -37,15 +28,15 @@ class _CollectionScreenState extends WidgetState<CollectionScreen, CollectionWid
         onPressed: () => wm.openCatalog(),
         child: const Icon(Icons.add),
       ),
-      body: EntityStateBuilder<List<Game>>(
-        streamedState: wm.collectionState,
-        builder: (context, games) {
-          if (games.isNotEmpty) {
+      body: EntityStateNotifierBuilder<Iterable<Game>>(
+        listenableEntityState: wm.collectionState,
+        builder: (_, games) {
+          if (games!.isNotEmpty) {
             return ListView.builder(
               physics: const BouncingScrollPhysics(),
               itemCount: games.length,
-              itemBuilder: (context, index) {
-                final game = games[index];
+              itemBuilder: (_, index) {
+                final game = games.elementAt(index);
                 return ListTile(
                   title: Text(game.name),
                   trailing: DropdownButton<String>(
@@ -66,10 +57,10 @@ class _CollectionScreenState extends WidgetState<CollectionScreen, CollectionWid
           }
           return const Center(child: Text(emptyCollection));
         },
-        loadingBuilder: (context, games) => const LoadingWidget(),
-        errorBuilder: (context, exception) => FailureWidget(
+        loadingBuilder: (_, __) => const LoadingWidget(),
+        errorBuilder: (_, exception, ___) => FailureWidget(
           exception: exception,
-          onRetry: wm.onLoad,
+          onRetry: wm.onRetryPressed,
         ),
       ),
     );
